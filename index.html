@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Students Hub | Premier UK Tuition Academy for 11+, GCSE & A-Levels</title>
+  <meta name="description" content="The Students Hub is a leading UK academic tuition academy offering expert tutoring for 11+, Key Stage 2 & 3, GCSE, and A-Level examinations. Interactive 3D learning and 98% pass rate.">
+  <meta name="keywords" content="The Students Hub, UK Tuition Academy, 11 Plus Exam Preparation, GCSE Tuition, A Level Tutors, Harrow Tuition, London Tutors, Science Tutors, Maths Tuition, Grammar School Preparation">
+  <meta property="og:title" content="The Students Hub | Premier UK Tuition Academy">
+  <meta property="og:description" content="Unlock academic excellence with expert tuition for 11+, GCSE, and A-Levels. Bespoke learning roadmaps and proven 98% pass rates.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thestudents-hub.uk/">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/hero-3d.css">
+
+  <!-- Three.js Library for 3D Interactive Canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP CONTACT & CREDENTIALS BAR
+       ========================================================================== -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="top-contact-left">
+        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
+        <a href="tel:+447424044851" class="top-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          +44 7424044851
+        </a>
+        <a href="tel:07405860115" class="top-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          07405860115
+        </a>
+        <a href="tel:02039577099" class="top-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 00-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+          020 3957 7099
+        </a>
+      </div>
+      <div class="top-contact-right">
+        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          admin@thestudents-hub.co.uk
+        </a>
+        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          thestudents-hub.uk
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" id="site-logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">The Students <span>Hub</span></span>
+          <span class="logo-tagline">Academic Tuition & Excellence</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="primary-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        
+        <div class="nav-dropdown-wrapper">
+          <a href="courses.html" class="nav-link">
+            Tuition & Courses
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="courses.html#11plus" class="dropdown-item">
+              <div class="dropdown-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+              <div>
+                <strong>11+ & 13+ Grammar Prep</strong>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Maths, VR, NVR, English</div>
+              </div>
+            </a>
+            <a href="courses.html#ks2-ks3" class="dropdown-item">
+              <div class="dropdown-icon"><svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+              <div>
+                <strong>Key Stage 2 & 3</strong>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Years 3 to 9 Foundation</div>
+              </div>
+            </a>
+            <a href="courses.html#gcse" class="dropdown-item">
+              <div class="dropdown-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+              <div>
+                <strong>GCSE & IGCSE</strong>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Grade 9 Acceleration</div>
+              </div>
+            </a>
+            <a href="courses.html#alevel" class="dropdown-item">
+              <div class="dropdown-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
+              <div>
+                <strong>A-Levels / AS & A2</strong>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Maths, Sciences & Further</div>
+              </div>
+            </a>
+            <a href="courses.html#coding" class="dropdown-item">
+              <div class="dropdown-icon"><svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg></div>
+              <div>
+                <strong>Coding & Robotics</strong>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Python, Scratch & AI for Kids</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Cart Trigger Button -->
+        <button class="cart-button-trigger" id="header-cart-btn" aria-label="Open Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Book Trial Modal Button -->
+        <button class="btn btn-primary trial-modal-trigger" id="btn-header-trial">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+          Book Free Trial
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH INTERACTIVE 3D WEBGL STAGE
+       ========================================================================== -->
+  <section class="hero-3d-section" id="hero-section">
+    <div class="hero-glow-orb-1"></div>
+    <div class="hero-glow-orb-2"></div>
+
+    <div class="container hero-grid-layout">
+      <!-- Left Hero Content -->
+      <div class="hero-content">
+        <div class="hero-trust-badge">
+          <span class="pulse-dot"></span>
+          <span>Harrow & Greater London's Leading Tuition Academy</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Inspiring Success, <br>
+          <span class="text-gradient">Shaping Bright Futures.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Tailored UK tuition designed by senior examiners and subject specialists. We build deep conceptual mastery, exam confidence, and independent critical thinking for 11+ Grammar Entrance, GCSEs, and A-Levels.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg trial-modal-trigger" id="btn-hero-trial">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            Book Free Assessment & Trial
+          </button>
+          <a href="courses.html" class="btn btn-outline-white btn-lg" id="btn-hero-explore">
+            Explore Courses
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-proof-bar">
+          <div class="proof-metric">
+            <span class="metric-num">98%</span>
+            <span class="metric-text">GCSE & 11+ Pass Rate</span>
+          </div>
+          <div class="proof-metric">
+            <span class="metric-num">1,500+</span>
+            <span class="metric-text">Successful Students</span>
+          </div>
+          <div class="proof-metric">
+            <span class="metric-num">Top 1%</span>
+            <span class="metric-text">DBS-Vetted Tutors</span>
+          </div>
+          <div class="proof-metric">
+            <span class="metric-num">1:6</span>
+            <span class="metric-text">Max Class Size</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Interactive 3D Canvas Showcase -->
+      <div class="hero-3d-showcase" id="hero-3d-container">
+        <!-- 3D Hint -->
+        <div class="hint-rotate-pill">
+          <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 004 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+          Click & drag to rotate 3D academy model
+        </div>
+
+        <!-- Floating HUD Status Cards -->
+        <div class="hud-card hud-top-left">
+          <div class="hud-icon gold">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="hud-info">
+            <h5>Grammar School Placements</h5>
+            <p>QE Boys, Henrietta Barnett & Tiffin</p>
+          </div>
+        </div>
+
+        <div class="hud-card hud-bottom-right">
+          <div class="hud-icon blue">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <div class="hud-info">
+            <h5>Grade 8 & 9 Accelerator</h5>
+            <p>Targeted High-Tier GCSE Prep</p>
+          </div>
+        </div>
+
+        <!-- The Actual WebGL 3D Canvas Container -->
+        <div id="hero-three-canvas"></div>
+
+        <!-- Interactive 3D Subject Focus HUD -->
+        <div class="subject-3d-controller" id="subject-hud-ctrl">
+          <button class="subject-node-btn active" data-subject="all">🌐 All Subjects</button>
+          <button class="subject-node-btn" data-subject="11plus">⭐ 11+ Grammar</button>
+          <button class="subject-node-btn" data-subject="maths">📐 Maths</button>
+          <button class="subject-node-btn" data-subject="science">🔬 Science</button>
+          <button class="subject-node-btn" data-subject="english">📚 English</button>
+          <button class="subject-node-btn" data-subject="coding">💻 Coding</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KEY ACADEMIC PILLARS / PROGRAM TRACKS
+       ========================================================================== -->
+  <section class="section-py" id="academic-programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Academic Programmes</span>
+        <h2 class="section-title">Designed for Every Stage of the British Curriculum</h2>
+        <p class="section-subtitle">
+          Whether preparing for competitive grammar school entrance tests or targeting Grade 9s in GCSE, our structured learning pathways ensure complete subject mastery.
+        </p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Card 1: 11+ / 13+ Prep -->
+        <div class="program-card">
+          <span class="program-tag">Ages 8-11 • Year 4, 5 & 6</span>
+          <div class="program-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3 class="program-title">11+ & 13+ Grammar School Entrance</h3>
+          <p class="program-desc">Comprehensive preparation for GL Assessment, CEM, and independent school entrance exams with focus on speed, logic, and test resilience.</p>
+          <div class="program-features">
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Verbal & Non-Verbal Reasoning</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Advanced Maths & English Comprehension</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Bi-Weekly Timed Mock Exam Simulations</span>
+            </div>
+          </div>
+          <a href="courses.html#11plus" class="btn btn-outline btn-sm">View Syllabus & Schedule</a>
+        </div>
+
+        <!-- Card 2: KS2 & KS3 -->
+        <div class="program-card">
+          <span class="program-tag">Ages 7-14 • Year 3 to 9</span>
+          <div class="program-icon-wrap" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">
+            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          </div>
+          <h3 class="program-title">Key Stage 2 & 3 Foundations</h3>
+          <p class="program-desc">Eliminate learning gaps, solidify core mathematical intuition, and expand written expression to prepare smoothly for secondary school success.</p>
+          <div class="program-features">
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>National Curriculum Aligned</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Year 6 SATS Excellence Track</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Interactive Problem-Solving Labs</span>
+            </div>
+          </div>
+          <a href="courses.html#ks2-ks3" class="btn btn-outline btn-sm">View Syllabus & Schedule</a>
+        </div>
+
+        <!-- Card 3: GCSE / IGCSE -->
+        <div class="program-card">
+          <span class="program-tag">Ages 14-16 • Year 10 & 11</span>
+          <div class="program-icon-wrap" style="background: #fdf2f8; color: #db2777;">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <h3 class="program-title">GCSE & IGCSE Grade 9 Accelerator</h3>
+          <p class="program-desc">Rigorous past-paper dissection, mark scheme analysis, and targeted mentoring across Higher Maths, Triple Science, and English Literature.</p>
+          <div class="program-features">
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>AQA, Edexcel, OCR Exam Boards</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Calculated Grade 7 to 9 Jump Strategies</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Full Examiner Feedback on Every Mock</span>
+            </div>
+          </div>
+          <a href="courses.html#gcse" class="btn btn-outline btn-sm">View Syllabus & Schedule</a>
+        </div>
+
+        <!-- Card 4: A-Levels -->
+        <div class="program-card">
+          <span class="program-tag">Ages 16-18 • Year 12 & 13</span>
+          <div class="program-icon-wrap" style="background: #f5f3ff; color: #7c3aed;">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          </div>
+          <h3 class="program-title">AS & A2 Level Mastery</h3>
+          <p class="program-desc">Elite 1-to-1 and small group tuition for Mathematics, Further Maths, Physics, Chemistry, and Biology. Russell Group & Oxbridge preparation.</p>
+          <div class="program-features">
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Pure, Mechanics & Statistics Depth</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>UCAS & Personal Statement Guidance</span>
+            </div>
+            <div class="program-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Tailored A* Target Blueprint</span>
+            </div>
+          </div>
+          <a href="courses.html#alevel" class="btn btn-outline btn-sm">View Syllabus & Schedule</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       IMAGE SHOWCASE & ACADEMY ENVIRONMENT
+       ========================================================================== -->
+  <section class="section-py" style="background: #ffffff; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+        <div style="position: relative;">
+          <img src="assets/images/hero-students.jpg" alt="Students studying at The Students Hub" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); width: 100%;">
+          <div style="position: absolute; bottom: -20px; right: -15px; background: var(--primary-900); color: #ffffff; padding: 1.25rem 1.75rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); border: 1px solid rgba(255,255,255,0.15);">
+            <div style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); color: #38bdf8;">94.8%</div>
+            <div style="font-size: 0.8rem; color: #cbd5e1;">Achieved Grades 8-9 (A*-A)</div>
+          </div>
+        </div>
+        <div>
+          <span class="section-badge">The Students Hub Difference</span>
+          <h2 class="section-title">A Positive, Inspiring Learning Community</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.05rem;">
+            At The Students Hub, we combine world-class subject tutors, modern interactive technology, and personal encouragement. We believe every child can achieve outstanding academic success when guided with clear diagnostics and proven revision strategies.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <div style="border-left: 3px solid var(--brand-blue); padding-left: 1rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.3rem;">Small Class Sizes</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Maximum 6 students per group ensures individual mentor attention.</p>
+            </div>
+            <div style="border-left: 3px solid var(--brand-emerald); padding-left: 1rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.3rem;">Weekly Diagnostics</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Instant identification of weaknesses before they become exam bottlenecks.</p>
+            </div>
+            <div style="border-left: 3px solid var(--brand-gold); padding-left: 1rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.3rem;">Examiner Insights</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Direct coaching from tutors who understand exact marking criteria.</p>
+            </div>
+            <div style="border-left: 3px solid var(--brand-indigo); padding-left: 1rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: var(--primary-900); margin-bottom: 0.3rem;">Hybrid Flexibility</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Attend at our centre or join live interactive digital classrooms.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary trial-modal-trigger">
+            Book a Free Centre Tour & Trial
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE GRADE BOOST ROADMAP TOOL
+       ========================================================================== -->
+  <section class="section-py" id="calculator-section">
+    <div class="container">
+      <div class="calculator-card">
+        <div class="calculator-left">
+          <span style="background: rgba(37,99,235,0.3); color: #93c5fd; padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.75rem;">Interactive Assessment</span>
+          <h3>Calculate Your Child's Grade Improvement Path</h3>
+          <p>
+            Select your child's current school year, subject, and current predicted grade to preview a tailored academic roadmap developed by our senior tuition coordinators.
+          </p>
+
+          <div class="calc-inputs-grid">
+            <div class="calc-field">
+              <label for="calc-year">Target Exam / Year</label>
+              <select id="calc-year">
+                <option value="11plus">11+ Grammar Entrance (Year 5)</option>
+                <option value="ks2">Key Stage 2 SATS (Year 6)</option>
+                <option value="ks3">Key Stage 3 (Year 7-9)</option>
+                <option value="gcse" selected>GCSE (Year 10-11)</option>
+                <option value="alevel">A-Levels (Year 12-13)</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-subject">Primary Subject</label>
+              <select id="calc-subject">
+                <option value="Mathematics" selected>Mathematics</option>
+                <option value="Triple Science">Triple Science</option>
+                <option value="English Language & Lit">English Language & Lit</option>
+                <option value="Verbal & Non-Verbal">Verbal & Non-Verbal Reasoning</option>
+                <option value="Computer Science">Computer Science & Coding</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-current">Current Working Grade</label>
+              <select id="calc-current">
+                <option value="Grade 4-5 (Working Pass)">Grade 4-5 (Working Pass)</option>
+                <option value="Grade 6 (Solid Foundation)" selected>Grade 6 (Solid Foundation)</option>
+                <option value="Grade 7 (High Competence)">Grade 7 (High Competence)</option>
+                <option value="Borderline 11+ Score">Borderline 11+ Score</option>
+              </select>
+            </div>
+
+            <div class="calc-field">
+              <label for="calc-target">Desired Target Grade</label>
+              <select id="calc-target">
+                <option value="Grade 9 (A* Top 3%)" selected>Grade 9 (A* Top 3%)</option>
+                <option value="Grade 8 (A*)">Grade 8 (A*)</option>
+                <option value="Top Grammar School Offer">Top Grammar School Offer</option>
+                <option value="A* at A-Level">A* at A-Level</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator-right">
+          <span class="target-badge">Predicted Potential</span>
+          <div class="target-grade-display" id="calc-target-display">Grade 9</div>
+          <p class="calc-roadmap-text" id="calc-roadmap-desc">
+            Targeting top 5% performance in Mathematics. Recommended plan: 2 hours weekly 1-to-1 masterclass + bi-weekly timed exam mocks.
+          </p>
+          <button class="btn btn-accent trial-modal-trigger" style="width: 100%;">
+            Confirm Roadmap With Advisor
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       POPULAR REVISION STUDY PACKS (SHOP PREVIEW)
+       ========================================================================== -->
+  <section class="section-py" id="featured-shop-section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Revision Store</span>
+        <h2 class="section-title">Authoritative Mock Papers & Revision Packs</h2>
+        <p class="section-subtitle">
+          Designed and written by former grammar school teachers and chief examiners. Instant digital downloads and premium physical spiral-bound workbooks.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Pack 1 -->
+        <div class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/study-packs.jpg" alt="11+ Mock Papers Bundle" loading="lazy">
+            <span class="product-badge-float">Best Seller</span>
+            <span class="product-type-pill">Physical + PDF</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">11 PLUS PREPARATION</div>
+            <h3 class="product-title">11+ Ultimate Exam Pack (GL & CEM)</h3>
+            <p class="product-desc">8 authentic mock exam papers (Maths, Verbal, Non-Verbal, English) with full worked parent mark schemes.</p>
+            <div class="product-meta-row">
+              <div class="product-price">
+                <span class="original">£39.99</span>
+                £29.99
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="hubCart.addItem('prod-1')">Add to Basket</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pack 2 -->
+        <div class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/study-packs.jpg" alt="GCSE Maths Higher Accelerator" loading="lazy">
+            <span class="product-badge-float">Popular</span>
+            <span class="product-type-pill">Workbook & Video</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">GCSE PREPARATION</div>
+            <h3 class="product-title">GCSE Mathematics Higher (Grade 8/9)</h3>
+            <p class="product-desc">Targeted high-difficulty algebraic reasoning, vector proofs, and trigonometry with video breakdowns.</p>
+            <div class="product-meta-row">
+              <div class="product-price">
+                <span class="original">£34.00</span>
+                £24.99
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="hubCart.addItem('prod-2')">Add to Basket</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pack 3 -->
+        <div class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/study-packs.jpg" alt="GCSE Triple Science Mastery" loading="lazy">
+            <span class="product-badge-float">Comprehensive</span>
+            <span class="product-type-pill">3 Spiral Books</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">GCSE PREPARATION</div>
+            <h3 class="product-title">GCSE Triple Science Mastery Pack</h3>
+            <p class="product-desc">Biology, Chemistry, and Physics core syllabus revision with 1200+ practice exam questions and mark schemes.</p>
+            <div class="product-meta-row">
+              <div class="product-price">
+                <span class="original">£48.00</span>
+                £34.99
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="hubCart.addItem('prod-3')">Add to Basket</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pack 4 -->
+        <div class="product-card">
+          <div class="product-thumb-wrap">
+            <img src="assets/images/study-packs.jpg" alt="A-Level Pure Mathematics Blueprint" loading="lazy">
+            <span class="product-badge-float">A* Targeted</span>
+            <span class="product-type-pill">Physical + Online</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">A-LEVEL PREPARATION</div>
+            <h3 class="product-title">A-Level Pure & Applied Mathematics</h3>
+            <p class="product-desc">Calculus, mechanics, and statistics mastery blueprint built for aspiring Russell Group and Oxbridge students.</p>
+            <div class="product-meta-row">
+              <div class="product-price">
+                <span class="original">£42.00</span>
+                £32.50
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="hubCart.addItem('prod-4')">Add to Basket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="shop.html" class="btn btn-secondary btn-lg">
+          View All Study Packs & Flashcards
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STUDENT & PARENT SUCCESS TESTIMONIALS
+       ========================================================================== -->
+  <section class="section-py" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Success Stories</span>
+        <h2 class="section-title">What London Parents & Students Say</h2>
+        <p class="section-subtitle">Real results from families who trusted The Students Hub for their high-stakes examinations.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            "My son Rohan was struggling with non-verbal reasoning timing. The tutors at The Students Hub broke down question archetypes into systematic steps. He secured his first-choice offer at Queen Elizabeth's School (QE Boys) with top marks!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SP</div>
+            <div class="author-info">
+              <h4>Sunita Patel</h4>
+              <p>Harrow • 11+ Parent</p>
+            </div>
+            <span class="admissions-pill">QE Boys Offer</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            "I went from a Grade 6 in GCSE Higher Maths mocks to achieving a Grade 9 in the real exams! The mock debriefs and error analytics made it impossible to repeat the same mistakes. Truly unmatched tuition quality."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">MK</div>
+            <div class="author-info">
+              <h4>Marcus King</h4>
+              <p>Year 11 GCSE Student</p>
+            </div>
+            <span class="admissions-pill">Grade 9 Achieved</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            "Both of my daughters have attended The Students Hub for A-Level Chemistry and Biology. The teachers are actual subject specialists who inspire genuine intellectual curiosity. Both gained entry into Imperial College Medicine."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">DR</div>
+            <div class="author-info">
+              <h4>Dr. David Ross</h4>
+              <p>A-Level Parent</p>
+            </div>
+            <span class="admissions-pill">Imperial Medicine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FINAL TRIAL CLASS CALL TO ACTION
+       ========================================================================== -->
+  <section class="section-py-lg" style="background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color: #ffffff; text-align: center; position: relative;">
+    <div class="container" style="max-width: 800px;">
+      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #93c5fd; margin-bottom: 1.25rem; display: inline-block;">Free Academic Consultation</span>
+      <h2 style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem;">
+        Give Your Child the Academic Edge They Deserve
+      </h2>
+      <p style="font-size: 1.15rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 2.5rem;">
+        Book a no-obligation 45-minute diagnostic assessment and trial lesson. Discover precise learning gaps, current exam rank, and a personalized 12-week improvement roadmap.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-primary btn-lg trial-modal-trigger">
+          Book Free Diagnostic Assessment
+        </button>
+        <a href="tel:+447424044851" class="btn btn-outline-white btn-lg">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          Speak with Academic Director
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About & Info -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title" style="color: #ffffff;">The Students <span style="color: #60a5fa;">Hub</span></span>
+              <span class="logo-tagline" style="color: #94a3b8;">Academic Tuition Academy</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">
+            The Students Hub is an accredited UK academic tuition centre dedicated to unlocking every student's highest potential in 11+ Grammar School entrance tests, GCSEs, and A-Levels.
+          </p>
+          <div class="footer-accreditations">
+            <span class="accred-badge">Ofsted Registered</span>
+            <span class="accred-badge">Enhanced DBS Certified</span>
+            <span class="accred-badge">AQA & Edexcel Partner</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Tuition Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#11plus">11+ Grammar Preparation</a>
+            <a href="courses.html#11plus">13+ Common Entrance</a>
+            <a href="courses.html#ks2-ks3">KS2 (Year 3 - 6)</a>
+            <a href="courses.html#ks2-ks3">KS3 (Year 7 - 9)</a>
+            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
+            <a href="courses.html#alevel">AS & A2 Level Tuition</a>
+            <a href="courses.html#coding">Coding & Robotics for Kids</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Resources & Shop -->
+        <div class="footer-col">
+          <h4>Study Resources</h4>
+          <div class="footer-links">
+            <a href="shop.html?cat=11plus">11+ Mock Exam Papers</a>
+            <a href="shop.html?cat=gcse">GCSE Maths Revision Packs</a>
+            <a href="shop.html?cat=gcse">Triple Science Workbooks</a>
+            <a href="shop.html?cat=alevel">A-Level Mathematics</a>
+            <a href="shop.html?cat=11plus">Vocabulary Flashcard Decks</a>
+            <a href="about.html">Our Teaching Methodology</a>
+            <a href="contact.html#faqs">Tuition FAQs</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Verified Contact -->
+        <div class="footer-col">
+          <h4>Contact & Centre Hours</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+            <div>
+              <strong>Admissions Hotline:</strong><br>
+              <a href="tel:+447424044851">+44 7424044851</a><br>
+              <a href="tel:07405860115">07405860115</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+            <div>
+              <strong>Centre Landline:</strong><br>
+              <a href="tel:02039577099">020 3957 7099</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <strong>Email Inquiries:</strong><br>
+              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div>
+              <strong>Official Website:</strong><br>
+              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 The Students Hub. All rights reserved. Registered Tuition Academy in England & Wales.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="contact.html">Safeguarding Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: BOOK FREE ASSESSMENT & TRIAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="trial-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Free Trial Lesson</h3>
+        <button class="modal-close-btn" id="trial-modal-close" aria-label="Close Modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+          Take the first step toward academic success. Enter your details below to schedule a free 45-minute baseline diagnostic and trial lesson with our senior tutor.
+        </p>
+        <form id="trial-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-parent-name">Parent / Guardian Name *</label>
+              <input type="text" id="trial-parent-name" class="form-control" required placeholder="e.g. Sarah Jenkins">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-student-name">Student Full Name *</label>
+              <input type="text" id="trial-student-name" class="form-control" required placeholder="e.g. Leo Jenkins">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-phone">Phone Number *</label>
+              <input type="tel" id="trial-phone" class="form-control" required placeholder="e.g. 07424 044851">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-email">Email Address *</label>
+              <input type="email" id="trial-email" class="form-control" required placeholder="e.g. sarah@example.co.uk">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-year">Student Year Group *</label>
+              <select id="trial-year" class="form-control" required>
+                <option value="">Select Year Group</option>
+                <option value="Year 3 / 4">Year 3 / 4 (KS2 Junior)</option>
+                <option value="Year 5 (11+ Candidate)">Year 5 (11+ Grammar Candidate)</option>
+                <option value="Year 6 (SATS / 11+)">Year 6 (SATS / 11+ Entrance)</option>
+                <option value="Year 7-9 (KS3)">Year 7 - 9 (Key Stage 3)</option>
+                <option value="Year 10-11 (GCSE)">Year 10 - 11 (GCSE / IGCSE)</option>
+                <option value="Year 12-13 (A-Level)">Year 12 - 13 (AS / A2 Level)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-subject">Primary Subject Focus *</label>
+              <select id="trial-subject" class="form-control" required>
+                <option value="">Select Focus</option>
+                <option value="11+ Grammar Suite (All 4 Subjects)">11+ Grammar Suite (All 4 Subjects)</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Triple Science (Bio/Chem/Phys)">Triple Science (Bio/Chem/Phys)</option>
+                <option value="English Language & Literature">English Language & Literature</option>
+                <option value="Coding & STEM for Kids">Coding & STEM for Kids</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="trial-notes">Preferred Lesson Mode & Notes</label>
+            <textarea id="trial-notes" class="form-control" rows="3" placeholder="In-person centre lesson, online, specific exam board (AQA/Edexcel), or key areas of concern..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Confirm Free Assessment Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CART SLIDE-OVER DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Study Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close Cart">✕</button>
+    </div>
+    <div class="cart-items-container" id="cart-drawer-items">
+      <!-- Injected via shop.js -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal-val">£0.00</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+        ⚡ Instant PDF download access provided immediately upon order completion.
+      </p>
+      <button class="btn btn-primary" id="cart-checkout-btn" style="width: 100%;">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       CHECKOUT MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkout-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Complete Study Pack Order</h3>
+        <button class="modal-close-btn" id="checkout-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="chk-name">Full Name *</label>
+              <input type="text" id="chk-name" class="form-control" required placeholder="Parent or Student name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="chk-email">Email Address (for PDF links) *</label>
+              <input type="email" id="chk-email" class="form-control" required placeholder="name@domain.co.uk">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="chk-delivery">Delivery Address (for Physical Packs)</label>
+            <input type="text" id="chk-delivery" class="form-control" placeholder="Street, City, Postcode">
+          </div>
+          <div style="background: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+            🔒 <strong>Simulated Secure Checkout:</strong> In demonstration mode, no payment card details are charged. Clicking submit confirms your order and unlocks instant simulated download links.
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Place Order & Get Resources
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING CALL & WHATSAPP SHORTCUTS
+       ========================================================================== -->
+  <div class="floating-actions">
+    <a href="https://wa.me/447424044851" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.24-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.29 3.8 2.52 1.09 2.52.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.21-.17-.46-.29z"/></svg>
+    </a>
+    <a href="tel:+447424044851" class="float-btn float-phone" aria-label="Call Admissions">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/shop.js"></script>
+  <script src="scripts/three-hero.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

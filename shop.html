@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Packs & Revision Resources Shop | The Students Hub</title>
+  <meta name="description" content="Official revision guides, 11+ mock exam papers, GCSE workbooks, and flashcard packs from The Students Hub. Instant digital PDF downloads and physical spiral books.">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .shop-hero {
+      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+      color: #ffffff;
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+    }
+    .shop-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .shop-hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .perks-strip {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.75rem 0;
+    }
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .perk-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      background: var(--brand-blue-light);
+      color: var(--brand-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .perk-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+    .perk-text h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-900);
+    }
+    .perk-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="top-contact-left">
+        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
+        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
+        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
+        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
+      </div>
+      <div class="top-contact-right">
+        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
+        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">The Students <span>Hub</span></span>
+          <span class="logo-tagline">Academic Tuition & Excellence</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Tuition & Courses</a>
+        <a href="shop.html" class="nav-link active">Shop & Study Packs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button-trigger" id="shop-header-cart-btn" aria-label="Open Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Shop Hero -->
+  <section class="shop-hero">
+    <div class="container">
+      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #93c5fd; margin-bottom: 1rem; display: inline-block;">
+        Exam Board Aligned Resources
+      </span>
+      <h1>Revision Packs & Mock Exam Papers</h1>
+      <p>
+        Accelerate exam readiness with comprehensive revision materials, authentic practice test papers, model answers, and examiners' secrets.
+      </p>
+    </div>
+  </section>
+
+  <!-- Perks Strip -->
+  <div class="perks-strip">
+    <div class="container perks-grid">
+      <div class="perk-item">
+        <div class="perk-icon">
+          <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+        </div>
+        <div class="perk-text">
+          <h5>Instant PDF Access</h5>
+          <p>Download immediately after checkout</p>
+        </div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-icon" style="background: var(--brand-gold-light); color: var(--brand-gold);">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="perk-text">
+          <h5>Examiner Mark Schemes</h5>
+          <p>Step-by-step parent scoring criteria</p>
+        </div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-icon" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-2 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div class="perk-text">
+          <h5>UK Fast Dispatch</h5>
+          <p>Royal Mail 1st Class printed copies</p>
+        </div>
+      </div>
+      <div class="perk-item">
+        <div class="perk-icon" style="background: #f5f3ff; color: #7c3aed;">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <div class="perk-text">
+          <h5>Proven 98% Success</h5>
+          <p>Helped 1500+ pupils pass target exams</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Catalogue Section -->
+  <section class="section-py" id="store-catalogue">
+    <div class="container">
+      <!-- Filters and Search Bar -->
+      <div class="shop-filters">
+        <div class="category-pills">
+          <button class="cat-pill active" data-cat="all">All Resources</button>
+          <button class="cat-pill" data-cat="11plus">11+ Grammar</button>
+          <button class="cat-pill" data-cat="gcse">GCSE (Year 10-11)</button>
+          <button class="cat-pill" data-cat="alevel">A-Levels</button>
+          <button class="cat-pill" data-cat="primary">Primary (KS2)</button>
+          <button class="cat-pill" data-cat="stem">Coding & STEM</button>
+        </div>
+
+        <div class="shop-search-box">
+          <span class="shop-search-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </span>
+          <input type="text" id="shop-search" class="shop-search-input" placeholder="Search resources by keyword or exam...">
+        </div>
+      </div>
+
+      <!-- Products Grid (injected and filtered via shop.js) -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered by scripts/shop.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title" style="color: #ffffff;">The Students <span style="color: #60a5fa;">Hub</span></span>
+              <span class="logo-tagline" style="color: #94a3b8;">Academic Tuition Academy</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
+            Providing premier revision packs, mock test papers, and tuition across Greater London and online nationwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#11plus">11+ Grammar Preparation</a>
+            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
+            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
+            <a href="courses.html#alevel">A-Level STEM Tuition</a>
+            <a href="courses.html#coding">Coding & Robotics Club</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="shop.html">Study Packs Shop</a>
+            <a href="about.html">About The Academy</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="contact.html#faqs">Tuition FAQs</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verified Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+            <div>
+              <a href="tel:+447424044851">+44 7424044851</a><br>
+              <a href="tel:07405860115">07405860115</a><br>
+              <a href="tel:02039577099">020 3957 7099</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div>
+              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Book Free Trial -->
+  <div class="modal-backdrop" id="trial-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Free Trial Lesson</h3>
+        <button class="modal-close-btn" id="trial-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="trial-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-parent-name">Parent Name *</label>
+              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-student-name">Student Name *</label>
+              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-phone">Phone Number *</label>
+              <input type="tel" id="trial-phone" class="form-control" required placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-email">Email Address *</label>
+              <input type="email" id="trial-email" class="form-control" required placeholder="Email Address">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Submit Trial Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Study Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items-container" id="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal-val">£0.00</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+        ⚡ Instant PDF download link provided upon checkout.
+      </p>
+      <button class="btn btn-primary" id="cart-checkout-btn" style="width: 100%;">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-backdrop" id="checkout-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Complete Study Pack Order</h3>
+        <button class="modal-close-btn" id="checkout-close-btn">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="chk-name">Full Name *</label>
+              <input type="text" id="chk-name" class="form-control" required placeholder="Parent or Student name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="chk-email">Email Address (for PDF links) *</label>
+              <input type="email" id="chk-email" class="form-control" required placeholder="name@domain.co.uk">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="chk-delivery">Delivery Address (for Physical Packs)</label>
+            <input type="text" id="chk-delivery" class="form-control" placeholder="Street, City, Postcode">
+          </div>
+          <div style="background: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+            🔒 <strong>Simulated Secure Checkout:</strong> In demonstration mode, no payment card details are charged. Clicking submit confirms your order and unlocks instant simulated download links.
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Place Order & Get Resources
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Call & WhatsApp -->
+  <div class="floating-actions">
+    <a href="https://wa.me/447424044851" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.24-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.29 3.8 2.52 1.09 2.52.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.21-.17-.46-.29z"/></svg>
+    </a>
+    <a href="tel:+447424044851" class="float-btn float-phone" aria-label="Call Admissions">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/shop.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

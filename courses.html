@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Tuition & STEM Courses | The Students Hub</title>
+  <meta name="description" content="Explore our full curriculum of expert tuition courses: 11+ Grammar Exam Preparation, KS2/KS3 Foundations, GCSE Grade 9 Acceleration, A-Levels, and Coding for Kids.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/hero-3d.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+      color: #ffffff;
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .page-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .page-hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .course-detail-section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .course-detail-section:nth-child(even) {
+      background: var(--bg-surface);
+    }
+    .course-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .curriculum-module-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem 0;
+    }
+    .curriculum-module-item {
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      border-left: 4px solid var(--brand-blue);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .curriculum-module-item h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-900);
+      margin-bottom: 0.2rem;
+    }
+    .curriculum-module-item p {
+      font-size: 0.825rem;
+      color: var(--text-secondary);
+    }
+    .pricing-tier-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .pricing-tier-card.featured {
+      border-color: var(--brand-blue);
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+    }
+    .pricing-featured-tag {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: var(--brand-blue);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.85rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="top-contact-left">
+        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
+        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
+        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
+        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
+      </div>
+      <div class="top-contact-right">
+        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
+        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">The Students <span>Hub</span></span>
+          <span class="logo-tagline">Academic Tuition & Excellence</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link active">Tuition & Courses</a>
+        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button-trigger" aria-label="Open Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #93c5fd; margin-bottom: 1rem; display: inline-block;">
+        British Curriculum Specialists
+      </span>
+      <h1>Comprehensive Academic Programmes</h1>
+      <p>
+        From early foundational literacy and maths to high-stakes 11+ grammar entrance, GCSE Grade 9 mastery, and A-Level STEM subjects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Navigation Anchor Strip -->
+  <div style="background: #ffffff; border-bottom: 1px solid var(--border-light); position: sticky; top: 78px; z-index: 100;">
+    <div class="container" style="display: flex; gap: 1rem; overflow-x: auto; padding-top: 0.75rem; padding-bottom: 0.75rem;">
+      <a href="#11plus" class="btn btn-outline btn-sm">11+ & 13+ Grammar</a>
+      <a href="#ks2-ks3" class="btn btn-outline btn-sm">KS2 & KS3 Foundation</a>
+      <a href="#gcse" class="btn btn-outline btn-sm">GCSE & IGCSE</a>
+      <a href="#alevel" class="btn btn-outline btn-sm">A-Levels / AS & A2</a>
+      <a href="#coding" class="btn btn-outline btn-sm">Coding & STEM for Kids</a>
+      <a href="#timetable" class="btn btn-outline btn-sm">Timetable & Fees</a>
+    </div>
+  </div>
+
+  <!-- Course 1: 11+ & 13+ Grammar School Entrance -->
+  <section class="course-detail-section" id="11plus">
+    <div class="container">
+      <div class="course-detail-grid">
+        <div>
+          <span class="section-badge">Years 4, 5 & 6</span>
+          <h2 class="section-title">11 Plus & 13 Plus Grammar School Preparation</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            London and surrounding counties feature some of the most competitive grammar schools in the UK (including QE Boys, Henrietta Barnett, St. Olave's, Tiffin, Wilson's, and Latymer). Our curriculum equips children with rigorous speed, accuracy, and examination stamina.
+          </p>
+
+          <div class="curriculum-module-list">
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Mathematics & Mental Agility</h5>
+                <p>Multi-step arithmetic, fractions, ratios, algebraic equations, geometry and speed tricks.</p>
+              </div>
+              <span class="admissions-pill">GL & CEM</span>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Verbal & Non-Verbal Reasoning</h5>
+                <p>Code breaking, word analogies, 2D/3D spatial rotation, folded shapes, and pattern sequences.</p>
+              </div>
+              <span class="admissions-pill">Exam Drills</span>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>English Comprehension & Creative Writing</h5>
+                <p>19th-century prose analysis, inference skills, evocative descriptive writing, and advanced vocabulary.</p>
+              </div>
+              <span class="admissions-pill">Independent Schools</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary trial-modal-trigger">Book 11+ Assessment Test</button>
+        </div>
+
+        <div class="pricing-tier-card featured">
+          <span class="pricing-featured-tag">Most Popular</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">11+ Grammar Intensive Cohort</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Maximum 6 pupils per class with weekly past paper mock testing.</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+            £24 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <li>✓ 4 hours tuition weekly (Maths, English, VR & NVR)</li>
+            <li>✓ Free access to The Students Hub 11+ Mock Pack</li>
+            <li>✓ Bi-weekly timed exam simulations under authentic conditions</li>
+            <li>✓ Detailed parent progress portal with question-by-question analytics</li>
+          </ul>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%;">Enrol for 11+ Class</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course 2: Key Stage 2 & 3 -->
+  <section class="course-detail-section" id="ks2-ks3">
+    <div class="container">
+      <div class="course-detail-grid">
+        <div style="order: 2;">
+          <span class="section-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Years 3 to 9</span>
+          <h2 class="section-title">Key Stage 2 & 3 Foundation Mastery</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            A confident secondary school transition depends on deep arithmetic fluency and confident written English. Our Key Stage 2 & 3 classes transform hesitant students into enthusiastic, curious problem solvers.
+          </p>
+
+          <div class="curriculum-module-list">
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Year 6 SATS Targeted Booster</h5>
+                <p>Arithmetic paper speed drills, multi-mark reasoning questions, and reading comprehension under time pressure.</p>
+              </div>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Year 7 - 9 Pre-GCSE Jumpstart</h5>
+                <p>Early mastery of linear equations, scientific inquiry, biology cells, chemical reactions, and essay structuring.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary trial-modal-trigger">Schedule Diagnostic Class</button>
+        </div>
+
+        <div class="pricing-tier-card" style="order: 1;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">KS2 / KS3 Foundation Plan</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Ideal for building solid core subject foundations and SATS excellence.</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+            £20 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <li>✓ Core Mathematics & English mastery</li>
+            <li>✓ Weekly homework review and feedback</li>
+            <li>✓ Confidence-building active recall exercises</li>
+            <li>✓ In-person at London centre or live online</li>
+          </ul>
+          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%;">Enrol Child</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course 3: GCSE & IGCSE -->
+  <section class="course-detail-section" id="gcse">
+    <div class="container">
+      <div class="course-detail-grid">
+        <div>
+          <span class="section-badge" style="background: #fdf2f8; color: #db2777;">Years 10 & 11</span>
+          <h2 class="section-title">GCSE & IGCSE Grade 9 Accelerator</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            The difference between a Grade 6 and a Grade 9 is mark-scheme awareness and precision. We dissect exam question commands (Explain, Evaluate, Calculate, Prove) so students never drop avoidable marks.
+          </p>
+
+          <div class="curriculum-module-list">
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Higher Mathematics (Edexcel / AQA / OCR)</h5>
+                <p>Circle theorems, algebraic proof, quadratic inequalities, 3D trigonometry, vector vectors, and graphs.</p>
+              </div>
+              <span class="admissions-pill">Grade 9 Focus</span>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Triple & Combined Science (Bio, Chem, Phys)</h5>
+                <p>Required practicals, electrolysis, quantitative chemistry, circuits, radiation, genetics, and bioenergetics.</p>
+              </div>
+              <span class="admissions-pill">All Boards</span>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>English Language & English Literature</h5>
+                <p>Macbeth, An Inspector Calls, Jekyll & Hyde, Power and Conflict poetry, and creative persuasive essays.</p>
+              </div>
+              <span class="admissions-pill">Model Essays</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary trial-modal-trigger">Book GCSE Diagnostic Assessment</button>
+        </div>
+
+        <div class="pricing-tier-card featured">
+          <span class="pricing-featured-tag">Grade 9 Fast-Track</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">GCSE Exam Masterclass</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Targeted high-tier past paper drilling and mark scheme mastery.</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+            £28 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <li>✓ Full exam board alignment (AQA, Edexcel, OCR)</li>
+            <li>✓ 10-year past paper archive with worked solutions</li>
+            <li>✓ Monthly full mock exams with predicted grade report</li>
+            <li>✓ 1-to-1 option available at £45/hour</li>
+          </ul>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%;">Enrol for GCSE Prep</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course 4: AS & A2 Levels -->
+  <section class="course-detail-section" id="alevel">
+    <div class="container">
+      <div class="course-detail-grid">
+        <div style="order: 2;">
+          <span class="section-badge" style="background: #f5f3ff; color: #7c3aed;">Years 12 & 13</span>
+          <h2 class="section-title">AS & A-Level Mastery Track</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            Taught by Oxford, Cambridge, and Imperial alumni with extensive examination insight. Essential for students aiming for Medicine, Dentistry, Engineering, Economics, and top Russell Group university offers.
+          </p>
+
+          <div class="curriculum-module-list">
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Mathematics & Further Maths</h5>
+                <p>Calculus, integration by parts, complex numbers, matrices, differential equations, and mechanics.</p>
+              </div>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>A-Level Chemistry & Biology</h5>
+                <p>Organic mechanisms, transition metals, thermodynamics, cellular respiration, genetics, and statistical testing.</p>
+              </div>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>A-Level Physics</h5>
+                <p>Quantum phenomena, gravitational fields, circular motion, nuclear physics, and astrophysics.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary trial-modal-trigger">Schedule A-Level Consultation</button>
+        </div>
+
+        <div class="pricing-tier-card" style="order: 1;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">A-Level Specialist Cohort</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Intensive small seminar format designed for A and A* attainment.</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+            £35 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <li>✓ Led by subject postgraduates and senior examiners</li>
+            <li>✓ UCAS & Personal Statement mentoring included</li>
+            <li>✓ Interview preparation for Oxbridge / Imperial / UCL</li>
+            <li>✓ 1-to-1 elite tuition available at £55/hour</li>
+          </ul>
+          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%;">Enrol A-Level</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course 5: Coding & Robotics for Kids -->
+  <section class="course-detail-section" id="coding">
+    <div class="container">
+      <div class="course-detail-grid">
+        <div>
+          <span class="section-badge" style="background: #ecfeff; color: #0891b2;">Ages 8 to 16 • STEM</span>
+          <h2 class="section-title">Coding, Robotics & Artificial Intelligence for Kids</h2>
+          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+            Empower your child with future-proof computer science skills. From block-based Scratch game design to authentic Python programming, algorithms, and micro:bit robotics projects.
+          </p>
+
+          <div class="curriculum-module-list">
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Scratch & Junior Game Development (Ages 8-11)</h5>
+                <p>Computational thinking, loops, variables, conditional logic, animations, and arcade game creation.</p>
+              </div>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Python Programming & Algorithms (Ages 11-16)</h5>
+                <p>Syntax fundamentals, data structures, Pygame graphics, text games, and GCSE Computer Science support.</p>
+              </div>
+            </div>
+            <div class="curriculum-module-item">
+              <div>
+                <h5>Robotics with BBC micro:bit & Arduino</h5>
+                <p>Sensors, motors, automated circuits, and basic robotics engineering principles.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary trial-modal-trigger">Book Free Coding Trial</button>
+        </div>
+
+        <div class="pricing-tier-card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">Junior Coding Club</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Hands-on interactive lab with code portfolio creation.</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+            £22 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
+          </div>
+          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+            <li>✓ Hands-on project portfolio to showcase at school</li>
+            <li>✓ Hardware & robotics kits provided during centre sessions</li>
+            <li>✓ Beginner, Intermediate, and Advanced tracks</li>
+            <li>✓ Certificate of completion upon milestone projects</li>
+          </ul>
+          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%;">Join Coding Club</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule & Fees Table -->
+  <section class="section-py" id="timetable" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Centre Schedule</span>
+        <h2 class="section-title">Weekly Tuition Schedule & Times</h2>
+        <p class="section-subtitle">Flexible weekday evening and weekend sessions designed to fit around school schedules.</p>
+      </div>
+
+      <div style="background: #ffffff; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-md);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: var(--primary-900); color: #ffffff;">
+              <th style="padding: 1.25rem 1.5rem; font-family: var(--font-heading);">Day</th>
+              <th style="padding: 1.25rem 1.5rem; font-family: var(--font-heading);">Times</th>
+              <th style="padding: 1.25rem 1.5rem; font-family: var(--font-heading);">Programmes Running</th>
+              <th style="padding: 1.25rem 1.5rem; font-family: var(--font-heading);">Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Monday – Friday</td>
+              <td style="padding: 1.25rem 1.5rem; color: var(--text-muted);">4:30 PM – 6:30 PM</td>
+              <td style="padding: 1.25rem 1.5rem;">KS2 & KS3 Foundation Booster (Maths & English)</td>
+              <td style="padding: 1.25rem 1.5rem;"><span class="badge-tag">In-Centre & Online</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: var(--bg-page);">
+              <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Monday – Friday</td>
+              <td style="padding: 1.25rem 1.5rem; color: var(--text-muted);">6:45 PM – 8:45 PM</td>
+              <td style="padding: 1.25rem 1.5rem;">GCSE & A-Level Higher Masterclasses (Maths & Sciences)</td>
+              <td style="padding: 1.25rem 1.5rem;"><span class="badge-tag">In-Centre & Online</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Saturday</td>
+              <td style="padding: 1.25rem 1.5rem; color: var(--text-muted);">9:00 AM – 1:30 PM</td>
+              <td style="padding: 1.25rem 1.5rem;">11+ Grammar Intensive (Maths, VR, NVR & English)</td>
+              <td style="padding: 1.25rem 1.5rem;"><span class="badge-tag" style="background: rgba(245,158,11,0.2); color: #b45309; border-color: #fcd34d;">High Demand</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: var(--bg-page);">
+              <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Saturday</td>
+              <td style="padding: 1.25rem 1.5rem; color: var(--text-muted);">2:00 PM – 5:00 PM</td>
+              <td style="padding: 1.25rem 1.5rem;">Junior Coding Club & GCSE Past-Paper Clinic</td>
+              <td style="padding: 1.25rem 1.5rem;"><span class="badge-tag">In-Centre</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Sunday</td>
+              <td style="padding: 1.25rem 1.5rem; color: var(--text-muted);">10:00 AM – 3:00 PM</td>
+              <td style="padding: 1.25rem 1.5rem;">Full Mock Exam Testing Hall & 1-to-1 Masterclasses</td>
+              <td style="padding: 1.25rem 1.5rem;"><span class="badge-tag">Exam Conditions</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title" style="color: #ffffff;">The Students <span style="color: #60a5fa;">Hub</span></span>
+              <span class="logo-tagline" style="color: #94a3b8;">Academic Tuition Academy</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">
+            Leading tuition provider in Greater London for 11+, Key Stage 2 & 3, GCSE and A-Level examinations.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#11plus">11+ Grammar Preparation</a>
+            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
+            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
+            <a href="courses.html#alevel">A-Level STEM Tuition</a>
+            <a href="courses.html#coding">Coding & Robotics Club</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="shop.html">Study Packs Shop</a>
+            <a href="about.html">About The Academy</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="contact.html#faqs">Tuition FAQs</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verified Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+            <div>
+              <a href="tel:+447424044851">+44 7424044851</a><br>
+              <a href="tel:07405860115">07405860115</a><br>
+              <a href="tel:02039577099">020 3957 7099</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div>
+              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Book Free Trial -->
+  <div class="modal-backdrop" id="trial-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Free Trial Lesson</h3>
+        <button class="modal-close-btn" id="trial-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="trial-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-parent-name">Parent Name *</label>
+              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-student-name">Student Name *</label>
+              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-phone">Phone Number *</label>
+              <input type="tel" id="trial-phone" class="form-control" required placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-email">Email Address *</label>
+              <input type="email" id="trial-email" class="form-control" required placeholder="Email Address">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="trial-subject">Course Level & Subject *</label>
+            <select id="trial-subject" class="form-control" required>
+              <option value="11+ Grammar Exam Prep">11+ & 13+ Grammar Exam Prep</option>
+              <option value="KS2/KS3 Maths & English">KS2/KS3 Maths & English</option>
+              <option value="GCSE Mathematics Higher">GCSE Mathematics Higher</option>
+              <option value="GCSE Triple Science">GCSE Triple Science</option>
+              <option value="A-Level Mathematics / Further">A-Level Mathematics / Further</option>
+              <option value="A-Level Chemistry / Biology">A-Level Chemistry / Biology</option>
+              <option value="Coding & STEM for Kids">Coding & STEM for Kids</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
+            Submit Trial Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Your Study Basket</h3>
+      <button class="cart-close-btn" id="cart-close-btn">✕</button>
+    </div>
+    <div class="cart-items-container" id="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cart-subtotal-val">£0.00</span>
+      </div>
+      <a href="shop.html" class="btn btn-primary" style="width: 100%;">View Shop & Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="scripts/shop.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

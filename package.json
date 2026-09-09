@@ -1,0 +1,23 @@
+{
+  "name": "the-students-hub",
+  "version": "1.0.0",
+  "description": "Premier British Academic Tuition Academy Website with Interactive 3D WebGL Hero",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve -l 3000 .",
+    "start": "npx -y serve -l 3000 .",
+    "serve": "python -m http.server 3000"
+  },
+  "keywords": [
+    "tuition",
+    "academy",
+    "11-plus",
+    "gcse",
+    "a-levels",
+    "threejs",
+    "webgl",
+    "education"
+  ],
+  "author": "The Students Hub",
+  "license": "ISC"
+}
