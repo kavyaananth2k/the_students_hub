@@ -3,929 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Tuition & STEM Courses | The Students Hub</title>
-  <meta name="description" content="Explore our full curriculum of expert tuition courses: 11+ Grammar Exam Preparation, KS2/KS3 Foundations, GCSE Grade 9 Acceleration, A-Levels, and Coding for Kids.">
+  <title>Academic Tuition | The Students Hub</title>
+  <meta name="description" content="Academic tuition programmes from Key Stage 2 to A-Level, plus coding, robotics, AI and STEM enrichment courses provided by The Students Hub.">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/hero-3d.css">
   <style>
-    .page-hero {
-      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
-      color: #ffffff;
-      padding: 4.5rem 0 3.5rem 0;
-      text-align: center;
-      position: relative;
-    }
-    .page-hero h1 {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .page-hero p {
-      font-size: 1.15rem;
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-    .course-detail-section {
-      padding: 4.5rem 0;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .course-detail-section:nth-child(even) {
-      background: var(--bg-surface);
-    }
-    .course-detail-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-    .curriculum-module-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 1.5rem 0 2rem 0;
-    }
-    .curriculum-module-item {
-      background: var(--bg-alt);
-      border-radius: var(--radius-md);
-      padding: 1rem 1.25rem;
-      border-left: 4px solid var(--brand-blue);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .curriculum-module-item h5 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--primary-900);
-      margin-bottom: 0.2rem;
-    }
-    .curriculum-module-item p {
-      font-size: 0.825rem;
-      color: var(--text-secondary);
-    }
-    .pricing-tier-card {
-      background: #ffffff;
-      border: 1.5px solid var(--border-light);
-      border-radius: var(--radius-xl);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-    .pricing-tier-card.featured {
-      border-color: var(--brand-blue);
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
-    }
-    .pricing-featured-tag {
-      position: absolute;
-      top: -12px;
-      right: 24px;
-      background: var(--brand-blue);
-      color: #ffffff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 0.25rem 0.85rem;
-      border-radius: var(--radius-full);
-      text-transform: uppercase;
-    }
+    .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
+    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.5rem); margin-bottom:1rem; }
+    .page-hero p { max-width:760px; margin:0 auto; color:#dbeafe; line-height:1.7; }
+    .section { padding:4rem 0; }
+    .nav-strip { background:#fff; border-bottom:1px solid var(--border-light); position: sticky; top: 78px; z-index: 10; }
+    .nav-strip-inner { display:flex; flex-wrap:wrap; gap:0.75rem; padding:0.75rem 0; }
+    .chip { display:inline-block; padding:0.55rem 0.9rem; border-radius:999px; border:1px solid var(--border-light); background:#fff; color:var(--primary-900); font-size:0.85rem; font-weight:700; }
+    .feature-grid, .subject-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
+    .card { background:#fff; border:1px solid var(--border-light); border-radius:var(--radius-lg); padding:1.8rem; box-shadow: var(--shadow-sm); }
+    .card h3 { color: var(--primary-900); margin-bottom:0.6rem; }
+    .card p, .card li { color: var(--text-secondary); line-height:1.7; }
+    .card ul { margin:0; padding-left:1.1rem; }
+    .cta-panel { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); border-radius: var(--radius-xl); padding:2.5rem; text-align:center; color:#fff; }
+    .cta-panel p { max-width:700px; margin:0 auto 1.5rem; color:#dbeafe; }
   </style>
 </head>
 <body>
-
-  <!-- Top Contact Bar -->
   <div class="top-contact-bar">
     <div class="container">
-      <div class="top-contact-left">
-        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
-        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
-        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
-        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
-      </div>
-      <div class="top-contact-right">
-        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
-        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
-      </div>
+      <div class="top-contact-left"><span class="badge-tag">Ofsted Aligned &amp; DBS Checked</span><a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a><a href="tel:07405860115" class="top-contact-item">07405860115</a><a href="tel:02039577099" class="top-contact-item">020 3957 7099</a></div>
+      <div class="top-contact-right"><a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a><a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a></div>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo" id="site-logo">
-        <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="brand-logo-img">
-      </a>
-
-      <nav class="nav-menu">
+      <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
+      <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="courses.html" class="nav-link active">Tuition & Courses</a>
-        <a href="guidance.html" class="nav-link">Guidance & Grammar Schools</a>
-        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="courses.html" class="nav-link active">Academic Tuition</a>
+        <a href="guidance.html" class="nav-link">Academic Guidance</a>
+        <a href="contact.html" class="nav-link">School Partnership</a>
+        <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
-
       <div class="header-actions">
-        <button class="cart-button-trigger" aria-label="Open Cart">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          <span class="cart-badge" style="display: none;">0</span>
-        </button>
         <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
-        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
   </header>
 
-  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #93c5fd; margin-bottom: 1rem; display: inline-block;">
-        British Curriculum Specialists
-      </span>
-      <h1>Comprehensive Academic Programmes</h1>
-      <p>
-        From early foundational literacy and maths to high-stakes 11+ grammar entrance, GCSE Grade 9 mastery, and A-Level STEM subjects.
-      </p>
+      <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">British Curriculum Specialists</span>
+      <h1>Academic Tuition Programmes</h1>
+      <p>From early foundational learning to GCSE, IGCSE, A-Level study and coding/STEM enrichment, our approach is designed to help students become confident, capable and fully prepared for future success.</p>
     </div>
   </section>
 
-  <!-- Navigation Anchor Strip -->
-  <div style="background: #ffffff; border-bottom: 1px solid var(--border-light); position: sticky; top: 78px; z-index: 100;">
-    <div class="container" style="display: flex; gap: 1rem; overflow-x: auto; padding-top: 0.75rem; padding-bottom: 0.75rem;">
-      <a href="#11plus" class="btn btn-outline btn-sm">11+ & 13+ Grammar</a>
-      <a href="#ks2-ks3" class="btn btn-outline btn-sm">KS2 & KS3 Foundation</a>
-      <a href="#gcse" class="btn btn-outline btn-sm">GCSE & IGCSE</a>
-      <a href="#alevel" class="btn btn-outline btn-sm">A-Levels / AS & A2</a>
-      <a href="#coding" class="btn btn-outline btn-sm">Coding & STEM for Kids</a>
-      <a href="#timetable" class="btn btn-outline btn-sm">Timetable & Fees</a>
+  <div class="nav-strip">
+    <div class="container nav-strip-inner">
+      <a href="#ks2" class="chip">Key Stage 2</a>
+      <a href="#ks3" class="chip">Key Stage 3</a>
+      <a href="#gcse" class="chip">GCSE &amp; IGCSE</a>
+      <a href="#alevel" class="chip">AS &amp; A2 Levels</a>
+      <a href="#stem" class="chip">Coding &amp; STEM</a>
     </div>
   </div>
 
-  <!-- Course 1: 11+ & 13+ Grammar School Entrance -->
-  <section class="course-detail-section" id="11plus">
+  <section class="section" id="ks2">
     <div class="container">
-      <div class="course-detail-grid">
-        <div>
-          <span class="section-badge">Years 4, 5 & 6</span>
-          <h2 class="section-title">11 Plus & 13 Plus Grammar School Preparation</h2>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            London and surrounding counties feature some of the most competitive grammar schools in the UK (including QE Boys, Henrietta Barnett, St. Olave's, Tiffin, Wilson's, and Latymer). Our curriculum equips children with rigorous speed, accuracy, and examination stamina.
-          </p>
-
-          <div class="curriculum-module-list">
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Mathematics & Mental Agility</h5>
-                <p>Multi-step arithmetic, fractions, ratios, algebraic equations, geometry and speed tricks.</p>
-              </div>
-              <span class="admissions-pill">GL & CEM</span>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Verbal & Non-Verbal Reasoning</h5>
-                <p>Code breaking, word analogies, 2D/3D spatial rotation, folded shapes, and pattern sequences.</p>
-              </div>
-              <span class="admissions-pill">Exam Drills</span>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>English Comprehension & Creative Writing</h5>
-                <p>19th-century prose analysis, inference skills, evocative descriptive writing, and advanced vocabulary.</p>
-              </div>
-              <span class="admissions-pill">Independent Schools</span>
-            </div>
-          </div>
-
-          <button class="btn btn-primary trial-modal-trigger">Book 11+ Assessment Test</button>
-        </div>
-
-        <div class="pricing-tier-card featured">
-          <span class="pricing-featured-tag">Most Popular</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">11+ Grammar Intensive Cohort</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Maximum 6 pupils per class with weekly past paper mock testing.</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-            £24 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
-          </div>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
-            <li>✓ 4 hours tuition weekly (Maths, English, VR & NVR)</li>
-            <li>✓ Free access to The Students Hub 11+ Mock Pack</li>
-            <li>✓ Bi-weekly timed exam simulations under authentic conditions</li>
-            <li>✓ Detailed parent progress portal with question-by-question analytics</li>
-          </ul>
-          <button class="btn btn-primary trial-modal-trigger" style="width: 100%;">Enrol for 11+ Class</button>
-        </div>
+      <div class="section-header">
+        <span class="section-badge">Key Stage 2</span>
+        <h2 class="section-title">Years 3 to 6</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card"><h3>Year 3</h3><ul><li>Maths: place value, fractions, measurement, geometry and statistics.</li><li>English: comprehension, inference, narrative and grammar.</li></ul></div>
+        <div class="card"><h3>Year 4</h3><ul><li>Maths: 4-digit operations, fractions, decimals, area and perimeter.</li><li>English: persuasive writing, diary entries, grammar and speaking.</li></ul></div>
+        <div class="card"><h3>Year 5</h3><ul><li>Maths: multi-step arithmetic, long multiplication and division, geometry and volume.</li><li>English: advanced comprehension, figurative language and formal presentations.</li></ul></div>
+        <div class="card"><h3>Year 6</h3><ul><li>Maths: ratio, algebra, geometry, area, perimeter and statistics.</li><li>English: balanced arguments, narrative techniques, formal reporting and debate.</li></ul></div>
       </div>
     </div>
   </section>
 
-  <!-- Course 2: Key Stage 2 & 3 -->
-  <section class="course-detail-section" id="ks2-ks3">
+  <section class="section" id="ks3" style="background: var(--bg-alt);">
     <div class="container">
-      <div class="course-detail-grid">
-        <div style="order: 2;">
-          <span class="section-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Years 3 to 9</span>
-          <h2 class="section-title">Key Stage 2 & 3 Foundation Mastery</h2>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            A confident secondary school transition depends on deep arithmetic fluency and confident written English. Our Key Stage 2 & 3 classes transform hesitant students into enthusiastic, curious problem solvers.
-          </p>
-
-          <div class="curriculum-module-list">
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Year 6 SATS Targeted Booster</h5>
-                <p>Arithmetic paper speed drills, multi-mark reasoning questions, and reading comprehension under time pressure.</p>
-              </div>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Year 7 - 9 Pre-GCSE Jumpstart</h5>
-                <p>Early mastery of linear equations, scientific inquiry, biology cells, chemical reactions, and essay structuring.</p>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-primary trial-modal-trigger">Schedule Diagnostic Class</button>
-        </div>
-
-        <div class="pricing-tier-card" style="order: 1;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">KS2 / KS3 Foundation Plan</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Ideal for building solid core subject foundations and SATS excellence.</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-            £20 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
-          </div>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
-            <li>✓ Core Mathematics & English mastery</li>
-            <li>✓ Weekly homework review and feedback</li>
-            <li>✓ Confidence-building active recall exercises</li>
-            <li>✓ In-person at London centre or live online</li>
-          </ul>
-          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%;">Enrol Child</button>
-        </div>
+      <div class="section-header">
+        <span class="section-badge">Key Stage 3</span>
+        <h2 class="section-title">Years 7 to 9</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card"><h3>Year 7</h3><ul><li>Maths: number, algebra, geometry, data handling and ratio basics.</li><li>Science: biology, chemistry and physics foundations.</li><li>Computer Science: hardware, software, algorithms and e-safety.</li></ul></div>
+        <div class="card"><h3>Year 8</h3><ul><li>Maths: standard form, equations, sequences and statistics.</li><li>Science: ecosystems, periodic table, electricity and renewable energy.</li><li>Computer Science: Python, networks, cybersecurity and spreadsheets.</li></ul></div>
+        <div class="card"><h3>Year 9</h3><ul><li>Maths: indices, surds, proportion, quadratics and graphs.</li><li>Science: inheritance, atomic structure and particle model themes.</li><li>Computer Science: advanced Python, logic gates, data representation and GCSE preparation.</li></ul></div>
       </div>
     </div>
   </section>
 
-  <!-- Course 3: GCSE & IGCSE -->
-  <section class="course-detail-section" id="gcse">
+  <section class="section" id="gcse">
     <div class="container">
-      <div class="course-detail-grid">
-        <div>
-          <span class="section-badge" style="background: #fdf2f8; color: #db2777;">Years 10 & 11</span>
-          <h2 class="section-title">GCSE & IGCSE Grade 9 Accelerator</h2>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            The difference between a Grade 6 and a Grade 9 is mark-scheme awareness and precision. We dissect exam question commands (Explain, Evaluate, Calculate, Prove) so students never drop avoidable marks.
-          </p>
-
-          <div class="curriculum-module-list">
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Higher Mathematics (Edexcel / AQA / OCR)</h5>
-                <p>Circle theorems, algebraic proof, quadratic inequalities, 3D trigonometry, vector vectors, and graphs.</p>
-              </div>
-              <span class="admissions-pill">Grade 9 Focus</span>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Triple & Combined Science (Bio, Chem, Phys)</h5>
-                <p>Required practicals, electrolysis, quantitative chemistry, circuits, radiation, genetics, and bioenergetics.</p>
-              </div>
-              <span class="admissions-pill">All Boards</span>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>English Language & English Literature</h5>
-                <p>Macbeth, An Inspector Calls, Jekyll & Hyde, Power and Conflict poetry, and creative persuasive essays.</p>
-              </div>
-              <span class="admissions-pill">Model Essays</span>
-            </div>
-          </div>
-
-          <button class="btn btn-primary trial-modal-trigger">Book GCSE Diagnostic Assessment</button>
-        </div>
-
-        <div class="pricing-tier-card featured">
-          <span class="pricing-featured-tag">Grade 9 Fast-Track</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">GCSE Exam Masterclass</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Targeted high-tier past paper drilling and mark scheme mastery.</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-            £28 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
-          </div>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
-            <li>✓ Full exam board alignment (AQA, Edexcel, OCR)</li>
-            <li>✓ 10-year past paper archive with worked solutions</li>
-            <li>✓ Monthly full mock exams with predicted grade report</li>
-            <li>✓ 1-to-1 option available at £45/hour</li>
-          </ul>
-          <button class="btn btn-primary trial-modal-trigger" style="width: 100%;">Enrol for GCSE Prep</button>
-        </div>
+      <div class="section-header">
+        <span class="section-badge">GCSE &amp; IGCSE</span>
+        <h2 class="section-title">Years 10 and 11</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card"><h3>Maths</h3><p>Fractions, decimals, percentages, algebra, quadratics, trigonometry, circle theorems and statistics.</p></div>
+        <div class="card"><h3>English</h3><p>Analytical writing, literature responses and exam-style practice across language and literature.</p></div>
+        <div class="card"><h3>Science</h3><p>Biology, chemistry and physics support with required practicals, quantitative chemistry and conceptual understanding.</p></div>
+        <div class="card"><h3>Computer Science</h3><p>Programming, algorithms, data representation and computing problem-solving to support exam confidence.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Course 4: AS & A2 Levels -->
-  <section class="course-detail-section" id="alevel">
+  <section class="section" id="alevel" style="background: var(--bg-alt);">
     <div class="container">
-      <div class="course-detail-grid">
-        <div style="order: 2;">
-          <span class="section-badge" style="background: #f5f3ff; color: #7c3aed;">Years 12 & 13</span>
-          <h2 class="section-title">AS & A-Level Mastery Track</h2>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            Taught by Oxford, Cambridge, and Imperial alumni with extensive examination insight. Essential for students aiming for Medicine, Dentistry, Engineering, Economics, and top Russell Group university offers.
-          </p>
-
-          <div class="curriculum-module-list">
-            <div class="curriculum-module-item">
-              <div>
-                <h5>Mathematics & Further Maths</h5>
-                <p>Calculus, integration by parts, complex numbers, matrices, differential equations, and mechanics.</p>
-              </div>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>A-Level Chemistry & Biology</h5>
-                <p>Organic mechanisms, transition metals, thermodynamics, cellular respiration, genetics, and statistical testing.</p>
-              </div>
-            </div>
-            <div class="curriculum-module-item">
-              <div>
-                <h5>A-Level Physics</h5>
-                <p>Quantum phenomena, gravitational fields, circular motion, nuclear physics, and astrophysics.</p>
-              </div>
-            </div>
-          </div>
-
-          <button class="btn btn-primary trial-modal-trigger">Schedule A-Level Consultation</button>
-        </div>
-
-        <div class="pricing-tier-card" style="order: 1;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--primary-900); margin-bottom: 0.5rem;">A-Level Specialist Cohort</h3>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;">Intensive small seminar format designed for A and A* attainment.</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-            £35 <span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);">/ hour (Small Group)</span>
-          </div>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
-            <li>✓ Led by subject postgraduates and senior examiners</li>
-            <li>✓ UCAS & Personal Statement mentoring included</li>
-            <li>✓ Interview preparation for Oxbridge / Imperial / UCL</li>
-            <li>✓ 1-to-1 elite tuition available at £55/hour</li>
-          </ul>
-          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%;">Enrol A-Level</button>
-        </div>
+      <div class="section-header">
+        <span class="section-badge">AS &amp; A2 Levels</span>
+        <h2 class="section-title">Years 12 and 13</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card"><h3>Mathematics &amp; Further Maths</h3><p>Calculus, integration, complex numbers, matrices, differential equations and mechanics.</p></div>
+        <div class="card"><h3>Biology, Chemistry &amp; Physics</h3><p>Advanced conceptual support, experiment preparation and subject mastery for ambitious university pathways.</p></div>
+        <div class="card"><h3>University Preparation</h3><p>Guidance that helps students with subject choices, personal statements and long-term academic planning.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Course 5: 12 Coding & STEM Courses from TSH Document -->
-  <section class="course-detail-section" id="coding">
+  <section class="section" id="stem">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-        <span class="section-badge" style="background: #ecfeff; color: #0891b2;">12 Comprehensive STEM Courses</span>
-        <h2 class="section-title">Coding, Robotics & Future Tech Academy</h2>
-        <p class="section-subtitle">
-          Hands-on, project-based STEM education designed to nurture creativity, algorithmic logic, and technical mastery from ages 7 to 16.
-        </p>
+      <div class="section-header">
+        <span class="section-badge">Coding &amp; STEM Courses</span>
+        <h2 class="section-title">12 practical, project-based courses from the approved content</h2>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.75rem; margin-bottom: 3rem;">
-        
-        <!-- Course 1: Scratch -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 7–14 • 40–50 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">1. Coding in Scratch</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Block-based coding developed by MIT. Students learn events, motion, loops, conditional logic, variables, sprite cloning, broadcasting, and publish their own arcade games.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Scratch Track</button>
-        </div>
-
-        <!-- Course 2: Web Design -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 10–16 • 40–55 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">2. Web Design (HTML, CSS & JS)</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Design and publish live websites using HTML semantics, modern CSS styling, flexbox/grid layout, UI/UX in Figma/Canva, responsive web design, and interactive JavaScript.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Web Design</button>
-        </div>
-
-        <!-- Course 3: Game Development -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 9–15 • 40 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">3. Game Development</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Mechanics, physics simulation, character control, score systems, collision detection, and level design. Students produce multi-level playable video games.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Game Dev</button>
-        </div>
-
-        <!-- Course 4: Coding in Python -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 10–16 • 45–50 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">4. Coding in Python</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Authentic industry-standard coding: variables, loops, conditional statements, functions, lists, dictionaries, Pygame development, and GCSE Computer Science support.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Python</button>
-        </div>
-
-        <!-- Course 5: Coding in JavaScript -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 11–16 • 45 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">5. Coding in JavaScript</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              The language of the web: DOM manipulation, event listeners, functions, async operations, browser apps, calculators, interactive quizzes, and dynamic web applications.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in JavaScript</button>
-        </div>
-
-        <!-- Course 6: Design with Canva -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 8–15 • 30 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">6. Digital Design with Canva</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Creative visual design: typography, color theory, digital posters, social media banners, presentations, branding principles, and digital portfolio assembly.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Design</button>
-        </div>
-
-        <!-- Course 7: Cyber Security Essentials -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 11–16 • 35 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">7. Cyber Security Essentials</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Digital safety, encryption basics, password cracking defense, network topologies, phishing detection, ethical hacking principles, and cyber defense awareness.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Cyber Security</button>
-        </div>
-
-        <!-- Course 8: Robotics -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 9–15 • 40 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">8. Robotics & Automation</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Physical computing, ultrasonic obstacle avoidance, motor speed drivers, servo angles, automated rovers, and sensor feedback integration.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Robotics</button>
-        </div>
-
-        <!-- Course 9: Artificial Intelligence -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 11–16 • 40 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">9. Artificial Intelligence</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Understanding machine learning, computer vision, training neural models, chatbot logic, prompt engineering, and ethical AI implications for future careers.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in AI Track</button>
-        </div>
-
-        <!-- Course 10: Arduino -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 11–16 • 45 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">10. Arduino Electronics & C++</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Microcontroller circuits, breadboard wiring, Ohm’s Law, digital/analog inputs, LED matrix control, LCD screens, and building smart automated devices.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Arduino</button>
-        </div>
-
-        <!-- Course 11: Raspberry Pi -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 12–16 • 45 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">11. Raspberry Pi Projects</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              Linux terminal, Python GPIO interfacing, camera modules, IoT sensor stations, home web servers, and physical automation engineering.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Raspberry Pi</button>
-        </div>
-
-        <!-- Course 12: BBC micro:bit -->
-        <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <span class="admissions-pill">Ages 10–16 • 35–45 hrs</span>
-              <span style="font-size: 0.8rem; font-weight: 700; color: var(--brand-blue);">10 Modules</span>
-            </div>
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">12. BBC Micro:bit Programming</h4>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
-              MakeCode block coding and MicroPython: built-in compass, accelerometer, radio broadcast mesh, buzzer melodies, servo steering, and creative invention showcase.
-            </p>
-          </div>
-          <button class="btn btn-outline btn-sm trial-modal-trigger" style="width: 100%;">Enrol in Micro:bit</button>
-        </div>
-
+      <div class="subject-grid">
+        <div class="card"><h3>1. Coding in Scratch</h3><p>Block-based coding for games, stories and animation.</p></div>
+        <div class="card"><h3>2. Web Design</h3><p>Learn HTML, CSS and JavaScript to build responsive websites.</p></div>
+        <div class="card"><h3>3. Game Development</h3><p>Create playable games using logic, visuals and interactive design.</p></div>
+        <div class="card"><h3>4. Coding in Python</h3><p>Build practical programming projects and develop problem-solving skills.</p></div>
+        <div class="card"><h3>5. Coding in JavaScript</h3><p>Explore browser-based apps, interactivity and web logic.</p></div>
+        <div class="card"><h3>6. Digital Design with Canva</h3><p>Develop creative design, branding and presentation skills.</p></div>
+        <div class="card"><h3>7. Cyber Security Essentials</h3><p>Learn more about digital safety, online privacy and cyber awareness.</p></div>
+        <div class="card"><h3>8. Robotics</h3><p>Build, code and control automated systems and robot projects.</p></div>
+        <div class="card"><h3>9. Artificial Intelligence</h3><p>Explore AI concepts, model thinking and responsible use.</p></div>
+        <div class="card"><h3>10. Programming with Arduino</h3><p>Understand circuits, sensors and electronics through hands-on projects.</p></div>
+        <div class="card"><h3>11. Raspberry Pi Projects</h3><p>Use physical computing and electronics to solve practical challenges.</p></div>
+        <div class="card"><h3>12. Micro:bit Programming</h3><p>Build interactive inventions, games and digital creativity projects.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Complete Academic Syllabi Explorer from TSH Document -->
-  <section class="section-py" id="syllabi" style="background: var(--bg-alt);">
+  <section class="section" style="background: var(--bg-alt);">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-badge">National Curriculum & Exam Boards</span>
-        <h2 class="section-title">Complete Academic Tuition Syllabi</h2>
-        <p class="section-subtitle">
-          Detailed topic breakdowns taught across Key Stage 2, Key Stage 3, GCSE, and A-Levels as documented in our official academy syllabus.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-        
-        <!-- KS2 Syllabi -->
-        <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <span class="admissions-pill" style="margin-bottom: 0.75rem; display: inline-block;">Years 3 to 6</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            Key Stage 2 (Years 3 – 6)
-          </h3>
-          <div style="margin-bottom: 1rem;">
-            <h5 style="color: var(--brand-blue); font-weight: 700; margin-bottom: 0.25rem;">Mathematics:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Place value (up to 10M), 4 operations with formal written algorithms, fractions, decimals & percentages, ratio/proportion, introductory algebra & sequences, perimeter/area/volume, 2D/3D geometry, angles in polygons, and statistics (line graphs, pie charts, mean).
-            </p>
-          </div>
-          <div>
-            <h5 style="color: var(--brand-emerald); font-weight: 700; margin-bottom: 0.25rem;">English:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Comprehension, inference, summarising themes, figurative language, balanced arguments, narratives with suspense & flashbacks, SPaG (fronted adverbials, relative clauses, passive voice, colons, semicolons), and statutory spelling words.
-            </p>
-          </div>
-        </div>
-
-        <!-- KS3 Syllabi -->
-        <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <span class="admissions-pill" style="margin-bottom: 0.75rem; display: inline-block;">Years 7 to 9</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            Key Stage 3 (Years 7 – 9)
-          </h3>
-          <div style="margin-bottom: 0.75rem;">
-            <h5 style="color: var(--brand-blue); font-weight: 700; margin-bottom: 0.25rem;">Maths & Computing:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              BIDMAS, standard form, expanding/factorising linear equations, Pythagoras theorem, circle theorems, transformations, probability, hardware/software, binary representation, and Python algorithms.
-            </p>
-          </div>
-          <div>
-            <h5 style="color: var(--brand-emerald); font-weight: 700; margin-bottom: 0.25rem;">English & Science:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Shakespeare, 19th-century prose, analytical writing (PEE/PEEL), poetry comparisons, alongside Science: Cells, digestion, respiration, photosynthesis, periodic table, reactions, forces, energy transfers, sound & light.
-            </p>
-          </div>
-        </div>
-
-        <!-- 11+ & 13+ Grammar -->
-        <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <span class="admissions-pill" style="margin-bottom: 0.75rem; display: inline-block;">Entrance Exams</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            11+ & 13+ Entrance Exams
-          </h3>
-          <div style="margin-bottom: 0.75rem;">
-            <h5 style="color: var(--brand-blue); font-weight: 700; margin-bottom: 0.25rem;">VR & Non-Verbal Reasoning:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Codes, analogies, hidden words, compound words, antonyms/synonyms, alphabet series, 3D cube nets, spatial rotation, reflection, matrices, odd-one-out, and layered patterns.
-            </p>
-          </div>
-          <div>
-            <h5 style="color: var(--brand-emerald); font-weight: 700; margin-bottom: 0.25rem;">Maths & English (GL & CEM):</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Rapid mental arithmetic, algebra, word problems, high-yield vocabulary, cloze tests, comprehension, and creative/persuasive writing mark scheme criteria.
-            </p>
-          </div>
-        </div>
-
-        <!-- GCSE & A-Levels -->
-        <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 2rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <span class="admissions-pill" style="margin-bottom: 0.75rem; display: inline-block;">Years 10 – 13</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            GCSE, IGCSE & A-Levels
-          </h3>
-          <div style="margin-bottom: 0.75rem;">
-            <h5 style="color: var(--brand-blue); font-weight: 700; margin-bottom: 0.25rem;">GCSE Higher (Grades 8 & 9):</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Higher algebraic proofs, vectors, quadratic formula, circle theorems, organic chemistry, electrolysis, bioenergetics, genetics, electromagnetic waves, and English Literature texts.
-            </p>
-          </div>
-          <div>
-            <h5 style="color: var(--brand-gold); font-weight: 700; margin-bottom: 0.25rem;">AS & A2 Level Mastery:</h5>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-              Pure Maths (calculus, trigonometry, proof), Further Maths (matrices, complex numbers), Biology (gene expression, ecology), Chemistry (spectroscopy, NMR, kinetics, thermodynamics), and Physics (fields, nuclear, mechanics).
-            </p>
-          </div>
-        </div>
-
+      <div class="cta-panel">
+        <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
+        <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Need help choosing the right programme?</h2>
+        <p>Our team can recommend the best options based on your child’s age, subject needs and current goals.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Speak to Our Team</a>
       </div>
     </div>
   </section>
 
-  <!-- Official Tuition Fees & Schedule (From TSH Document) -->
-  <section class="section-py" id="timetable" style="background: #ffffff;">
-    <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-badge">Transparent Pricing</span>
-        <h2 class="section-title">Official Tuition Fees & Schedule</h2>
-        <p class="section-subtitle">
-          Clear, competitive, and transparent fees for in-centre small groups and personalised 1-to-1 online tuition classes.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem;">
-        
-        <!-- Table 1: In-Centre / Small Group Tuition -->
-        <div style="background: var(--bg-alt); border-radius: var(--radius-xl); padding: 2rem; border: 1.5px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900);">
-              Small Group Tuition Classes
-            </h3>
-            <span class="admissions-pill">In-Centre & Online</span>
-          </div>
-
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
-            <tbody>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>Key Stage 2 (Year 3, 4, 5)</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths & English</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£35 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 2 hours</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>Key Stage 3 & 13+ Prep</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, Science & English</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£40 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 2 hours</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>SATS / 11+ Prep</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, English, VR & NVR</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--brand-blue); font-size: 1.05rem;">£40 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 2 hours</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>GCSE / IGCSE</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, Science & English</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£45 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ per subject (2h)</span></td>
-              </tr>
-              <tr>
-                <td style="padding: 0.9rem 0;"><strong>AS / A2 Level</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, Physics, Chemistry</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£55 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ per subject (1.5h)</span></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <button class="btn btn-primary trial-modal-trigger" style="width: 100%; margin-top: 1.5rem;">Book Small Group Trial</button>
-        </div>
-
-        <!-- Table 2: 1-to-1 Online Tuition -->
-        <div style="background: var(--bg-alt); border-radius: var(--radius-xl); padding: 2rem; border: 1.5px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900);">
-              1-to-1 Personalised Online Classes
-            </h3>
-            <span class="admissions-pill" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">100% Tailored</span>
-          </div>
-
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
-            <tbody>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>Key Stage 2 & 3</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, Science & English (One subject)</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£30 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 1 hour</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>11 Plus & 13 Plus</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, English, VR & NVR (One subject)</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--brand-blue); font-size: 1.05rem;">£35 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 1 hour</span></td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td style="padding: 0.9rem 0;"><strong>GCSE / IGCSE</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths, Science & English (One subject)</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£40 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 1 hour</span></td>
-              </tr>
-              <tr>
-                <td style="padding: 0.9rem 0;"><strong>AS / A2 Level</strong><br><span style="color: var(--text-muted); font-size: 0.82rem;">Maths or Science (One subject)</span></td>
-                <td style="padding: 0.9rem 0; text-align: right; font-weight: 800; color: var(--primary-900); font-size: 1.05rem;">£50 <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-muted);">/ 1 hour</span></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <button class="btn btn-secondary trial-modal-trigger" style="width: 100%; margin-top: 2.2rem;">Book 1-to-1 Session</button>
-        </div>
-
-      </div>
-
-      <!-- Registration Fee & Discount Banner (from TSH document) -->
-      <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-        <div>
-          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.75rem;">
-            Registration Fees:
-          </h4>
-          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); list-style: none; padding: 0;">
-            <li>📌 <strong>Key Stage 2:</strong> £25/- (Non-refundable one-off registration fee)</li>
-            <li>📌 <strong>KS3 / KS4 / GCSE / A-Level:</strong> £50/- (Non-refundable one-off registration fee)</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.75rem;">
-            Available Discounts & Savings:
-          </h4>
-          <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); list-style: none; padding: 0;">
-            <li>🎉 <strong>10% Discount:</strong> Applied when booking 10 lessons together in advance.</li>
-            <li>🎉 <strong>15% Discount:</strong> Applied on booking for the full academic year (conditions apply).</li>
-            <li>🎉 <strong>Referral Rewards:</strong> £5 to £15 worth of discount for every friend or family referral.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Global Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="footer-logo-wrap">
-            <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="footer-logo-img">
-          </a>
-          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">
-            The Students Hub is a leading online tuition provider based in London, serving students across Primary, 11 Plus, KS3, KS4, GCSE, IGCSE, AS and A2 Levels across the United Kingdom. We hold the firm conviction that every child possesses talent, and that every child deserves the opportunity to acquire the skills and confidence needed to transform their potential into success.
-          </p>
-          <div class="footer-accreditations" style="margin-top: 1rem;">
-            <span class="accred-badge">OCR, Edexcel, AQA & Cambridge</span>
-            <span class="accred-badge">Enhanced DBS Certified</span>
-            <span class="accred-badge">Understand, Apply & Practice</span>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Programmes</h4>
-          <div class="footer-links">
-            <a href="courses.html#11plus">11+ Grammar Preparation</a>
-            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
-            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
-            <a href="courses.html#alevel">A-Level STEM Tuition</a>
-            <a href="courses.html#coding">Coding & Robotics Club</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Resources & Guidance</h4>
-          <div class="footer-links">
-            <a href="guidance.html">Grammar Schools & Guidance</a>
-            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
-            <a href="shop.html">Study Packs Shop</a>
-            <a href="about.html">About The Academy</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="contact.html#faqs">Tuition FAQs</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Verified Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-            <div>
-              <a href="tel:+447424044851">+44 7424044851</a><br>
-              <a href="tel:07405860115">07405860115</a><br>
-              <a href="tel:02039577099">020 3957 7099</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <div>
-              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            <div>
-              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
-            </div>
-          </div>
-        </div>
+        <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub offers high-quality online tuition and academic guidance for learners across the UK.</p></div>
+        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="#ks2">Key Stage 2</a><a href="#ks3">Key Stage 3</a><a href="#gcse">GCSE &amp; IGCSE</a><a href="#alevel">AS &amp; A2 Levels</a><a href="#stem">Coding &amp; STEM</a></div></div>
+        <div class="footer-col"><h4>Resources</h4><div class="footer-links"><a href="about.html">About Us</a><a href="guidance.html">Academic Guidance</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
+        <div class="footer-col"><h4>Verified Contact</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg><div><a href="tel:+447424044851">+44 7424044851</a><br><a href="tel:07405860115">07405860115</a><br><a href="tel:02039577099">020 3957 7099</a></div></div><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><div><a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a></div></div></div>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
-      </div>
+      <div class="footer-bottom"><div>&copy; 2026 The Students Hub. All rights reserved.</div></div>
     </div>
   </footer>
 
-  <!-- Modal: Book Free Trial -->
-  <div class="modal-backdrop" id="trial-modal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3 class="modal-title">Book a Free Trial Lesson</h3>
-        <button class="modal-close-btn" id="trial-modal-close">✕</button>
-      </div>
-      <div class="modal-body">
-        <form id="trial-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-parent-name">Parent Name *</label>
-              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-student-name">Student Name *</label>
-              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-phone">Phone Number *</label>
-              <input type="tel" id="trial-phone" class="form-control" required placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-email">Email Address *</label>
-              <input type="email" id="trial-email" class="form-control" required placeholder="Email Address">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="trial-subject">Course Level & Subject *</label>
-            <select id="trial-subject" class="form-control" required>
-              <option value="11+ Grammar Exam Prep">11+ & 13+ Grammar Exam Prep</option>
-              <option value="KS2/KS3 Maths & English">KS2/KS3 Maths & English</option>
-              <option value="GCSE Mathematics Higher">GCSE Mathematics Higher</option>
-              <option value="GCSE Triple Science">GCSE Triple Science</option>
-              <option value="A-Level Mathematics / Further">A-Level Mathematics / Further</option>
-              <option value="A-Level Chemistry / Biology">A-Level Chemistry / Biology</option>
-              <option value="Coding & STEM for Kids">Coding & STEM for Kids</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
-            Submit Trial Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Drawer -->
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header">
-      <h3 class="cart-drawer-title">Your Study Basket</h3>
-      <button class="cart-close-btn" id="cart-close-btn">✕</button>
-    </div>
-    <div class="cart-items-container" id="cart-drawer-items"></div>
-    <div class="cart-drawer-footer">
-      <div class="cart-subtotal-row">
-        <span>Subtotal:</span>
-        <span id="cart-subtotal-val">£0.00</span>
-      </div>
-      <a href="shop.html" class="btn btn-primary" style="width: 100%;">View Shop & Checkout</a>
-    </div>
-  </aside>
-
-  <!-- Scripts -->
-  <script src="scripts/shop.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -66,6 +66,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const navDropdownWrappers = document.querySelectorAll('.nav-dropdown-wrapper');
+  navDropdownWrappers.forEach((wrapper) => {
+    const trigger = wrapper.querySelector('.nav-link');
+
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (event) => {
+      if (window.innerWidth > 768) return;
+
+      event.preventDefault();
+
+      const isAlreadyOpen = wrapper.classList.contains('open');
+
+      navDropdownWrappers.forEach((item) => {
+        item.classList.remove('open');
+        const itemTrigger = item.querySelector('.nav-link');
+        if (itemTrigger) {
+          itemTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (!isAlreadyOpen) {
+        wrapper.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   // -------------------------------------------------------------
   // 3. Free Trial / Diagnostic Assessment Modal
   // -------------------------------------------------------------

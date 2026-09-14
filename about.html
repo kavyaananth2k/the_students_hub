@@ -3,701 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About The Students Hub | Learn • Grow • Succeed | UK Online Tuition</title>
-  <meta name="description" content="The Students Hub is the United Kingdom's trusted online tuition provider. Learn • Grow • Succeed. High-quality live lessons, expert mentorship, and our Understand, Apply & Achieve method.">
+  <title>About Us | The Students Hub</title>
+  <meta name="description" content="About The Students Hub, our teaching method, National Curriculum alignment and student-centred learning approach.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    .about-hero {
-      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
-      color: #ffffff;
-      padding: 5rem 0 4rem 0;
-      text-align: center;
-      position: relative;
-    }
-    .about-hero h1 {
-      font-family: var(--font-heading);
-      font-size: 3.2rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    .about-tagline {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #38bdf8;
-      margin-bottom: 1.25rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .about-hero p {
-      font-size: 1.15rem;
-      color: #cbd5e1;
-      max-width: 760px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-    .commitments-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    .commitment-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      transition: all var(--transition-normal);
-    }
-    .commitment-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(37, 99, 235, 0.3);
-    }
-    .commitment-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-md);
-      background: var(--brand-blue-light);
-      color: var(--brand-blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .commitment-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-    .commitment-text h4 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary-900);
-      margin-bottom: 0.35rem;
-    }
-    .commitment-text p {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-    .quick-facts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.75rem;
-    }
-    .quick-fact-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      border-top: 4px solid var(--brand-blue);
-      box-shadow: var(--shadow-sm);
-    }
-    .quick-fact-card h4 {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary-900);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .quick-fact-card p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .term-dates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .term-date-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .term-date-card strong {
-      color: var(--primary-900);
-      font-size: 0.95rem;
-    }
-    .term-date-card span {
-      color: var(--brand-blue);
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
+    .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding: 4rem 0 3rem; text-align:center; }
+    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.5rem); margin-bottom: 1rem; }
+    .page-hero p { max-width:760px; margin:0 auto; color:#dbeafe; line-height:1.7; }
+    .section { padding:4rem 0; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:1.5rem; }
+    .card { background:#fff; border:1px solid var(--border-light); border-radius: var(--radius-lg); padding:1.8rem; box-shadow: var(--shadow-sm); }
+    .card h3 { color: var(--primary-900); margin-bottom:0.6rem; }
+    .card p, .card li { color: var(--text-secondary); line-height:1.7; }
+    .card ul { margin:0; padding-left:1.1rem; }
+    .pill-list { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+    .pill { background: var(--brand-blue-light); color: var(--brand-blue); border-radius:999px; padding:0.35rem 0.75rem; font-size:0.8rem; font-weight:700; }
+    .cta-panel { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); border-radius: var(--radius-xl); padding:2.5rem; text-align:center; color:#fff; }
+    .cta-panel p { color:#dbeafe; max-width:700px; margin:0 auto 1.5rem; }
   </style>
 </head>
 <body>
-
-  <!-- Top Contact Bar -->
   <div class="top-contact-bar">
     <div class="container">
-      <div class="top-contact-left">
-        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
-        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
-        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
-        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
-      </div>
-      <div class="top-contact-right">
-        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
-        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
-      </div>
+      <div class="top-contact-left"><span class="badge-tag">Ofsted Aligned &amp; DBS Checked</span><a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a><a href="tel:07405860115" class="top-contact-item">07405860115</a><a href="tel:02039577099" class="top-contact-item">020 3957 7099</a></div>
+      <div class="top-contact-right"><a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a><a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a></div>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo" id="site-logo">
-        <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="brand-logo-img">
-      </a>
-
-      <nav class="nav-menu">
+      <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
+      <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="courses.html" class="nav-link">Tuition & Courses</a>
-        <a href="guidance.html" class="nav-link">Guidance & Grammar Schools</a>
-        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
         <a href="about.html" class="nav-link active">About Us</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="courses.html" class="nav-link">Academic Tuition</a>
+        <a href="guidance.html" class="nav-link">Academic Guidance</a>
+        <a href="contact.html" class="nav-link">School Partnership</a>
+        <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
-
       <div class="header-actions">
-        <button class="cart-button-trigger" aria-label="Open Cart">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          <span class="cart-badge" style="display: none;">0</span>
-        </button>
         <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
-        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
   </header>
 
-  <!-- About Hero -->
-  <section class="about-hero">
+  <section class="page-hero">
     <div class="container">
-      <div class="about-tagline">Learn • Grow • Succeed</div>
-      <h1>Excellence in Tuition, Trusted by Parents</h1>
-      <p>
-        <strong>The Students Hub</strong> is formed by a group of experienced tutors with years of dedicated expertise in providing high-quality after-school tuition and academic coaching. We help students achieve top grades in their <strong>SATs, 11+, 13+, GCSE, IGCSE, and AS & A2 Levels</strong>, guiding them into grammar schools and premier universities.
-      </p>
-      <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <button class="btn btn-primary btn-lg trial-modal-trigger">Book a Free Assessment</button>
-        <a href="documents/TSH content.docx" download class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.15); color: #ffffff; border: 1px solid rgba(255,255,255,0.3);">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-          </svg>
-          Download Official Curriculum (.docx)
-        </a>
-      </div>
+      <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Learn • Grow • Succeed</span>
+      <h1>About The Students Hub</h1>
+      <p>The Students Hub is formed by a group of experienced tutors with years of dedication in providing excellent after-school tuition and additional coaching to students. We help learners achieve high grades in SATs, 11+, 13+, GCSE, IGCSE and AS &amp; A2 Level exams, while guiding parents who want their children to thrive academically and confidently.</p>
     </div>
   </section>
 
-  <!-- Teaching Method: Understand -> Apply -> Practice -->
-  <section class="section-py" style="background: #ffffff;">
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Our Teaching Method</span>
-        <h2 class="section-title">Our Proven Approach: Understand → Apply → Practice</h2>
-        <p class="section-subtitle">
-          At The Students Hub, we focus on helping students build strong foundational knowledge across all subjects. By teaching core concepts clearly and effectively, we empower students to grow academically and excel in school and beyond.
-        </p>
+        <h2 class="section-title">Understand → Apply → Practice</h2>
       </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
-        <div style="background: var(--bg-alt); padding: 2rem; border-radius: var(--radius-lg); border-top: 4px solid var(--brand-blue); box-shadow: var(--shadow-sm);">
-          <div style="font-size: 2.2rem; font-weight: 900; color: var(--brand-blue); margin-bottom: 0.5rem;">01</div>
-          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.75rem;">1. Understand</h3>
-          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
-            We begin with clear conceptual explanations that simplify complex topics and strengthen the student’s foundation from the ground up, eliminating confusion before problem solving begins.
-          </p>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>1. Understand</h3>
+          <p>We begin with clear conceptual explanations that simplify complex topics and strengthen the student’s foundation.</p>
         </div>
-
-        <div style="background: var(--bg-alt); padding: 2rem; border-radius: var(--radius-lg); border-top: 4px solid var(--brand-emerald); box-shadow: var(--shadow-sm);">
-          <div style="font-size: 2.2rem; font-weight: 900; color: var(--brand-emerald); margin-bottom: 0.5rem;">02</div>
-          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.75rem;">2. Apply</h3>
-          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
-            Students are shown real-life applications of concepts, helping them understand the relevance of what they learn, making topics tangible and improving long-term cognitive retention.
-          </p>
+        <div class="card">
+          <h3>2. Apply</h3>
+          <p>Students see how ideas connect to real life, which improves understanding, retention and confidence.</p>
         </div>
-
-        <div style="background: var(--bg-alt); padding: 2rem; border-radius: var(--radius-lg); border-top: 4px solid var(--brand-gold); box-shadow: var(--shadow-sm);">
-          <div style="font-size: 2.2rem; font-weight: 900; color: var(--brand-gold); margin-bottom: 0.5rem;">03</div>
-          <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.75rem;">3. Practice</h3>
-          <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
-            Rigorous and structured practice helps students develop unshakeable confidence, master exam techniques, overcome timing pressures, and achieve exceptional examination grades.
-          </p>
-        </div>
-      </div>
-
-      <!-- National Curriculum Alignment -->
-      <div style="background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color: #ffffff; border-radius: var(--radius-xl); padding: 2.5rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: center;">
-        <div>
-          <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #bfdbfe; margin-bottom: 0.75rem; display: inline-block;">National Curriculum Standards</span>
-          <h3 style="font-family: var(--font-heading); font-size: 1.65rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
-            Strictly Aligned With All Major UK Exam Boards
-          </h3>
-          <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
-            We strictly follow the National Curriculum, ensuring every topic is covered thoroughly. To provide high-quality and accurate support, our tutors utilize well-known textbooks and workbooks, authentic past examination papers, and materials from all major exam boards:
-          </p>
-          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">Edexcel</span>
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">OCR</span>
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">AQA</span>
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">Cambridge (CAIE)</span>
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">GL Assessment</span>
-            <span style="background: rgba(255,255,255,0.12); padding: 0.4rem 0.9rem; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700;">CEM 11+</span>
-          </div>
-        </div>
-        <div style="text-align: center;">
-          <img src="assets/images/tutor-mentoring.jpg" alt="National Curriculum Tuition" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; max-height: 240px; object-fit: cover;">
+        <div class="card">
+          <h3>3. Practice</h3>
+          <p>Rigorous and structured practice helps students master exam techniques and achieve consistent academic results.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Our Subjects Matter & Addressing Common Challenges -->
-  <section class="section-py" style="background: var(--bg-alt);">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-        
-        <!-- Why Our Subjects Matter -->
-        <div style="background: #ffffff; padding: 2.5rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <div class="section-badge" style="margin-bottom: 1rem;">Future Pathways</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            Why Our Subjects Matter
-          </h3>
-          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-            Knowledge of <strong>Mathematics, Science, and ICT</strong> plays a crucial role in students’ future academic and career pathways. These core disciplines encourage:
-          </p>
-          <ul style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 1.5rem; list-style: none; padding: 0;">
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-emerald); font-weight: bold;">✔</span>
-              <span><strong>Logical and critical thinking:</strong> Dissecting complex problems with structured reasoning.</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-emerald); font-weight: bold;">✔</span>
-              <span><strong>Analytical skills:</strong> Interpreting empirical data, proofs, and scientific observations.</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-emerald); font-weight: bold;">✔</span>
-              <span><strong>Problem-solving abilities:</strong> Developing innovative, methodical solutions to unfamiliar challenges.</span>
-            </li>
-          </ul>
-          <p style="font-size: 0.88rem; color: var(--text-muted); background: var(--bg-alt); padding: 1rem; border-radius: var(--radius-md);">
-            🚀 A strong foundation in these subjects directly supports future university degrees and careers such as <strong>Engineering, Computer Science & IT, Medicine, Accountancy, and Economics</strong>.
-          </p>
-        </div>
-
-        <!-- Addressing Common Challenges -->
-        <div style="background: #ffffff; padding: 2.5rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-          <div class="section-badge" style="margin-bottom: 1rem;">Overcoming Barriers</div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-            Addressing Common Challenges
-          </h3>
-          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-            Topics like <strong>Algebra, Geometry, and Trigonometry</strong> can often seem daunting for secondary school students. It is common for learners to find mathematics challenging or uninteresting due to abstract teaching styles.
-          </p>
-          <p style="font-weight: 600; color: var(--primary-900); margin-bottom: 0.75rem;">We change this dynamic by:</p>
-          <ul style="display: flex; flex-direction: column; gap: 0.65rem; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 1.25rem; list-style: none; padding: 0;">
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-blue); font-weight: bold;">➔</span>
-              <span>Promoting <strong>conceptual understanding</strong> rather than just procedural rote memorization.</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-blue); font-weight: bold;">➔</span>
-              <span>Helping students make sense of abstract mathematical ideas visually.</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-blue); font-weight: bold;">➔</span>
-              <span>Building genuine relevance and interest through practical real-life examples.</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 0.6rem;">
-              <span style="color: var(--brand-blue); font-weight: bold;">➔</span>
-              <span><strong>Reducing subject-related anxiety</strong> in a calm, supportive setting.</span>
-            </li>
-          </ul>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-            Our tutors teach in an <strong>informal, clear, and interactive learner-centred style</strong> that is interesting, developmental, deep, and enjoyable!
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- School Partnership & Community Mission -->
-  <section class="section-py" style="background: #ffffff;">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
-        <div>
-          <span class="section-badge">School Partnerships & Community</span>
-          <h2 class="section-title">Creating Opportunities for Every Child</h2>
-          <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem; font-size: 1.05rem;">
-            We are an <strong>Ofsted-registered after-school tuition centre</strong> that strongly believes every child has talent and deserves the opportunity to develop the skills and confidence needed to achieve success—both in school and beyond—regardless of their background.
-          </p>
-          
-          <h4 style="font-weight: 700; color: var(--primary-900); margin-bottom: 0.5rem;">Dedicated Support For:</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem;">
-            <div style="background: var(--bg-alt); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.88rem; font-weight: 600; color: var(--primary-900);">
-              ⭐ Disadvantaged Backgrounds
-            </div>
-            <div style="background: var(--bg-alt); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.88rem; font-weight: 600; color: var(--primary-900);">
-              ⭐ Pupil Premium Funding
-            </div>
-            <div style="background: var(--bg-alt); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.88rem; font-weight: 600; color: var(--primary-900);">
-              ⭐ Pupils with SEND
-            </div>
-            <div style="background: var(--bg-alt); padding: 0.85rem; border-radius: var(--radius-md); font-size: 0.88rem; font-weight: 600; color: var(--primary-900);">
-              ⭐ Alternative Provision (AP)
-            </div>
-          </div>
-
-          <h4 style="font-weight: 700; color: var(--primary-900); margin-bottom: 0.5rem;">Working With Schools & Local Organisations:</h4>
-          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            We collaborate with <strong>local libraries, community centres, schools, and educational support groups</strong> to design bespoke programmes supporting general studies and targeted exam booster crash courses to help children overcome learning loss.
-          </p>
-
-          <a href="contact.html" class="btn btn-primary">Partner With Us</a>
-        </div>
-
-        <div>
-          <!-- Official Academy Prospectus Download Card -->
-          <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-xl); border: 1px solid rgba(255,255,255,0.1);">
-            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(37,99,235,0.3); color: #93c5fd; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; margin-bottom: 1.25rem;">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
-              OFFICIAL ACADEMY DOCUMENT
-            </div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">
-              The Students Hub Prospectus & Curriculum Guide
-            </h3>
-            <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
-              Download our complete official documentation containing our full academic syllabus, 12 coding courses, grammar school entry guides, booster workshops, and fee schedules:
-            </p>
-            
-            <div style="background: rgba(255,255,255,0.06); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.75rem; border: 1px solid rgba(255,255,255,0.1);">
-              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.88rem;">
-                <span style="color: #cbd5e1;">File Name:</span>
-                <strong style="color: #ffffff;">TSH content.docx</strong>
-              </div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.88rem;">
-                <span style="color: #cbd5e1;">File Size:</span>
-                <span style="color: #93c5fd; font-weight: 600;">103 KB (Word Document)</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
-                <span style="color: #cbd5e1;">Includes:</span>
-                <span style="color: #34d399; font-weight: 600;">Full Syllabi, Fees & Policies</span>
-              </div>
-            </div>
-
-            <a href="documents/TSH content.docx" download class="btn btn-primary" style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center; gap: 0.6rem;">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              Download TSH content.docx
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Facts -->
-  <section class="section-py" style="background: var(--bg-alt);">
+  <section class="section" style="background: var(--bg-alt);">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Academy Highlights</span>
-        <h2 class="section-title">About Us – Quick Facts</h2>
-        <p class="section-subtitle">A trusted, reliable, and Ofsted-registered academy for families across the UK and internationally.</p>
+        <span class="section-badge">Aligned With the National Curriculum</span>
+        <h2 class="section-title">A robust learning programme built around strong foundations</h2>
       </div>
-
-      <div class="quick-facts-grid">
-        <div class="quick-fact-card">
-          <h4>🏛️ Established Academy</h4>
-          <p>A highly regarded provider of quality online education, trusted by hundreds of families across London, the UK, and overseas.</p>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>What we use</h3>
+          <p>We strictly follow the National Curriculum and use well-known textbooks, past papers and materials from all major exam boards.</p>
+          <div class="pill-list">
+            <span class="pill">Edexcel</span>
+            <span class="pill">OCR</span>
+            <span class="pill">AQA</span>
+            <span class="pill">Cambridge</span>
+          </div>
         </div>
-
-        <div class="quick-fact-card">
-          <h4>🎓 Students: All Levels</h4>
-          <p>We support students of every age, ability, and background in achieving the grades to which they aspire, from KS2 through Sixth Form.</p>
+        <div class="card">
+          <h3>Why our subjects matter</h3>
+          <p>Mathematics, Science and ICT play a crucial role in future study and career pathways. They encourage logical thinking, analytical skills and problem-solving abilities.</p>
         </div>
-
-        <div class="quick-fact-card">
-          <h4>📈 Outstanding Results</h4>
-          <p>Our students and their families consistently report high satisfaction with the quality of our teaching and the exam outcomes achieved.</p>
-        </div>
-
-        <div class="quick-fact-card">
-          <h4>🌐 Reach: Nationwide & Beyond</h4>
-          <p>Delivered entirely online via our live interactive classroom, our lessons are accessible to families across the UK and internationally.</p>
-        </div>
-
-        <div class="quick-fact-card">
-          <h4>🎯 Career & School Guidance</h4>
-          <p>We provide expert guidance on entrance examinations, interviews, and admissions for grammar schools, sixth forms, and universities.</p>
-        </div>
-
-        <div class="quick-fact-card">
-          <h4>👥 1:1 & Small Group Ratio</h4>
-          <p>We maintain an optimal staff-to-student ratio (1:1 and maximum 6 in groups), ensuring every learner receives focused attention.</p>
+        <div class="card">
+          <h3>How we support learners</h3>
+          <p>We help students make sense of challenging topics, reduce anxiety and build confidence through conceptual understanding and consistent progress.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Academic Calendar & Operating Hours -->
-  <section class="section-py" style="background: var(--bg-alt);">
+  <section class="section">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start;">
-        <div>
-          <span class="section-badge">Annual Schedule</span>
-          <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.25rem;">
-            Academic Calendar & Term Dates
-          </h3>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
-            Our academic year is structured to ensure timely topic completion, followed by rigorous revision and mock examinations ahead of school assessments.
-          </p>
-          <div class="term-dates-grid">
-            <div class="term-date-card">
-              <strong>Autumn Term (Term 1)</strong>
-              <span>September – December</span>
-            </div>
-            <div class="term-date-card">
-              <strong>Spring Half-Term Booster</strong>
-              <span>February</span>
-            </div>
-            <div class="term-date-card">
-              <strong>Spring Term (Term 2)</strong>
-              <span>January – April</span>
-            </div>
-            <div class="term-date-card">
-              <strong>Easter Intensive Bootcamp</strong>
-              <span>April (Exam Focus)</span>
-            </div>
-            <div class="term-date-card">
-              <strong>Summer Term (Term 3)</strong>
-              <span>April – July</span>
-            </div>
-            <div class="term-date-card">
-              <strong>Summer Booster Masterclasses</strong>
-              <span>July – August</span>
-            </div>
-          </div>
+      <div class="section-header">
+        <span class="section-badge">Our Teaching Style</span>
+        <h2 class="section-title">Informal, clear, interactive and learner-centred</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>What students experience</h3>
+          <p>Our tutors teach in an informal, clear and interactive way. Lessons are interesting, developmental, deep, connected and easy to understand.</p>
         </div>
-
-        <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-md);">
-          <span class="badge-tag" style="background: rgba(37,99,235,0.2); color: var(--brand-blue); margin-bottom: 0.75rem; display: inline-block;">Weekly Availability</span>
-          <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1.25rem;">
-            Live Academy Operating Hours
-          </h4>
-          <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Monday:</strong>
-              <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Tuesday:</strong>
-              <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Wednesday:</strong>
-              <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Thursday:</strong>
-              <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Friday:</strong>
-              <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.4rem;">
-              <strong>Saturday:</strong>
-              <span style="color: var(--text-secondary);">10:00 – 18:00</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding-bottom: 0.4rem;">
-              <strong>Sunday:</strong>
-              <span style="color: var(--text-secondary);">12:00 – 16:00</span>
-            </div>
-          </div>
+        <div class="card">
+          <h3>What families can expect</h3>
+          <p>Students remain motivated, confident and eager to learn because the teaching style supports curiosity, structure and steady progress.</p>
+        </div>
+        <div class="card">
+          <h3>What we aim for</h3>
+          <p>We help every learner build strong foundations, improve performance in school and develop the confidence to take the next step in their education.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Global Footer -->
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="cta-panel">
+        <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
+        <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Ready to support your child’s learning journey?</h2>
+        <p>Speak with our academic team to discuss the best support pathway for your child, whether that is 11+ preparation, GCSE support, A-Level guidance or STEM enrichment.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Book Free Assessment</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="footer-logo-wrap">
-            <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="footer-logo-img">
-          </a>
-          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
-            The Students Hub is a leading online tuition provider based in London, serving students across Primary, 11 Plus, KS3, KS4, GCSE, IGCSE, AS and A2 Levels across the United Kingdom. We hold the firm conviction that every child possesses talent, and that every child deserves the opportunity to acquire the skills and confidence needed to transform their potential into success.
-          </p>
-          <div class="footer-accreditations" style="margin-top: 1rem;">
-            <span class="accred-badge">OCR, Edexcel, AQA & Cambridge</span>
-            <span class="accred-badge">Enhanced DBS Certified</span>
-            <span class="accred-badge">Understand, Apply & Practice</span>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Programmes</h4>
-          <div class="footer-links">
-            <a href="courses.html#11plus">11+ Grammar Preparation</a>
-            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
-            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
-            <a href="courses.html#alevel">A-Level STEM Tuition</a>
-            <a href="courses.html#coding">Coding & Robotics Club</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Resources & Guidance</h4>
-          <div class="footer-links">
-            <a href="guidance.html">Grammar Schools & Guidance</a>
-            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
-            <a href="shop.html">Study Packs Shop</a>
-            <a href="about.html">About The Academy</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="contact.html#faqs">Tuition FAQs</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Verified Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-            <div>
-              <a href="tel:+447424044851">+44 7424044851</a><br>
-              <a href="tel:07405860115">07405860115</a><br>
-              <a href="tel:02039577099">020 3957 7099</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <div>
-              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            <div>
-              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
-            </div>
-          </div>
-        </div>
+        <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub helps students build confidence, improve academic performance and reach ambitious goals through expert tuition and guidance.</p></div>
+        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="courses.html#stem">Coding &amp; STEM</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="guidance.html">Academic Guidance</a><a href="contact.html">School Partnership</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
+        <div class="footer-col"><h4>Verified Contact</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg><div><a href="tel:+447424044851">+44 7424044851</a><br><a href="tel:07405860115">07405860115</a><br><a href="tel:02039577099">020 3957 7099</a></div></div><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><div><a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a></div></div></div>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
-      </div>
+      <div class="footer-bottom"><div>&copy; 2026 The Students Hub. All rights reserved.</div></div>
     </div>
   </footer>
 
-  <!-- Modal: Book Free Trial -->
-  <div class="modal-backdrop" id="trial-modal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3 class="modal-title">Book a Free Assessment</h3>
-        <button class="modal-close-btn" id="trial-modal-close">✕</button>
-      </div>
-      <div class="modal-body">
-        <form id="trial-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-parent-name">Parent Name *</label>
-              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-student-name">Student Name *</label>
-              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-phone">Phone Number *</label>
-              <input type="tel" id="trial-phone" class="form-control" required placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-email">Email Address *</label>
-              <input type="email" id="trial-email" class="form-control" required placeholder="Email Address">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="trial-year">Year Group / Course *</label>
-            <select id="trial-year" class="form-control" required>
-              <option value="">Select Year Group</option>
-              <option value="KS2 (Years 3, 4, 5, 6)">KS2 (Years 3, 4, 5, 6)</option>
-              <option value="11 Plus Preparation">11 Plus (Years 3, 4, 5)</option>
-              <option value="KS3 (Years 7, 8, 9)">KS3 (Years 7, 8, 9)</option>
-              <option value="13 Plus Preparation">13 Plus (Years 7 & 8)</option>
-              <option value="GCSE / IGCSE (Years 10 & 11)">GCSE / IGCSE (Years 10 & 11)</option>
-              <option value="A Levels / AS & A2 (Years 12 & 13)">A Levels / AS & A2 (Years 12 & 13)</option>
-              <option value="Logic, Vedic Maths & Olympiad">Logic, Vedic Maths & Olympiad</option>
-              <option value="STEM & Coding">STEM & Coding</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
-            Submit Free Assessment Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Drawer -->
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header">
-      <h3 class="cart-drawer-title">Your Study Basket</h3>
-      <button class="cart-close-btn" id="cart-close-btn">✕</button>
-    </div>
-    <div class="cart-items-container" id="cart-drawer-items"></div>
-    <div class="cart-drawer-footer">
-      <div class="cart-subtotal-row">
-        <span>Subtotal:</span>
-        <span id="cart-subtotal-val">£0.00</span>
-      </div>
-      <a href="shop.html" class="btn btn-primary" style="width: 100%;">View Shop & Checkout</a>
-    </div>
-  </aside>
-
-  <!-- Floating Call & WhatsApp -->
-  <div class="floating-actions">
-    <a href="https://wa.me/447424044851" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.24-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.29 3.8 2.52 1.09 2.52.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.21-.17-.46-.29z"/></svg>
-    </a>
-    <a href="tel:+447424044851" class="float-btn float-phone" aria-label="Call Admissions">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-    </a>
-  </div>
-
-  <!-- Scripts -->
-  <script src="scripts/shop.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

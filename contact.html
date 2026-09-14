@@ -3,557 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Book Free Assessment | The Students Hub</title>
-  <meta name="description" content="Contact The Students Hub tuition centre. Call +44 7424044851, 07405860115, or 020 3957 7099. Book a free diagnostic trial lesson or centre tour today.">
+  <title>School Partnership &amp; Contact | The Students Hub</title>
+  <meta name="description" content="Contact The Students Hub for school partnerships, admissions, academic guidance and tuition support.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    .contact-hero {
-      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
-      color: #ffffff;
-      padding: 4.5rem 0 3.5rem 0;
-      text-align: center;
-    }
-    .contact-hero h1 {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .contact-hero p {
-      font-size: 1.15rem;
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-    .contact-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3.5rem;
-    }
-    .contact-info-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .contact-icon-large {
-      width: 60px;
-      height: 60px;
-      border-radius: var(--radius-md);
-      background: var(--brand-blue-light);
-      color: var(--brand-blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-    .contact-icon-large svg {
-      width: 28px;
-      height: 28px;
-      fill: currentColor;
-    }
-    .contact-info-card h4 {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary-900);
-      margin-bottom: 0.5rem;
-    }
-    .contact-info-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-    .contact-info-card a {
-      font-weight: 700;
-      color: var(--brand-blue);
-      font-size: 1.05rem;
-    }
-    .form-box {
-      background: #ffffff;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-lg);
-      padding: 3rem;
-    }
-    /* FAQ Accordion */
-    .faq-accordion {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .faq-accordion-item {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: all var(--transition-fast);
-    }
-    .faq-header {
-      width: 100%;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--primary-900);
-      background: #ffffff;
-    }
-    .faq-header:hover {
-      background: var(--bg-alt);
-    }
-    .faq-header svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--text-muted);
-      transition: transform var(--transition-fast);
-    }
-    .faq-body {
-      padding: 0 1.5rem 1.25rem 1.5rem;
-      font-size: 0.925rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      display: none;
-    }
-    .faq-accordion-item.active {
-      border-color: var(--brand-blue);
-    }
-    .faq-accordion-item.active .faq-header {
-      color: var(--brand-blue);
-    }
-    .faq-accordion-item.active .faq-header svg {
-      transform: rotate(180deg);
-      fill: var(--brand-blue);
-    }
-    .faq-accordion-item.active .faq-body {
-      display: block;
-    }
+    .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
+    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.5rem); margin-bottom:1rem; }
+    .page-hero p { max-width:760px; margin:0 auto; color:#dbeafe; line-height:1.7; }
+    .section { padding:4rem 0; }
+    .cards-grid, .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
+    .card, .info-card { background:#fff; border:1px solid var(--border-light); border-radius:var(--radius-lg); padding:1.8rem; box-shadow: var(--shadow-sm); }
+    .info-card { text-align:center; }
+    .info-icon { width:54px; height:54px; border-radius: var(--radius-md); background: var(--brand-blue-light); color: var(--brand-blue); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
+    .info-icon svg { width:26px; height:26px; fill:currentColor; }
+    .card h3, .info-card h3 { color: var(--primary-900); margin-bottom:0.6rem; }
+    .card p, .card li { color: var(--text-secondary); line-height:1.7; }
+    .card ul { margin:0; padding-left:1.1rem; }
+    .cta-panel { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); border-radius: var(--radius-xl); padding:2.5rem; text-align:center; color:#fff; }
+    .cta-panel p { max-width:700px; margin:0 auto 1.5rem; color:#dbeafe; }
   </style>
 </head>
 <body>
-
-  <!-- Top Contact Bar -->
   <div class="top-contact-bar">
     <div class="container">
-      <div class="top-contact-left">
-        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
-        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
-        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
-        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
-      </div>
-      <div class="top-contact-right">
-        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
-        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
-      </div>
+      <div class="top-contact-left"><span class="badge-tag">Ofsted Aligned &amp; DBS Checked</span><a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a><a href="tel:07405860115" class="top-contact-item">07405860115</a><a href="tel:02039577099" class="top-contact-item">020 3957 7099</a></div>
+      <div class="top-contact-right"><a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a><a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a></div>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/images/logo.png" alt="The Students Hub Logo" class="brand-logo-img">
-        <div class="logo-text">
-          <span class="logo-title">The Students <span>Hub</span></span>
-          <span class="logo-tagline">Learn • Grow • Succeed</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu">
+      <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
+      <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="courses.html" class="nav-link">Tuition & Courses</a>
-        <a href="guidance.html" class="nav-link">Guidance & Grammar Schools</a>
-        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="courses.html" class="nav-link">Academic Tuition</a>
+        <a href="guidance.html" class="nav-link">Academic Guidance</a>
+        <a href="contact.html" class="nav-link active">School Partnership</a>
+        <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
-
       <div class="header-actions">
-        <button class="cart-button-trigger" aria-label="Open Cart">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          <span class="cart-badge" style="display: none;">0</span>
-        </button>
         <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
-        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
   </header>
 
-  <!-- Contact Hero -->
-  <section class="contact-hero">
+  <section class="page-hero">
     <div class="container">
-      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #93c5fd; margin-bottom: 1rem; display: inline-block;">
-        We Are Here To Help
-      </span>
-      <h1>Get In Touch With Our Advisors</h1>
-      <p>
-        Speak with our admissions team or schedule a free baseline assessment and consultation for your child.
-      </p>
+      <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">We Are Here To Help</span>
+      <h1>School Partnership &amp; Contact</h1>
+      <p>Whether you are a parent seeking support, a school exploring partnership opportunities or a student ready for a free assessment, our team is here to help.</p>
     </div>
   </section>
 
-  <!-- Contact Details Grid -->
-  <section class="section-py" style="padding-bottom: 2rem;">
+  <section class="section" id="partnership">
     <div class="container">
-      <div class="contact-cards-grid">
-        <!-- Card 1 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-large">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-          </div>
-          <h4>Admissions Mobile</h4>
-          <p>Direct line to academy coordinator</p>
-          <a href="tel:+447424044851">+44 7424044851</a>
-          <a href="tel:07405860115" style="font-size: 0.95rem; margin-top: 0.25rem;">07405860115</a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-large" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">
-            <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
-          </div>
-          <h4>Centre Landline</h4>
-          <p>General enquiries & reception</p>
-          <a href="tel:02039577099">020 3957 7099</a>
-          <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem;">Mon - Sun 9:00am - 8:00pm</span>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-large" style="background: var(--brand-gold-light); color: var(--brand-gold);">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </div>
-          <h4>Email Enquiries</h4>
-          <p>Expect a response within 2 hours</p>
-          <a href="mailto:admin@thestudents-hub.co.uk" style="font-size: 0.95rem;">admin@thestudents-hub.co.uk</a>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="contact-info-card">
-          <div class="contact-icon-large" style="background: #f5f3ff; color: #7c3aed;">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          </div>
-          <h4>Official Domain</h4>
-          <p>Online student & resource portal</p>
-          <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Contact Form & Location Section -->
-  <section class="section-py" style="background: var(--bg-alt);">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: start;">
-        <!-- Form -->
-        <div class="form-box">
-          <span class="section-badge">Send a Message</span>
-          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">
-            Book an Assessment or Consultation
-          </h2>
-          <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">
-            Fill in the form below and our Academic Director will contact you to confirm class options and timings.
-          </p>
-
-          <form id="hub-contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="contact-name">Parent / Guardian Full Name *</label>
-                <input type="text" id="contact-name" class="form-control" required placeholder="e.g. Rachel Adams">
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-student">Student Name & Age *</label>
-                <input type="text" id="contact-student" class="form-control" required placeholder="e.g. Ethan (Age 10)">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="contact-phone">Phone Number *</label>
-                <input type="tel" id="contact-phone" class="form-control" required placeholder="e.g. +44 7424 044851">
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="contact-email">Email Address *</label>
-                <input type="email" id="contact-email" class="form-control" required placeholder="e.g. rachel@example.co.uk">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-course">Subject / Programme of Interest *</label>
-              <select id="contact-course" class="form-control" required>
-                <option value="">Select Programme</option>
-                <option value="11+ Grammar Exam Prep">11+ & 13+ Grammar School Exam Prep</option>
-                <option value="Key Stage 2/3 Foundation">Key Stage 2 / 3 (Year 3 - 9)</option>
-                <option value="GCSE Mathematics Higher">GCSE Mathematics (Higher Tier)</option>
-                <option value="GCSE Triple Science">GCSE Triple Science (Bio/Chem/Phys)</option>
-                <option value="A-Level STEM Subjects">A-Level STEM (Maths, Chemistry, Physics)</option>
-                <option value="Coding & STEM for Kids">Junior Coding & Robotics</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-msg">Message & Specific Requirements</label>
-              <textarea id="contact-msg" class="form-control" rows="4" placeholder="Tell us about your child's current school, specific target schools or grades, or any questions you have..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              Send Enquiry & Request Callback
-            </button>
-          </form>
-        </div>
-
-        <!-- Centre Info & Hours -->
-        <div>
-          <div style="background: #ffffff; border-radius: var(--radius-xl); border: 1px solid var(--border-light); padding: 2.5rem; box-shadow: var(--shadow-md); margin-bottom: 2rem;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
-              Centre Hours & Access
-            </h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
-              Our dedicated learning centre features state-of-the-art classrooms, private 1-to-1 mentoring rooms, and a quiet exam simulation hall.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem;">
-                <strong>Monday – Friday:</strong>
-                <span style="color: var(--text-secondary);">09:00 – 20:00</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem;">
-                <strong>Saturday:</strong>
-                <span style="color: var(--text-secondary);">10:00 – 18:00</span>
-              </div>
-              <div style="display: flex; justify-content: space-between; padding-bottom: 0.5rem;">
-                <strong>Sunday:</strong>
-                <span style="color: var(--text-secondary);">12:00 – 16:00</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="background: var(--primary-900); color: #ffffff; border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: var(--shadow-md);">
-            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">
-              Need Immediate Assistance?
-            </h4>
-            <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.5rem;">
-              You can message our senior academic coordinator directly on WhatsApp for instant timetable checks and course queries.
-            </p>
-            <a href="https://wa.me/447424044851" class="btn btn-primary" target="_blank" rel="noopener" style="width: 100%; background: #25d366; border: none;">
-              Chat on WhatsApp Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive FAQs -->
-  <section class="section-py" id="faqs">
-    <div class="container" style="max-width: 850px;">
       <div class="section-header">
-        <span class="section-badge">Common Questions</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about joining The Students Hub.</p>
+        <span class="section-badge">School Partnership</span>
+        <h2 class="section-title">How we can work together</h2>
       </div>
-
-      <div class="faq-accordion">
-        <!-- Q1 -->
-        <div class="faq-accordion-item active">
-          <button class="faq-header">
-            <span>How do you assess a new student before placement?</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="faq-body">
-            Every child completes our 45-minute baseline diagnostic assessment. This isn't a pass/fail test; it maps out curriculum competencies and flags specific blind spots. Following the assessment, our coordinator provides a full breakdown of their working grade and recommended roadmap.
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="faq-accordion-item">
-          <button class="faq-header">
-            <span>What are your typical class sizes?</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="faq-body">
-            We cap our small groups at a maximum of 6 students. This guarantees that each student receives individual question time and tailored guidance while benefiting from the motivation and collaborative energy of fellow ambitious peers.
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="faq-accordion-item">
-          <button class="faq-header">
-            <span>Do you offer 1-to-1 tuition as well as group lessons?</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="faq-body">
-            Yes! We offer bespoke 1-to-1 private tutoring across all levels (11+, KS2/3, GCSE, and A-Levels) both at our centre and live online. This is ideal for students who want hyper-accelerated preparation or need intensive support in specific topics.
-          </div>
-        </div>
-
-        <!-- Q4 -->
-        <div class="faq-accordion-item">
-          <button class="faq-header">
-            <span>How often are mock exam simulations held?</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="faq-body">
-            For 11+ and GCSE cohorts, we conduct bi-weekly timed mock exams starting 6 months before national examinations. Mock papers are marked using official examination mark schemes, accompanied by question-by-question diagnostic error logs.
-          </div>
-        </div>
-
-        <!-- Q5 -->
-        <div class="faq-accordion-item">
-          <button class="faq-header">
-            <span>Can students switch between in-person and online classes?</span>
-            <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="faq-body">
-            Yes. Our hybrid learning platform allows families the flexibility to attend physical centre classes or join our live interactive digital broadcast with identical interactive whiteboard notes and tutor feedback.
-          </div>
-        </div>
+      <div class="feature-grid">
+        <div class="card"><h3>For schools</h3><p>We support schools with additional tutoring, revision planning, extension sessions and structured academic enrichment for pupils who need extra confidence or challenge.</p></div>
+        <div class="card"><h3>For parents</h3><p>We guide families through subject choices, exam preparation, school entrance planning and the best next steps for long-term academic success.</p></div>
+        <div class="card"><h3>For students</h3><p>Students can book an assessment, receive tailored recommendations and begin a programme that matches their stage, needs and goals.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Global Footer -->
+  <section class="section" style="background: var(--bg-alt);" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact</span>
+        <h2 class="section-title">Get in touch</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg></div><h3>Admissions</h3><p><a href="tel:+447424044851">+44 7424044851</a><br><a href="tel:07405860115">07405860115</a></p></div>
+        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.05 15.05 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div><h3>Landline</h3><p><a href="tel:02039577099">020 3957 7099</a></p></div>
+        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><h3>Email</h3><p><a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a></p></div>
+        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div><h3>Website</h3><p><a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel">
+        <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
+        <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Speak with our academic team</h2>
+        <p>Share your child’s year group, subject needs and goals, and we will help recommend the right programme for them.</p>
+        <a href="mailto:admin@thestudents-hub.co.uk" class="btn btn-primary btn-lg">Email Us</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
-            <div class="footer-logo-wrap">
-              <img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img">
-            </div>
-            <div class="logo-text">
-              <span class="logo-title" style="color: #ffffff;">The Students <span style="color: #60a5fa;">Hub</span></span>
-              <span class="logo-tagline" style="color: #94a3b8;">Learn • Grow • Succeed</span>
-            </div>
-          </a>
-          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
-            Your child's education, guided by excellence – wherever you are. Premier tuition for KS2, KS3, 11+, 13+, GCSE & A-Levels across the UK and worldwide online.
-          </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Programmes</h4>
-          <div class="footer-links">
-            <a href="courses.html#11plus">11+ Grammar Preparation</a>
-            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
-            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
-            <a href="courses.html#alevel">A-Level STEM Tuition</a>
-            <a href="courses.html#coding">Coding & Robotics Club</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Resources & Guidance</h4>
-          <div class="footer-links">
-            <a href="guidance.html">Grammar Schools & Guidance</a>
-            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
-            <a href="shop.html">Study Packs Shop</a>
-            <a href="about.html">About The Academy</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="contact.html#faqs">Tuition FAQs</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Verified Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-            <div>
-              <a href="tel:+447424044851">+44 7424044851</a><br>
-              <a href="tel:07405860115">07405860115</a><br>
-              <a href="tel:02039577099">020 3957 7099</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <div>
-              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-            <div>
-              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
-            </div>
-          </div>
-        </div>
+        <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub offers expert academic support, school partnership guidance and student-centred programmes across the UK.</p></div>
+        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="courses.html#stem">Coding &amp; STEM</a></div></div>
+        <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="about.html">About Us</a><a href="guidance.html">Academic Guidance</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
+        <div class="footer-col"><h4>Verified Contact</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg><div><a href="tel:+447424044851">+44 7424044851</a><br><a href="tel:07405860115">07405860115</a><br><a href="tel:02039577099">020 3957 7099</a></div></div><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><div><a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a></div></div></div>
       </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
-      </div>
+      <div class="footer-bottom"><div>&copy; 2026 The Students Hub. All rights reserved.</div></div>
     </div>
   </footer>
 
-  <!-- Modal: Book Free Trial -->
-  <div class="modal-backdrop" id="trial-modal">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3 class="modal-title">Book a Free Trial Lesson</h3>
-        <button class="modal-close-btn" id="trial-modal-close">✕</button>
-      </div>
-      <div class="modal-body">
-        <form id="trial-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-parent-name">Parent Name *</label>
-              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-student-name">Student Name *</label>
-              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="trial-phone">Phone Number *</label>
-              <input type="tel" id="trial-phone" class="form-control" required placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="trial-email">Email Address *</label>
-              <input type="email" id="trial-email" class="form-control" required placeholder="Email Address">
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem;">
-            Submit Trial Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Drawer -->
-  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
-  <aside class="cart-drawer" id="cart-drawer">
-    <div class="cart-drawer-header">
-      <h3 class="cart-drawer-title">Your Study Basket</h3>
-      <button class="cart-close-btn" id="cart-close-btn">✕</button>
-    </div>
-    <div class="cart-items-container" id="cart-drawer-items"></div>
-    <div class="cart-drawer-footer">
-      <div class="cart-subtotal-row">
-        <span>Subtotal:</span>
-        <span id="cart-subtotal-val">£0.00</span>
-      </div>
-      <a href="shop.html" class="btn btn-primary" style="width: 100%;">View Shop & Checkout</a>
-    </div>
-  </aside>
-
-  <!-- Scripts -->
-  <script src="scripts/shop.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>
