@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Guidance & Grammar Schools Directory | The Students Hub</title>
+  <meta name="description" content="Comprehensive guide to Grammar Schools across London Barnet, Hertfordshire, Berkshire Slough, and Buckinghamshire, alongside academic guidance, revision workshops, and booster crash courses.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/hero-3d.css">
+  <style>
+    .guidance-hero {
+      background: linear-gradient(135deg, var(--primary-900) 0%, #1e1b4b 100%);
+      color: #ffffff;
+      padding: 4.5rem 0 3.5rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .guidance-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.85rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .guidance-hero p {
+      font-size: 1.125rem;
+      color: #cbd5e1;
+      max-width: 750px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.7;
+    }
+    .region-nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .region-tab-btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: #ffffff;
+      border: 1.5px solid var(--border-light);
+      color: var(--primary-900);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .region-tab-btn:hover, .region-tab-btn.active {
+      background: var(--brand-blue);
+      color: #ffffff;
+      border-color: var(--brand-blue);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+    .schools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .school-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .school-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-blue);
+    }
+    .school-region-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      background: var(--brand-blue-light);
+      color: var(--brand-blue);
+      margin-bottom: 0.75rem;
+    }
+    .school-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-900);
+      margin-bottom: 0.5rem;
+    }
+    .school-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .guidance-stage-card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 2.25rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+    .guidance-stage-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--primary-900);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .booster-card {
+      background: linear-gradient(135deg, #ffffff 0%, var(--bg-alt) 100%);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem;
+      border: 1.5px solid var(--border-light);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Contact Bar -->
+  <div class="top-contact-bar">
+    <div class="container">
+      <div class="top-contact-left">
+        <span class="badge-tag">Ofsted Aligned & DBS Checked</span>
+        <a href="tel:+447424044851" class="top-contact-item">+44 7424044851</a>
+        <a href="tel:07405860115" class="top-contact-item">07405860115</a>
+        <a href="tel:02039577099" class="top-contact-item">020 3957 7099</a>
+      </div>
+      <div class="top-contact-right">
+        <a href="mailto:admin@thestudents-hub.co.uk" class="top-contact-item">admin@thestudents-hub.co.uk</a>
+        <a href="https://thestudents-hub.uk" class="top-contact-item" target="_blank" rel="noopener">thestudents-hub.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="site-logo">
+        <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Tuition & Courses</a>
+        <a href="guidance.html" class="nav-link active">Guidance & Grammar Schools</a>
+        <a href="shop.html" class="nav-link">Shop & Study Packs</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-button-trigger" aria-label="Open Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="guidance-hero">
+    <div class="container">
+      <span class="badge-tag" style="background: rgba(37,99,235,0.4); color: #bfdbfe; margin-bottom: 1rem; display: inline-block;">
+        Academic & Career Excellence
+      </span>
+      <h1>Academic Guidance & Grammar Schools Directory</h1>
+      <p>
+        Personalised academic guidance for Primary, Secondary, and Sixth Form students, specialist admissions coaching for leading Grammar Schools across London and the Home Counties, and intensive holiday revision booster classes.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-primary btn-lg trial-modal-trigger">Book Guidance Consultation</button>
+        <a href="documents/TSH content.docx" download class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.15); color: #ffffff; border: 1px solid rgba(255,255,255,0.3);">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          Download TSH Curriculum Document (.docx)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Guidance Section -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Stage-by-Stage Support</span>
+        <h2 class="section-title">Academic Guidance for Primary, Secondary & Sixth Form</h2>
+        <p class="section-subtitle">
+          At our tuition centre, we provide personalised academic support designed to help every learner grow in confidence, close attainment gaps, and achieve their full potential.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+        
+        <!-- Primary KS1-KS2 -->
+        <div class="guidance-stage-card">
+          <span class="badge-tag" style="background: var(--brand-blue-light); color: var(--brand-blue); margin-bottom: 0.75rem; display: inline-block;">Years 1 – 6</span>
+          <h3>
+            <span>🎒</span> Primary School Support (KS1–KS2)
+          </h3>
+          
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Building Strong Foundations:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            We help younger learners develop essential literacy and numeracy skills: reading fluency, phonics, comprehension, core maths (number bonds, place value, times tables), and early writing skills (spelling, punctuation, vocabulary).
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Confidence & Learning Habits:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Nurturing curiosity, motivation, and independence through positive learning habits, growth mindset, resilience, and problem-solving skills.
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">SATs & 11+ Preparation:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            Specialist support for Year 2 & Year 6 SATs, plus 11+ entrance exams (GL & CEM) in Verbal Reasoning, Non-Verbal Reasoning, English, and Mathematics.
+          </p>
+        </div>
+
+        <!-- Secondary KS3-KS4 -->
+        <div class="guidance-stage-card">
+          <span class="badge-tag" style="background: var(--brand-emerald-light); color: var(--brand-emerald); margin-bottom: 0.75rem; display: inline-block;">Years 7 – 11</span>
+          <h3>
+            <span>📐</span> Secondary Support (KS3–KS4 / GCSE)
+          </h3>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Subject Mastery & Foundations:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Targeted academic support across Maths, English, Science, Humanities, Languages, and Computing. Smooth foundation building for the KS3 transition and GCSE success.
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Effective Study & Revision Skills:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Students learn how to revise smarter, not harder: active recall, spaced repetition, time management, organisation, and decoding exam command words.
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">GCSE Exam Preparation & Careers:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            Comprehensive preparation for AQA, Edexcel, and OCR boards, mock exams with feedback, and early guidance on post-16 options and career choices.
+          </p>
+        </div>
+
+        <!-- Sixth Form -->
+        <div class="guidance-stage-card">
+          <span class="badge-tag" style="background: var(--brand-gold-light); color: var(--brand-gold); margin-bottom: 0.75rem; display: inline-block;">Years 12 – 13</span>
+          <h3>
+            <span>🏛️</span> Sixth Form Coaching & UCAS
+          </h3>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Advanced Academic Coaching:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Tailored sessions in key A-Level subjects: Maths, Further Maths, Physics, Chemistry, Biology, Economics, Business, Psychology, Sociology, and English Literature.
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">Independent Study & Success:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+            Critical thinking, extended essay writing, managing deadlines, advanced exam strategies, and future-ready digital and AI-assisted learning literacy.
+          </p>
+
+          <h5 style="font-weight: 700; color: var(--primary-900); margin: 1rem 0 0.4rem 0;">University & Apprenticeships:</h5>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+            UCAS personal statements, university course selection, interview preparation, apprenticeship advice, and CV development.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Grammar Schools Directory by Region -->
+  <section class="section-py" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Admissions Directory</span>
+        <h2 class="section-title">Grammar Schools Targeted by The Students Hub</h2>
+        <p class="section-subtitle">
+          We provide dedicated 11+ and 13+ entrance preparation, mock tests, and admissions consultation for the top grammar schools across Greater London and neighboring counties.
+        </p>
+      </div>
+
+      <!-- Regional Filter Tabs -->
+      <div class="region-nav-tabs">
+        <button class="region-tab-btn active" data-region="all">All Regions (25+ Schools)</button>
+        <button class="region-tab-btn" data-region="barnet">London : Barnet</button>
+        <button class="region-tab-btn" data-region="hertfordshire">Hertfordshire</button>
+        <button class="region-tab-btn" data-region="berkshire">Berkshire : Slough</button>
+        <button class="region-tab-btn" data-region="buckinghamshire">Buckinghamshire</button>
+      </div>
+
+      <div class="schools-grid" id="schools-directory">
+        
+        <!-- London Barnet -->
+        <div class="school-card" data-region="barnet">
+          <div>
+            <span class="school-region-badge">London Barnet</span>
+            <h4>Henrietta Barnett School</h4>
+            <p>One of the top-performing girls' grammar schools in the country with rigorous English and numerical reasoning exams.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="barnet">
+          <div>
+            <span class="school-region-badge">London Barnet</span>
+            <h4>Mill Hill County High School</h4>
+            <p>Outstanding academy known for high academic achievement, musical and technological aptitude streams.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="barnet">
+          <div>
+            <span class="school-region-badge">London Barnet</span>
+            <h4>Queen Elizabeth’s School (QE Boys)</h4>
+            <p>Consistently ranked as the #1 state grammar school in England, renowned for unmatched mathematics and scientific excellence.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="barnet">
+          <div>
+            <span class="school-region-badge">London Barnet</span>
+            <h4>St Michael’s Catholic Grammar School</h4>
+            <p>Top selective Catholic grammar school for girls with high academic standards in mathematics and humanities.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <!-- Hertfordshire -->
+        <div class="school-card" data-region="hertfordshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Hertfordshire</span>
+            <h4>Parmiter’s School</h4>
+            <p>Heavily oversubscribed, outstanding co-educational selective school in Garston, Watford.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="hertfordshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Hertfordshire</span>
+            <h4>Queens’ School (Bushey)</h4>
+            <p>Renowned Bushey academy with academic and musical selective criteria, producing excellent GCSE and A-Level results.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="hertfordshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Hertfordshire</span>
+            <h4>Rickmansworth School</h4>
+            <p>Outstanding South West Herts consortium school known for strong science, mathematics, and arts faculties.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="hertfordshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Hertfordshire</span>
+            <h4>Croxley Danes School</h4>
+            <p>Modern selective consortium school delivering high academic standards and outstanding enrichment.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="hertfordshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-emerald-light); color: var(--brand-emerald);">Hertfordshire</span>
+            <h4>Bushey Meads School</h4>
+            <p>Popular academy in Bushey offering selective technology and academic streams within the consortium.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <!-- Berkshire / Slough -->
+        <div class="school-card" data-region="berkshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-gold-light); color: var(--brand-gold);">Berkshire : Slough</span>
+            <h4>Herschel Grammar School</h4>
+            <p>High-achieving co-educational grammar school with a strong focus on STEM, technology, and Russell Group entry.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="berkshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-gold-light); color: var(--brand-gold);">Berkshire : Slough</span>
+            <h4>Langley Grammar School</h4>
+            <p>Leading co-educational grammar school and National Support School with exceptional academic progress scores.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="berkshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-gold-light); color: var(--brand-gold);">Berkshire : Slough</span>
+            <h4>Upton Court Grammar School</h4>
+            <p>Pioneering grammar school committed to academic excellence, leadership, and digital literacy.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="berkshire">
+          <div>
+            <span class="school-region-badge" style="background: var(--brand-gold-light); color: var(--brand-gold);">Berkshire : Slough</span>
+            <h4>St Bernard’s Catholic Grammar</h4>
+            <p>Selective voluntary aided Catholic grammar school delivering remarkable value-added progress and pastoral care.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <!-- Buckinghamshire -->
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Dr Challoner’s Grammar School</h4>
+            <p>Historic selective boys' grammar in Amersham with exceptional Oxbridge, medicine, and STEM progression.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Dr Challoner’s High School</h4>
+            <p>Top-tier girls' grammar school in Little Chalfont renowned for inspiring intellectual curiosity and confidence.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>The Royal Grammar School (High Wycombe)</h4>
+            <p>Prestigious boys' grammar school established in 1562, offering elite academic and sporting traditions.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Beaconsfield High School</h4>
+            <p>High-achieving girls' selective school cultivating resilience, leadership, and outstanding GCSE / A-Level scores.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Aylesbury Grammar School (AGS)</h4>
+            <p>Famous boys' selective academy with a strong tradition of mathematical, scientific, and linguistic success.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Aylesbury High School</h4>
+            <p>Exemplary girls' grammar school with an inclusive, stimulating environment and remarkable university outcomes.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Sir Henry Floyd Grammar School</h4>
+            <p>Co-educational grammar school in Aylesbury celebrated for outstanding academic achievement and performing arts.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Sir William Borlase’s Grammar School</h4>
+            <p>Co-educational selective academy located in Marlow, highly rated for academic rigour and creative vitality.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>The Royal Latin School</h4>
+            <p>Prestigious co-educational grammar school in Buckingham with historic roots dating back to the 15th century.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Chesham Grammar School</h4>
+            <p>Leading co-educational grammar with a rich tradition of university progression, languages, and sciences.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>John Hampden Grammar School</h4>
+            <p>High Wycombe boys' selective school renowned for innovation, mathematics, and technological prowess.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Burnham Grammar School</h4>
+            <p>Co-educational grammar school known for fostering academic excellence and personal growth.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+        <div class="school-card" data-region="buckinghamshire">
+          <div>
+            <span class="school-region-badge" style="background: #fdf2f8; color: #db2777;">Buckinghamshire</span>
+            <h4>Wycombe High School</h4>
+            <p>High-performing girls' grammar school in High Wycombe with outstanding STEM and humanities results.</p>
+          </div>
+          <button class="btn btn-outline btn-sm trial-modal-trigger">11+ Prep Available</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Revision Workshops & Booster Classes -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Intensive Exam Prep</span>
+        <h2 class="section-title">Revision Workshops & Holiday Booster Classes</h2>
+        <p class="section-subtitle">
+          Exclusive revision sessions held both at our centre and online, designed to strengthen students’ final exam preparation before and during exam periods, and through intensive programmes during Easter and Summer holidays.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+        
+        <div class="booster-card">
+          <span class="badge-tag" style="background: rgba(37,99,235,0.15); color: var(--brand-blue); margin-bottom: 0.75rem; display: inline-block;">Year-Round Support</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
+            Comprehensive Booster Courses
+          </h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+            Crash courses that thoroughly cover the entire syllabus, ideal for students preparing for <strong>GCSE, IGCSE, A-Levels, 11 Plus, and 13 Plus</strong>.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-primary); margin-bottom: 1.5rem; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-blue);">✔</span> Revisiting missed or challenging topics thoroughly.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-blue);">✔</span> Practising a wide range of authentic exam-style questions.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-blue);">✔</span> Solving past examination papers under timed conditions.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-blue);">✔</span> Strengthening mark-scheme awareness and exam technique.</li>
+          </ul>
+          <button class="btn btn-primary trial-modal-trigger">Register for Booster Workshop</button>
+        </div>
+
+        <div class="booster-card">
+          <span class="badge-tag" style="background: rgba(245,158,11,0.15); color: #b45309; margin-bottom: 0.75rem; display: inline-block;">Holiday Accelerators</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
+            Easter & Summer Holiday Booster Classes
+          </h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+            High-impact holiday bootcamps that prevent learning loss and supercharge exam readiness ahead of crucial summer examination series.
+          </p>
+          <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--text-primary); margin-bottom: 1.5rem; list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-gold);">✔</span> Comprehensive syllabus review in condensed, intensive modules.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-gold);">✔</span> Targeted focus on hardest topics in Maths, Sciences & English.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-gold);">✔</span> Daily feedback and personalized gap-closing support.</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--brand-gold);">✔</span> Builds confidence before walking into the real exam hall.</li>
+          </ul>
+          <button class="btn btn-secondary trial-modal-trigger">Enquire About Holiday Camps</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Guidance & Application Support -->
+  <section class="section-py" style="background: var(--bg-alt);">
+    <div class="container">
+      <div style="background: #ffffff; border-radius: var(--radius-xl); padding: 3rem; border: 1px solid var(--border-light); box-shadow: var(--shadow-md);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+          <div>
+            <span class="section-badge">Admissions & Futures</span>
+            <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary-900); margin-bottom: 1rem;">
+              Career Guidance & University Admissions
+            </h2>
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+              We offer dedicated Academic and Career Guidance to support students and parents throughout the entrance exam and admissions process. We provide clear, personalised advice for applications to <strong>Grammar Schools, Independent Schools, Sixth-Form Colleges, and Russell Group Universities</strong>.
+            </p>
+            
+            <h5 style="font-weight: 700; color: var(--primary-900); margin-bottom: 0.5rem;">How We Support Families:</h5>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; list-style: none; padding: 0;">
+              <li>✔ Entrance exam process, registration dates, and admissions criteria</li>
+              <li>✔ Preparation for Grammar and Private School interviews</li>
+              <li>✔ Choosing suitable career paths that align with student interests & strengths</li>
+              <li>✔ Identifying universities offering relevant undergraduate degrees</li>
+              <li>✔ Highlighting alternative vocational and apprenticeship pathways</li>
+            </ul>
+
+            <button class="btn btn-primary trial-modal-trigger">Book Admissions Advisory Session</button>
+          </div>
+
+          <div style="background: linear-gradient(135deg, var(--primary-900) 0%, #0f172a 100%); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: #ffffff;">
+              Download Complete Curriculum & Syllabus Guide
+            </h3>
+            <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Access the official document containing our full curriculum for Key Stage 2, Key Stage 3, GCSE, A-Levels, 12 Coding Courses, and the full Grammar Schools directory:
+            </p>
+            <div style="background: rgba(255,255,255,0.08); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; font-size: 0.88rem;">
+              <div><strong>Document:</strong> TSH content.docx</div>
+              <div style="color: #93c5fd; margin-top: 0.25rem;">Official Syllabus, Guidance & Schedule</div>
+            </div>
+            <a href="documents/TSH content.docx" download class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download TSH content.docx
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo-wrap">
+            <img src="assets/images/logo.png" alt="The Students Hub - Learn Grow Succeed" class="footer-logo-img">
+          </a>
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
+            The Students Hub is a leading online tuition provider based in London, serving students across Primary, 11 Plus, KS3, KS4, GCSE, IGCSE, AS and A2 Levels across the United Kingdom. We hold the firm conviction that every child possesses talent, and that every child deserves the opportunity to acquire the skills and confidence needed to transform their potential into success.
+          </p>
+          <div class="footer-accreditations" style="margin-top: 1rem;">
+            <span class="accred-badge">OCR, Edexcel, AQA & Cambridge</span>
+            <span class="accred-badge">Enhanced DBS Certified</span>
+            <span class="accred-badge">Understand, Apply & Practice</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#11plus">11+ Grammar Preparation</a>
+            <a href="courses.html#ks2-ks3">KS2 & KS3 Foundations</a>
+            <a href="courses.html#gcse">GCSE & IGCSE Booster</a>
+            <a href="courses.html#alevel">A-Level STEM Tuition</a>
+            <a href="courses.html#coding">Coding & Robotics Club</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources & Guidance</h4>
+          <div class="footer-links">
+            <a href="guidance.html">Grammar Schools & Guidance</a>
+            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
+            <a href="shop.html">Study Packs Shop</a>
+            <a href="about.html">About The Academy</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="contact.html#faqs">Tuition FAQs</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verified Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+            <div>
+              <a href="tel:+447424044851">+44 7424044851</a><br>
+              <a href="tel:07405860115">07405860115</a><br>
+              <a href="tel:02039577099">020 3957 7099</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            <div>
+              <a href="https://thestudents-hub.uk" target="_blank" rel="noopener">thestudents-hub.uk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Students Hub. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Book Free Trial -->
+  <div class="modal-backdrop" id="trial-modal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Free Trial / Assessment</h3>
+        <button class="modal-close-btn" id="trial-modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="trial-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-parent-name">Parent Name *</label>
+              <input type="text" id="trial-parent-name" class="form-control" required placeholder="Parent Name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-student-name">Student Name *</label>
+              <input type="text" id="trial-student-name" class="form-control" required placeholder="Student Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-email">Email Address *</label>
+              <input type="email" id="trial-email" class="form-control" required placeholder="parent@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-phone">Mobile / Phone *</label>
+              <input type="tel" id="trial-phone" class="form-control" required placeholder="+44 7424044851">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="trial-course">Programme of Interest *</label>
+              <select id="trial-course" class="form-control" required>
+                <option value="">-- Choose Programme --</option>
+                <option value="11plus">11+ & 13+ Grammar School Preparation</option>
+                <option value="ks2">Key Stage 2 (Years 3 - 6)</option>
+                <option value="ks3">Key Stage 3 (Years 7 - 9)</option>
+                <option value="gcse">GCSE & IGCSE Booster</option>
+                <option value="alevel">AS & A2 Levels</option>
+                <option value="coding">Coding & STEM for Kids</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trial-format">Preferred Format *</label>
+              <select id="trial-format" class="form-control" required>
+                <option value="online">Live Interactive Online (Zoom)</option>
+                <option value="centre">London Tuition Centre</option>
+                <option value="1to1">1-to-1 Personalised Tuition</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="trial-notes">Target School / Examination Board / Notes</label>
+            <textarea id="trial-notes" class="form-control" rows="3" placeholder="E.g., aiming for Henrietta Barnett / QE Boys / GCSE Edexcel Maths"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Consultation Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/shop.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+    // Tab switching for Grammar Schools Directory
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabBtns = document.querySelectorAll('.region-tab-btn');
+      const schoolCards = document.querySelectorAll('.school-card');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const region = btn.getAttribute('data-region');
+          schoolCards.forEach(card => {
+            if (region === 'all' || card.getAttribute('data-region') === region) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
