@@ -9,11 +9,14 @@ Official website for **The Students Hub** — an accredited academic tuition aca
 ## 📞 Contact Information
 
 - **Website Name:** The Students Hub
-- **Admissions Mobile 1:** `+44 7424044851`
-- **Admissions Mobile 2:** `07405860115`
-- **Centre Landline:** `020 3957 7099`
+- **WhatsApp:** `07424044851` ([Chat on WhatsApp](https://wa.me/447424044851))
+- **Phone (Mobile):** `07405860115`
+- **Landline:** `020 3957 7099`
 - **Email:** `admin@thestudents-hub.co.uk`
-- **Official Domain:** [thestudents-hub.uk](https://thestudents-hub.uk)
+- **Official Domain:** [www.thestudents-hub.uk](https://www.thestudents-hub.uk)
+- **Facebook:** [The Students Hub](https://www.facebook.com)
+- **Instagram:** [@thestudentshub01](https://www.instagram.com/thestudentshub01)
+- **Location:** United Kingdom
 
 ---
 
