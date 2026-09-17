@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------
-  // 2. Mobile Navigation Toggle
+  // 2. Mobile Navigation Toggle & Dropdown Flow
   // -------------------------------------------------------------
   const mobileToggle = document.querySelector('.mobile-nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close mobile menu when direct (non-dropdown) nav links are clicked
-    navMenu.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach((link) => {
+    // Close mobile menu when nav links are clicked
+    navMenu.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach((link) => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
         mobileToggle?.setAttribute('aria-expanded', 'false');
@@ -76,12 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle touch & click on the dropdown trigger
     trigger.addEventListener('click', (event) => {
-      const isAlreadyOpen = wrapper.classList.contains('open');
+      const isMobile = window.innerWidth <= 768;
 
-      // If not yet open, reveal the dropdown menu first so user can choose an item
-      if (!isAlreadyOpen) {
+      // On mobile screens, tapping toggles the accordion
+      if (isMobile) {
         event.preventDefault();
         event.stopPropagation();
+        const isAlreadyOpen = wrapper.classList.contains('open');
 
         // Close any other open dropdowns
         navDropdownWrappers.forEach((item) => {
@@ -90,19 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
           if (itemTrigger) itemTrigger.setAttribute('aria-expanded', 'false');
         });
 
-        wrapper.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
-      } else {
-        // If already open on mobile screen, toggle closed
-        if (window.innerWidth <= 768) {
-          event.preventDefault();
+        if (!isAlreadyOpen) {
+          wrapper.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        } else {
           wrapper.classList.remove('open');
           trigger.setAttribute('aria-expanded', 'false');
         }
       }
+      // On desktop, hover handles revealing the menu and clicking navigates directly to courses.html
     });
 
-    // Close when clicking any dropdown item and close mobile menu
+    // Close when clicking any dropdown item
     if (dropdownMenu) {
       dropdownMenu.querySelectorAll('.dropdown-item').forEach((item) => {
         item.addEventListener('click', () => {
@@ -139,54 +139,176 @@ document.addEventListener('DOMContentLoaded', () => {
           trigger.blur();
         }
       });
+      closeTrialModal();
     }
   });
+
+  // Automatically update active nav link state across all pages
+  function syncNavActiveLinks() {
+    const rawPath = window.location.pathname.split('/').pop() || 'index.html';
+    const currentHash = window.location.hash;
+    const currentPath = rawPath === '' ? 'index.html' : rawPath;
+
+    document.querySelectorAll('#primary-nav .nav-link').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const [linkFile, linkHash] = href.split('#');
+      const normalizedLinkFile = linkFile || currentPath;
+
+      if (link.classList.contains('dropdown-toggle')) {
+        if (currentPath === 'courses.html') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        return;
+      }
+
+      if (linkHash) {
+        if (currentHash === '#' + linkHash && normalizedLinkFile === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      } else if (normalizedLinkFile === currentPath && !currentHash) {
+        link.classList.add('active');
+      } else if (normalizedLinkFile !== currentPath) {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  syncNavActiveLinks();
+  window.addEventListener('hashchange', syncNavActiveLinks);
 
   // -------------------------------------------------------------
   // 3. Free Trial / Diagnostic Assessment Modal
   // -------------------------------------------------------------
-  const trialModal = document.getElementById('trial-modal');
-  const trialCloseBtn = document.getElementById('trial-modal-close');
-  const trialTriggers = document.querySelectorAll('.trial-modal-trigger');
-  const trialForm = document.getElementById('trial-form');
+  function ensureTrialModalElement() {
+    let modal = document.getElementById('trial-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.className = 'modal-backdrop';
+      modal.id = 'trial-modal';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('aria-labelledby', 'trial-modal-title');
+      modal.innerHTML = `
+        <div class="modal-window">
+          <div class="modal-header">
+            <h3 class="modal-title" id="trial-modal-title">Book a Free Assessment</h3>
+            <button class="modal-close-btn" id="trial-modal-close" aria-label="Close dialog">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+              Claim a 100% free, no-obligation 45-minute diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
+            </p>
+            <form id="trial-form">
+              <div class="form-group">
+                <label class="form-label" for="trial-parent-name">Parent / Guardian Full Name *</label>
+                <input type="text" id="trial-parent-name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="trial-student-name">Student Full Name *</label>
+                <input type="text" id="trial-student-name" class="form-control" placeholder="e.g. James Jenkins" required>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="trial-email">Contact Email *</label>
+                  <input type="email" id="trial-email" class="form-control" placeholder="parent@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="trial-phone">Contact Phone *</label>
+                  <input type="tel" id="trial-phone" class="form-control" placeholder="07405 860115" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="trial-subject">Target Academic Programme *</label>
+                <select id="trial-subject" class="form-control" required>
+                  <option value="" disabled selected>Select a programme or subject...</option>
+                  <option value="11+ Grammar Entrance Prep">11+ Grammar School Entrance (GL / CEM)</option>
+                  <option value="13+ Common Entrance Prep">13+ Common Entrance &amp; Scholarships</option>
+                  <option value="Key Stage 2 Maths &amp; English">Key Stage 2 (Years 3–6)</option>
+                  <option value="Key Stage 3 Secondary Core">Key Stage 3 (Years 7–9)</option>
+                  <option value="GCSE / IGCSE Exam Preparation">GCSE / IGCSE Exam Preparation</option>
+                  <option value="A-Level / Sixth Form Tutoring">AS &amp; A2 Level Tutoring</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; margin-top: 0.5rem;">
+                Confirm Free Assessment Booking
+              </button>
+            </form>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+    return modal;
+  }
 
-  function openTrialModal() {
-    if (trialModal) {
-      trialModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  function openTrialModal(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    const modal = ensureTrialModalElement();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const closeBtn = modal.querySelector('#trial-modal-close');
+    if (closeBtn && !closeBtn._hasCloseBound) {
+      closeBtn.addEventListener('click', closeTrialModal);
+      closeBtn._hasCloseBound = true;
+    }
+
+    if (!modal._hasBackdropBound) {
+      modal.addEventListener('click', (ev) => {
+        if (ev.target === modal) closeTrialModal();
+      });
+      modal._hasBackdropBound = true;
+    }
+
+    const form = modal.querySelector('#trial-form');
+    if (form && !form._hasSubmitBound) {
+      form.addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        const parentName = document.getElementById('trial-parent-name')?.value || 'Parent';
+        const studentName = document.getElementById('trial-student-name')?.value || 'Student';
+        const subject = document.getElementById('trial-subject')?.value || 'Tuition';
+
+        closeTrialModal();
+        form.reset();
+
+        window.showHubToast(
+          `Thank you ${parentName}! Free trial assessment booked for ${studentName} (${subject}). Our academic advisor will contact you within 2 business hours.`
+        );
+      });
+      form._hasSubmitBound = true;
     }
   }
 
   function closeTrialModal() {
-    if (trialModal) {
-      trialModal.classList.remove('active');
+    const modal = document.getElementById('trial-modal');
+    if (modal) {
+      modal.classList.remove('active');
       document.body.style.overflow = '';
     }
   }
 
-  trialTriggers.forEach((btn) => btn.addEventListener('click', openTrialModal));
-  if (trialCloseBtn) trialCloseBtn.addEventListener('click', closeTrialModal);
-
-  if (trialModal) {
-    trialModal.addEventListener('click', (e) => {
-      if (e.target === trialModal) closeTrialModal();
-    });
-  }
-
-  if (trialForm) {
-    trialForm.addEventListener('submit', (e) => {
+  // Handle all Free Trial button triggers (header, floating, cards)
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.trial-modal-trigger, a[href$="#trial"], a[href$="#trial-modal"]');
+    if (trigger) {
       e.preventDefault();
-      const parentName = document.getElementById('trial-parent-name')?.value || 'Parent';
-      const studentName = document.getElementById('trial-student-name')?.value || 'Student';
-      const subject = document.getElementById('trial-subject')?.value || 'Tuition';
+      openTrialModal(e);
+    }
+  });
 
-      closeTrialModal();
-      trialForm.reset();
-
-      window.showHubToast(
-        `Thank you ${parentName}! Free trial assessment booked for ${studentName} (${subject}). Our academic advisor will contact you within 2 business hours.`
-      );
-    });
+  // Open modal if page loaded with #trial hash
+  if (window.location.hash === '#trial' || window.location.hash === '#trial-modal') {
+    setTimeout(openTrialModal, 300);
   }
 
   // -------------------------------------------------------------
