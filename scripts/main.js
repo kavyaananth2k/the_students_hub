@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle touch & click on the dropdown trigger
     trigger.addEventListener('click', (event) => {
-      const isMobile = window.innerWidth <= 768;
+      const isMobile = window.innerWidth <= 1140;
 
       // On mobile screens, tapping toggles the accordion
       if (isMobile) {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
           trigger.setAttribute('aria-expanded', 'false');
         }
       }
-      // On desktop, hover handles revealing the menu and clicking navigates directly to courses.html
+      // On desktop, hover handles revealing the menu and clicking navigates directly
     });
 
     // Close when clicking any dropdown item
@@ -149,21 +149,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentHash = window.location.hash;
     const currentPath = rawPath === '' ? 'index.html' : rawPath;
 
+    const codingHashes = ['#stem', '#scratch', '#webdesign', '#gamedev', '#python', '#javascript', '#canva', '#cybersecurity', '#robotics', '#ai', '#arduino', '#raspberrypi', '#microbit'];
+
     document.querySelectorAll('#primary-nav .nav-link').forEach((link) => {
-      const href = link.getAttribute('href');
-      if (!href) return;
+      const id = link.id;
 
-      const [linkFile, linkHash] = href.split('#');
-      const normalizedLinkFile = linkFile || currentPath;
-
-      if (link.classList.contains('dropdown-toggle')) {
-        if (currentPath === 'courses.html') {
+      if (id === 'coding-courses-nav') {
+        if (currentPath === 'coding.html') {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
         }
         return;
       }
+
+      if (id === 'academic-tuition-nav') {
+        if (currentPath === 'courses.html' && currentHash !== '#fees' && currentHash !== '#schedule') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        return;
+      }
+
+      if (id === 'services-nav') {
+        if (currentPath === 'guidance.html') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        return;
+      }
+
+      if (id === 'fees-schedule-nav') {
+        if (currentPath === 'courses.html' && (currentHash === '#fees' || currentHash === '#schedule')) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        return;
+      }
+
+      if (id === 'free-resources-nav') {
+        if (currentPath === 'shop.html') {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        return;
+      }
+
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const [linkFile, linkHash] = href.split('#');
+      const normalizedLinkFile = linkFile || currentPath;
 
       if (linkHash) {
         if (currentHash === '#' + linkHash && normalizedLinkFile === currentPath) {
@@ -181,6 +221,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   syncNavActiveLinks();
   window.addEventListener('hashchange', syncNavActiveLinks);
+
+  // Coding courses filter buttons click & scroll spy handling
+  const codingFilterBtns = document.querySelectorAll('.coding-filter-btn');
+  const codingCards = document.querySelectorAll('.coding-card');
+
+  if (codingFilterBtns.length > 0 && codingCards.length > 0) {
+    codingFilterBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const targetId = btn.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            codingFilterBtns.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, targetId);
+            }
+          }
+        }
+      });
+    });
+
+    const updateActiveCodingFilter = () => {
+      const scrollPos = window.scrollY + 220;
+      let currentCardId = '';
+      codingCards.forEach((card) => {
+        const top = card.offsetTop;
+        const height = card.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          currentCardId = card.getAttribute('id');
+        }
+      });
+      if (currentCardId) {
+        codingFilterBtns.forEach((btn) => {
+          if (btn.getAttribute('href') === `#${currentCardId}`) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+    };
+
+    window.addEventListener('scroll', updateActiveCodingFilter, { passive: true });
+    updateActiveCodingFilter();
+  }
 
   // -------------------------------------------------------------
   // 3. Free Trial / Diagnostic Assessment Modal
@@ -524,11 +612,18 @@ document.addEventListener('DOMContentLoaded', () => {
         { threshold: 0.1, rootMargin: '-130px 0px -65% 0px' }
       );
 
-      // Safe lookup for all main sections (supports digit-prefixed IDs like 11plus, 13plus)
-      const sectionIds = ['ks2', 'ks3', 'gcse', '11plus', '13plus', 'alevel', 'stem'];
+      // Safe lookup for all main sections and any nav-strip chips
+      const sectionIds = ['ks2', 'ks3', 'gcse', '11plus', '13plus', 'alevel', 'stem', 'school-partnership', 'academic-guidance', 'grammar-schools', 'revision-workshops', 'booster-classes', 'career-guidance'];
       sectionIds.forEach((id) => {
         const sec = document.getElementById(id);
         if (sec) sectionObserver.observe(sec);
+      });
+      chips.forEach((chip) => {
+        const targetId = chip.getAttribute('href')?.replace('#', '');
+        if (targetId) {
+          const sec = document.getElementById(targetId);
+          if (sec) sectionObserver.observe(sec);
+        }
       });
 
       // 2. Observe year panels to sync Year switcher buttons

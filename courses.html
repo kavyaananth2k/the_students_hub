@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academic Tuition | The Students Hub</title>
-  <meta name="description" content="Academic tuition programmes from Key Stage 2 to A-Level, plus coding, robotics, AI and STEM enrichment courses provided by The Students Hub.">
+  <meta name="description" content="Academic tuition programmes from Key Stage 2 to A-Level, 11 Plus and 13 Plus entrance exam preparation provided by The Students Hub.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
     .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
@@ -42,9 +42,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
-      <nav class="nav-menu" id="primary-nav">
+            <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+
+        <!-- Academic Tuition Dropdown -->
         <div class="nav-dropdown-wrapper">
           <a href="courses.html" class="nav-link active dropdown-toggle" id="academic-tuition-nav" role="button" aria-haspopup="true" aria-expanded="false">
             Academic Tuition
@@ -62,12 +64,90 @@
             <a href="courses.html#alevel" class="dropdown-item">AS &amp; A2 Levels</a>
           </div>
         </div>
-        <a href="guidance.html" class="nav-link">Academic Guidance</a>
-        <a href="contact.html" class="nav-link">School Partnership</a>
+
+        <!-- Coding Courses Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="coding.html" class="nav-link dropdown-toggle" id="coding-courses-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Coding Courses
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="coding-courses-nav">
+            <a href="coding.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Coding Courses &rarr;</a>
+            <a href="coding.html#scratch" class="dropdown-item">Coding in Scratch</a>
+            <a href="coding.html#webdesign" class="dropdown-item">Web Design</a>
+            <a href="coding.html#gamedev" class="dropdown-item">Game Development</a>
+            <a href="coding.html#python" class="dropdown-item">Coding in Python</a>
+            <a href="coding.html#javascript" class="dropdown-item">Coding in JavaScript</a>
+            <a href="coding.html#canva" class="dropdown-item">Design Using Canva</a>
+            <a href="coding.html#cybersecurity" class="dropdown-item">Cyber Security Essentials</a>
+            <a href="coding.html#robotics" class="dropdown-item">Robotics</a>
+            <a href="coding.html#ai" class="dropdown-item">Artificial Intelligence</a>
+            <a href="coding.html#arduino" class="dropdown-item">Programming with Ardunio UNO</a>
+            <a href="coding.html#raspberrypi" class="dropdown-item">Programming with Raspberry Pi</a>
+            <a href="coding.html#microbit" class="dropdown-item">Programming with BBC Microbit</a>
+          </div>
+        </div>
+
+        <!-- Our Services Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="guidance.html" class="nav-link dropdown-toggle" id="services-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Our Services
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="services-nav">
+            <a href="guidance.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Services Overview &rarr;</a>
+            <a href="guidance.html#school-partnership" class="dropdown-item">School Partnership</a>
+            <a href="guidance.html#academic-guidance" class="dropdown-item">Academic Guidance</a>
+            <a href="guidance.html#grammar-schools" class="dropdown-item">Grammar Schools Admissions</a>
+            <a href="guidance.html#revision-workshops" class="dropdown-item">Revision Workshops</a>
+            <a href="guidance.html#booster-classes" class="dropdown-item">Easter &amp; Summer Booster Classes</a>
+            <a href="guidance.html#career-guidance" class="dropdown-item">Career Guidance</a>
+          </div>
+        </div>
+
+        <!-- Fees & Schedule Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="fees.html" class="nav-link dropdown-toggle" id="fees-schedule-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Fees &amp; Schedule
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="fees-schedule-nav">
+            <a href="fees.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">Fees &amp; Timetable Overview &rarr;</a>
+            <a href="fees.html#fees" class="dropdown-item">Tuition Fees Structure</a>
+            <a href="fees.html#one-to-one" class="dropdown-item">1-to-1 Online Tuition Fees</a>
+            <a href="fees.html#discounts" class="dropdown-item">Discounts &amp; Policies</a>
+            <a href="fees.html#schedule" class="dropdown-item">Weekly Operating Hours</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Book Free Assessment</a>
+          </div>
+        </div>
+
+        <!-- Free Resources Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="resources.html" class="nav-link dropdown-toggle" id="free-resources-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Free Resources
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="free-resources-nav">
+            <a href="resources.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Free Resources &rarr;</a>
+            <a href="resources.html#study-packs" class="dropdown-item">Study Packs &amp; Worksheets</a>
+            <a href="resources.html#past-papers" class="dropdown-item">11+ &amp; GCSE Past Paper Packs</a>
+            <a href="documents/TSH content.docx" class="dropdown-item" download>Download Prospectus (.docx)</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Free Diagnostic Assessment</a>
+          </div>
+        </div>
+
         <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="btn btn-accent trial-modal-trigger">Book Free Trial</button>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
@@ -77,7 +157,7 @@
     <div class="container">
       <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">British Curriculum Specialists</span>
       <h1>Academic Tuition Programmes</h1>
-      <p>From early foundational learning to GCSE, IGCSE, A-Level study and coding/STEM enrichment, our approach is designed to help students become confident, capable and fully prepared for future success.</p>
+      <p>From early foundational learning to GCSE, IGCSE, and A-Level mastery, our academic approach is designed to help students become confident, capable and fully prepared for top school exams and future success.</p>
     </div>
   </section>
 
@@ -89,7 +169,9 @@
       <a href="#11plus" class="chip">11 Plus Prep</a>
       <a href="#13plus" class="chip">13 Plus Prep</a>
       <a href="#alevel" class="chip">AS &amp; A2 Levels</a>
-      <a href="#stem" class="chip">Coding &amp; STEM</a>
+      <a href="#fees" class="chip">Tuition Fees</a>
+      <a href="#schedule" class="chip">Timetable</a>
+      <a href="coding.html" class="chip" style="background: var(--brand-blue-light); color: var(--brand-blue); border-color: #bfdbfe; font-weight: 800;">Coding &amp; STEM Academy &rarr;</a>
     </div>
   </div>
 
@@ -1832,25 +1914,147 @@
     </div>
   </section>
 
-  <section class="section" id="stem">
+  <!-- DEDICATED CODING & STEM ACADEMY PROMO BANNER -->
+  <section class="section" id="stem" style="background: linear-gradient(135deg, var(--primary-900) 0%, #1e1b4b 100%); color: #ffffff; padding: 3.75rem 0;">
+    <div class="container" style="text-align: center; max-width: 860px;">
+      <span class="section-badge" style="background: rgba(96, 165, 250, 0.2); color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.3);">Coding, AI &amp; STEM Academy</span>
+      <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; margin-top: 0.5rem;">
+        Looking for Coding &amp; STEM Courses?
+      </h2>
+      <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.75rem;">
+        Our Coding &amp; Technology Academy now has its own dedicated page! Explore all 12 progressive curriculum tracks including Scratch, Web Design, Python, JavaScript, Canva, Cyber Security, Robotics, AI, Arduino, Raspberry Pi, and BBC Micro:bit.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="coding.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, var(--brand-blue) 0%, #8b5cf6 100%);">
+          Explore All 12 Coding Courses &rarr;
+        </a>
+        <button class="btn btn-outline-white btn-lg trial-modal-trigger">Book Free Assessment</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUITION FEES STRUCTURE SECTION -->
+  <section class="section" id="fees" style="background: var(--bg-alt);">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Coding &amp; STEM Courses</span>
-        <h2 class="section-title">12 practical, project-based courses from the approved content</h2>
+        <span class="section-badge">Transparent Pricing</span>
+        <h2 class="section-title">Tuition Fees Structure</h2>
+        <p class="section-subtitle">Affordable, high-impact tuition with experienced subject specialists. All fees include diagnostic reporting and bespoke lesson materials.</p>
       </div>
-      <div class="subject-grid">
-        <div class="card"><h3>1. Coding in Scratch</h3><p>Block-based coding for games, stories and animation.</p></div>
-        <div class="card"><h3>2. Web Design</h3><p>Learn HTML, CSS and JavaScript to build responsive websites.</p></div>
-        <div class="card"><h3>3. Game Development</h3><p>Create playable games using logic, visuals and interactive design.</p></div>
-        <div class="card"><h3>4. Coding in Python</h3><p>Build practical programming projects and develop problem-solving skills.</p></div>
-        <div class="card"><h3>5. Coding in JavaScript</h3><p>Explore browser-based apps, interactivity and web logic.</p></div>
-        <div class="card"><h3>6. Digital Design with Canva</h3><p>Develop creative design, branding and presentation skills.</p></div>
-        <div class="card"><h3>7. Cyber Security Essentials</h3><p>Learn more about digital safety, online privacy and cyber awareness.</p></div>
-        <div class="card"><h3>8. Robotics</h3><p>Build, code and control automated systems and robot projects.</p></div>
-        <div class="card"><h3>9. Artificial Intelligence</h3><p>Explore AI concepts, model thinking and responsible use.</p></div>
-        <div class="card"><h3>10. Programming with Arduino</h3><p>Understand circuits, sensors and electronics through hands-on projects.</p></div>
-        <div class="card"><h3>11. Raspberry Pi Projects</h3><p>Use physical computing and electronics to solve practical challenges.</p></div>
-        <div class="card"><h3>12. Micro:bit Programming</h3><p>Build interactive inventions, games and digital creativity projects.</p></div>
+
+      <div class="course-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        
+        <div class="card" style="border-top: 4px solid var(--brand-blue); text-align: center; padding: 2rem 1.5rem;">
+          <span class="badge-tag">Years 3–6</span>
+          <h3 style="margin-top: 0.75rem; margin-bottom: 0.5rem;">Key Stage 2 Tuition</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Maths, English, Reading &amp; SATS preparation.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; color: var(--brand-blue); margin: 1.25rem 0;">&pound;25<span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);"> / hour</span></div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.25rem;">Reg. fee: &pound;25 (One-time, non-refundable)</p>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%; justify-content: center;">Book Assessment</button>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #8b5cf6; text-align: center; padding: 2rem 1.5rem; position: relative;">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #8b5cf6; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.75rem; border-radius: 999px;">MOST POPULAR</div>
+          <span class="badge-tag">11+ &amp; 13+ Entrance</span>
+          <h3 style="margin-top: 0.75rem; margin-bottom: 0.5rem;">Grammar School Prep</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Maths, English, Verbal Reasoning &amp; Non-Verbal.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #8b5cf6; margin: 1.25rem 0;">&pound;35<span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);"> / hour</span></div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.25rem;">Reg. fee: &pound;50 (One-time, non-refundable)</p>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%; justify-content: center;">Book Assessment</button>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #059669; text-align: center; padding: 2rem 1.5rem;">
+          <span class="badge-tag">Years 10–11</span>
+          <h3 style="margin-top: 0.75rem; margin-bottom: 0.5rem;">GCSE / IGCSE Exam</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Higher Maths, Triple Sciences &amp; English Language.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #059669; margin: 1.25rem 0;">&pound;40<span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);"> / hour</span></div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.25rem;">Reg. fee: &pound;50 (One-time, non-refundable)</p>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%; justify-content: center;">Book Assessment</button>
+        </div>
+
+        <div class="card" style="border-top: 4px solid #d97706; text-align: center; padding: 2rem 1.5rem;">
+          <span class="badge-tag">Years 12–13</span>
+          <h3 style="margin-top: 0.75rem; margin-bottom: 0.5rem;">AS &amp; A2 Level Tutoring</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Pure Maths, Further Maths, Physics, Chemistry, Biology.</p>
+          <div style="font-size: 2.2rem; font-weight: 800; color: #d97706; margin: 1.25rem 0;">&pound;50<span style="font-size: 0.95rem; font-weight: 500; color: var(--text-muted);"> / hour</span></div>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.25rem;">Reg. fee: &pound;50 (One-time, non-refundable)</p>
+          <button class="btn btn-primary trial-modal-trigger" style="width: 100%; justify-content: center;">Book Assessment</button>
+        </div>
+
+      </div>
+
+      <!-- Discount Notes Callout -->
+      <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+        <div>
+          <h4 style="color: var(--primary-900); margin-bottom: 0.35rem;">Tuition Discounts &amp; Payment Options</h4>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin: 0; line-height: 1.5;">
+            &bull; <strong>10% Discount</strong> when booking 10 lessons in advance.<br>
+            &bull; <strong>15% Discount</strong> when booking for the full academic year. (Terms &amp; conditions apply)
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn-outline" style="border-color: var(--brand-blue); color: var(--brand-blue);">Enquire About Discounts &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATING HOURS & TIMETABLE SCHEDULE SECTION -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Lesson Structure</span>
+        <h2 class="section-title">Operating Hours &amp; Class Timetable</h2>
+        <p class="section-subtitle">Flexible after-school and weekend schedules designed to fit around regular school commitments.</p>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 2.5rem;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+          <thead>
+            <tr style="background: var(--primary-900); color: #ffffff;">
+              <th style="padding: 1.1rem 1.25rem;">Days</th>
+              <th style="padding: 1.1rem 1.25rem;">Programmes Covered</th>
+              <th style="padding: 1.1rem 1.25rem;">Subjects</th>
+              <th style="padding: 1.1rem 1.25rem;">Session Times</th>
+              <th style="padding: 1.1rem 1.25rem; text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--primary-900);">Monday – Friday</td>
+              <td style="padding: 1rem 1.25rem;">Key Stage 2 &amp; Key Stage 3</td>
+              <td style="padding: 1rem 1.25rem;">Maths, English &amp; Science</td>
+              <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">4:30 PM &ndash; 6:30 PM</td>
+              <td style="padding: 1rem 1.25rem; text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Reserve</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: #f8fafc;">
+              <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--primary-900);">Monday – Friday</td>
+              <td style="padding: 1rem 1.25rem;">GCSE, IGCSE &amp; A-Level</td>
+              <td style="padding: 1rem 1.25rem;">Maths, Physics, Chemistry, Biology</td>
+              <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">6:30 PM &ndash; 8:30 PM</td>
+              <td style="padding: 1rem 1.25rem; text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Reserve</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--primary-900);">Saturday</td>
+              <td style="padding: 1rem 1.25rem;">11+ &amp; 13+ Grammar School Accelerator</td>
+              <td style="padding: 1rem 1.25rem;">Maths, English, VR, NVR</td>
+              <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">9:30 AM &ndash; 1:30 PM</td>
+              <td style="padding: 1rem 1.25rem; text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Reserve</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light); background: #f8fafc;">
+              <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--primary-900);">Saturday &amp; Sunday</td>
+              <td style="padding: 1rem 1.25rem;">Coding, Robotics &amp; STEM Workshops</td>
+              <td style="padding: 1rem 1.25rem;">Scratch, Python, Web, Arduino, AI</td>
+              <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">2:00 PM &ndash; 5:00 PM</td>
+              <td style="padding: 1rem 1.25rem; text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Reserve</button></td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--primary-900);">Sunday</td>
+              <td style="padding: 1rem 1.25rem;">GCSE &amp; A-Level Exam Booster Clinics</td>
+              <td style="padding: 1rem 1.25rem;">Past Papers, Timed Drills &amp; Feedback</td>
+              <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">10:00 AM &ndash; 2:00 PM</td>
+              <td style="padding: 1rem 1.25rem; text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Reserve</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -1860,8 +2064,8 @@
       <div class="cta-panel">
         <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
         <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Need help choosing the right programme?</h2>
-        <p>Our team can recommend the best options based on your child’s age, subject needs and current goals.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Speak to Our Team</a>
+        <p>Our academic advisors can assess baseline knowledge and recommend the best timetable options for your child.</p>
+        <button class="btn btn-primary btn-lg trial-modal-trigger">Book 45-Minute Assessment</button>
       </div>
     </div>
   </section>
@@ -1870,7 +2074,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub offers high-quality online tuition and academic guidance for learners across the UK.</p></div>
-        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="#ks2">Key Stage 2</a><a href="#ks3">Key Stage 3</a><a href="#gcse">GCSE &amp; IGCSE</a><a href="#alevel">AS &amp; A2 Levels</a><a href="#stem">Coding &amp; STEM</a></div></div>
+        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="#ks2">Key Stage 2</a><a href="#ks3">Key Stage 3</a><a href="#gcse">GCSE &amp; IGCSE</a><a href="#alevel">AS &amp; A2 Levels</a><a href="coding.html">Coding &amp; STEM Academy</a></div></div>
         <div class="footer-col"><h4>Resources</h4><div class="footer-links"><a href="about.html">About Us</a><a href="guidance.html">Academic Guidance</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
         <div class="footer-col">
           <h4>Verified Contact</h4>

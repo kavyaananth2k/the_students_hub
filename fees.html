@@ -3,27 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School Partnership &amp; Contact | The Students Hub</title>
-  <meta name="description" content="Contact The Students Hub for school partnerships, admissions, academic guidance and tuition support.">
+  <title>Fees &amp; Schedule | The Students Hub</title>
+  <meta name="description" content="Transparent tuition fees structure, one-to-one online classes, discount policies, and weekly operating hours timetable at The Students Hub.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
-    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.5rem); margin-bottom:1rem; }
-    .page-hero p { max-width:760px; margin:0 auto; color:#dbeafe; line-height:1.7; }
-    .section { padding:4rem 0; }
-    .cards-grid, .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
-    .card, .info-card { background:#fff; border:1px solid var(--border-light); border-radius:var(--radius-lg); padding:1.8rem; box-shadow: var(--shadow-sm); }
-    .info-card { text-align:center; }
-    .info-icon { width:54px; height:54px; border-radius: var(--radius-md); background: var(--brand-blue-light); color: var(--brand-blue); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
-    .info-icon svg { width:26px; height:26px; fill:currentColor; }
-    .card h3, .info-card h3 { color: var(--primary-900); margin-bottom:0.6rem; }
-    .card p, .card li { color: var(--text-secondary); line-height:1.7; }
-    .card ul { margin:0; padding-left:1.1rem; }
-    .cta-panel { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); border-radius: var(--radius-xl); padding:2.5rem; text-align:center; color:#fff; }
-    .cta-panel p { max-width:700px; margin:0 auto 1.5rem; color:#dbeafe; }
+    .fees-hero {
+      background: linear-gradient(135deg, var(--primary-900) 0%, #1e3a8a 50%, var(--primary-800) 100%);
+      color: #fff;
+      padding: 4.5rem 0 3.5rem;
+      text-align: center;
+    }
+    .fees-hero h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin-bottom: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .fees-hero p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #dbeafe;
+      font-size: 1.12rem;
+      line-height: 1.75;
+    }
+    .pricing-table-wrap {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 3rem;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 680px;
+    }
+    .pricing-table th {
+      background: var(--primary-900);
+      color: #fff;
+      padding: 1.15rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .pricing-table td {
+      padding: 1.1rem 1.4rem;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.98rem;
+      color: var(--text-primary);
+    }
+    .pricing-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .pricing-table tr:hover {
+      background: #eff6ff;
+    }
+    .price-tag {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brand-blue);
+    }
+    .price-tag span {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* Discount callout cards */
+    .discount-box {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .discount-box h3 {
+      font-size: 1.4rem;
+      color: var(--primary-900);
+      margin-bottom: 1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .discount-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .discount-item:last-child {
+      margin-bottom: 0;
+    }
+    .discount-badge {
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 800;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    /* Navigation sticky strip */
+    .nav-strip {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 78px;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .nav-strip-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0.85rem 0;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
+  <!-- Top Notification & Contact Bar -->
   <div class="top-contact-bar">
     <div class="container">
       <div class="top-contact-left">
@@ -39,6 +147,7 @@
     </div>
   </div>
 
+  <!-- Main Site Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" id="site-logo">
@@ -113,7 +222,7 @@
 
         <!-- Fees & Schedule Dropdown (Dedicated Page) -->
         <div class="nav-dropdown-wrapper">
-          <a href="fees.html" class="nav-link dropdown-toggle" id="fees-schedule-nav" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="fees.html" class="nav-link active dropdown-toggle" id="fees-schedule-nav" role="button" aria-haspopup="true" aria-expanded="false">
             Fees &amp; Schedule
             <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
@@ -146,71 +255,299 @@
           </div>
         </div>
 
-        <a href="contact.html#contact" class="nav-link active">Contact</a>
+        <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
         <button class="btn btn-accent trial-modal-trigger">Book Free Trial</button>
-        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
   </header>
 
-  <section class="page-hero">
+  <!-- Hero Section -->
+  <section class="fees-hero">
     <div class="container">
-      <span class="badge-tag" style="background: rgba(255,255,255,0.15); color: #fff; margin-bottom: 1rem;">Let's Connect</span>
-      <h1 class="page-title">We are here to help your learner thrive</h1>
-      <p class="page-subtitle">Speak with our academic team for tailored course recommendations, free assessment bookings and advice on the best route for your child.</p>
+      <span class="badge-tag" style="background: rgba(255,255,255,0.15); color:#fff; border: 1px solid rgba(255,255,255,0.25); margin-bottom: 1.2rem; font-size: 0.88rem; padding: 0.45rem 1.2rem;">
+        FEES &amp; SCHEDULE
+      </span>
+      <h1>Fees &amp; Timetable Schedule</h1>
+      <p>
+        Transparent tuition pricing, flexible 1-to-1 online classes, sibling discounts, and structured lesson operating hours.
+      </p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Sticky Nav Strip -->
+  <div class="nav-strip">
+    <div class="container nav-strip-inner">
+      <a href="#fees" class="chip active">💳 Group Tuition Fees</a>
+      <a href="#one-to-one" class="chip">💻 1-to-1 Online Tuition</a>
+      <a href="#discounts" class="chip">🏷️ Discounts &amp; Notes</a>
+      <a href="#schedule" class="chip">⏰ Operating Hours</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: TUITION FEES (Group Classes matching Table 0) -->
+  <section class="section" id="fees">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Advisory</span>
-        <h2 class="section-title">How can we support you today?</h2>
+      <div class="section-header" style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem;">
+        <span class="section-badge">Small Group Tutoring</span>
+        <h2 class="section-title">Tuition Fees Structure</h2>
+        <p class="section-subtitle">Affordable, high-impact group tuition delivered by experienced subject specialists in classes of 4 to 6 students.</p>
       </div>
-      <div class="feature-grid">
-        <div class="card"><h3>For schools</h3><p>We support schools with additional tutoring, revision planning, extension sessions and structured academic enrichment for pupils who need extra confidence or challenge.</p></div>
-        <div class="card"><h3>For parents</h3><p>We guide families through subject choices, exam preparation, school entrance planning and the best next steps for long-term academic success.</p></div>
-        <div class="card"><h3>For students</h3><p>Students can book an assessment, receive tailored recommendations and begin a programme that matches their stage, needs and goals.</p></div>
+
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Key Stage / Level</th>
+              <th>Subjects Covered</th>
+              <th>Tuition Fee</th>
+              <th style="text-align: center;">Enrollment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Key Stage 2</strong><br><span style="color: var(--text-secondary); font-size: 0.88rem;">Year 3, 4, 5</span></td>
+              <td>Maths &amp; English</td>
+              <td><span class="price-tag">&pound;35/- <span>for 2 hours</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>Key Stage 3 &amp; 13 Plus Prep</strong><br><span style="color: var(--text-secondary); font-size: 0.88rem;">Year 7, 8, 9</span></td>
+              <td>Maths, Science &amp; English</td>
+              <td><span class="price-tag">&pound;40/- <span>for 2 hours</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>SATS / 11 Plus Prep</strong><br><span style="color: var(--text-secondary); font-size: 0.88rem;">Grammar Entrance</span></td>
+              <td>Maths, English, VR &amp; NVR</td>
+              <td><span class="price-tag">&pound;40/- <span>for 2 hours</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>GCSE / IGCSE</strong><br><span style="color: var(--text-secondary); font-size: 0.88rem;">Year 10, 11</span></td>
+              <td>Maths, Science &amp; English</td>
+              <td><span class="price-tag">&pound;45/- <span>per subject for 2 hours</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>AS / A2 Level</strong><br><span style="color: var(--text-secondary); font-size: 0.88rem;">Year 12, 13</span></td>
+              <td>Maths, Physics, Chemistry</td>
+              <td><span class="price-tag">&pound;55/- <span>per subject for 1.5 hours</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--bg-alt);" id="contact">
+  <!-- SECTION 2: ONE TO ONE ONLINE TUITION (Table 1) -->
+  <section class="section" id="one-to-one" style="background: #f8fafc; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Contact</span>
-        <h2 class="section-title">Get in touch</h2>
+      <div class="section-header" style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem;">
+        <span class="section-badge">Personalised 1-to-1</span>
+        <h2 class="section-title">One to One Online Tuition Class</h2>
+        <p class="section-subtitle">Dedicated 1-on-1 personalized tutoring with interactive screen sharing, recorded sessions, and custom pace.</p>
       </div>
-      <div class="cards-grid">
-        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.18 8.18 0 0 1-1.25-4.36c0-4.54 3.7-8.24 8.27-8.24zm4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.05.15 1.72-.71 1.96-1.39.24-.68.24-1.27.17-1.39-.07-.12-.25-.19-.5-.32z"/></svg></div><h3>WhatsApp &amp; Mobile</h3><p><a href="https://wa.me/447424044851" target="_blank" rel="noopener">WhatsApp: 07424044851</a><br><a href="tel:07405860115">Phone: 07405860115</a></p></div>
-        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div><h3>Landline</h3><p><a href="tel:02039577099">020 3957 7099</a></p></div>
-        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div><h3>Email</h3><p><a href="mailto:admin@thestudents-hub.co.uk">admin@thestudents-hub.co.uk</a></p></div>
-        <div class="info-card"><div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div><h3>Website</h3><p><a href="https://www.thestudents-hub.uk" target="_blank" rel="noopener">www.thestudents-hub.uk</a></p></div>
+
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Key Stage / Level</th>
+              <th>Subjects Covered</th>
+              <th>1-to-1 Fee Rate</th>
+              <th style="text-align: center;">Enrollment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Key stage 2 &amp; 3</strong></td>
+              <td>Maths, Science &amp; English</td>
+              <td><span class="price-tag">&pound;30/- <span>for 1 hour (One subject covered)</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>11 plus &amp; 13 plus</strong></td>
+              <td>Maths, English, VR &amp; NVR</td>
+              <td><span class="price-tag">&pound;35/- <span>for 1 hour (One subject covered)</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>GCSE / IGCSE</strong></td>
+              <td>Maths, Science &amp; English</td>
+              <td><span class="price-tag">&pound;40/- <span>for 1 hour (One subject covered)</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+            <tr>
+              <td><strong>AS / A2 Level</strong></td>
+              <td>Maths / Science</td>
+              <td><span class="price-tag">&pound;50/- <span>for 1 hour (One subject covered)</span></span></td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">BOOK NOW</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- SECTION 3: REGISTRATION FEES, DISCOUNTS & NOTES -->
+  <section class="section" id="discounts">
     <div class="container">
-      <div class="cta-panel">
-        <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
-        <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Speak with our academic team</h2>
-        <p>Share your child’s year group, subject needs and goals, and we will help recommend the right programme for them.</p>
-        <a href="mailto:admin@thestudents-hub.co.uk" class="btn btn-primary btn-lg">Email Us</a>
+      <div style="max-width: 860px; margin: 0 auto;">
+        <div class="discount-box">
+          <h3>🏷️ Please Note &amp; Available Discounts</h3>
+
+          <div style="margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px dashed #cbd5e1;">
+            <div class="discount-item">
+              <span class="discount-badge">REGISTRATION</span>
+              <div>
+                <strong>Registration fee for KS2:</strong> &pound;25/- <span style="color: var(--text-secondary);">(Non refundable)</span>
+              </div>
+            </div>
+            <div class="discount-item">
+              <span class="discount-badge">REGISTRATION</span>
+              <div>
+                <strong>Registration fee for KS3 / KS4 / GCSE / A level:</strong> &pound;50/- <span style="color: var(--text-secondary);">(Non refundable)</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="discount-item">
+              <span class="discount-badge" style="background: #e0f2fe; color: #0284c7;">10% OFF</span>
+              <div><strong>10% Discount</strong> on booking 10 lessons together</div>
+            </div>
+            <div class="discount-item">
+              <span class="discount-badge" style="background: #fef08a; color: #854d0e;">15% OFF</span>
+              <div><strong>15% Discount</strong> on booking for the whole year <span style="color: var(--text-secondary); font-size: 0.9rem;">(Conditions apply)</span></div>
+            </div>
+            <div class="discount-item">
+              <span class="discount-badge" style="background: #fce7f3; color: #be185d;">REFERRAL</span>
+              <div><strong>&pound;5 to &pound;15 worth of Discount</strong> for each referral you make – Please mention your name <span style="color: var(--text-secondary); font-size: 0.9rem;">(Conditions apply)</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- SECTION 4: OPERATING HOURS STRUCTURE -->
+  <section class="section" id="schedule" style="background: #f8fafc; border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem;">
+        <span class="section-badge">STRUCTURE</span>
+        <h2 class="section-title">Our Operating Hours</h2>
+        <p class="section-subtitle">Weekly operating structure designed around school hours and optimal study routines.</p>
+      </div>
+
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Courses</th>
+              <th>Subjects</th>
+              <th>Time</th>
+              <th style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monday &ndash; Friday</strong></td>
+              <td>Key Stage 2 &amp; Key Stage 3</td>
+              <td>Maths, English &amp; Science</td>
+              <td>4:30 PM &ndash; 6:30 PM</td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Book Now</button></td>
+            </tr>
+            <tr>
+              <td><strong>Monday &ndash; Friday</strong></td>
+              <td>KS4 / GCSE &amp; A-Level</td>
+              <td>Maths, Science &amp; English</td>
+              <td>6:30 PM &ndash; 8:30 PM</td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Book Now</button></td>
+            </tr>
+            <tr>
+              <td><strong>Saturday</strong></td>
+              <td>11+ &amp; 13+ Grammar School Accelerator</td>
+              <td>Maths, English, VR &amp; NVR</td>
+              <td>9:30 AM &ndash; 1:30 PM</td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Book Now</button></td>
+            </tr>
+            <tr>
+              <td><strong>Saturday &amp; Sunday</strong></td>
+              <td>Coding, Robotics &amp; STEM Workshops</td>
+              <td>Scratch, Python, Web, Arduino, AI</td>
+              <td>2:00 PM &ndash; 5:00 PM</td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Book Now</button></td>
+            </tr>
+            <tr>
+              <td><strong>Sunday</strong></td>
+              <td>GCSE &amp; A-Level Exam Booster Clinics</td>
+              <td>Past Papers, Timed Drills &amp; Feedback</td>
+              <td>10:00 AM &ndash; 2:00 PM</td>
+              <td style="text-align: center;"><button class="btn btn-primary btn-sm trial-modal-trigger">Book Now</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Panel -->
+  <section class="section" style="padding: 3rem 0 5rem;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--primary-900) 0%, #1e3a8a 100%); border-radius: var(--radius-xl); padding: 3.5rem 2rem; text-align: center; color: #fff; box-shadow: var(--shadow-lg);">
+        <span class="section-badge" style="background: rgba(255,255,255,0.15); color:#bfdbfe; margin-bottom: 1rem;">Book Free Diagnostic Assessment</span>
+        <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: #fff; margin-bottom: 1rem; font-weight: 800;">Get Started with a Free Baseline Assessment</h2>
+        <p style="max-width: 720px; margin: 0 auto 2rem; color: #dbeafe; font-size: 1.08rem; line-height: 1.7;">
+          Book a 45-minute diagnostic session to evaluate your child’s current level, understand curriculum gaps, and receive our recommended timetable schedule.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-accent btn-lg trial-modal-trigger">Book Free Assessment</button>
+          <a href="contact.html#contact" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.12); color:#fff; border-color: rgba(255,255,255,0.35);">
+            Enquire About Lessons
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub offers expert academic support, school partnership guidance and student-centred programmes across the UK.</p></div>
-        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="coding.html">Coding &amp; STEM Academy</a></div></div>
-        <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="about.html">About Us</a><a href="guidance.html">Academic Guidance</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo-wrap">
+            <img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img">
+          </a>
+          <p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">
+            The Students Hub supports academic progress, confidence and long-term success in every stage of learning.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#ks2">Key Stage 2</a>
+            <a href="courses.html#ks3">Key Stage 3</a>
+            <a href="courses.html#gcse">GCSE &amp; IGCSE</a>
+            <a href="courses.html#alevel">AS &amp; A2 Levels</a>
+            <a href="coding.html">Coding &amp; STEM Academy</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
+            <a href="guidance.html#school-partnership">School Partnership</a>
+            <a href="fees.html">Fees &amp; Schedule</a>
+            <a href="resources.html">Free Resources</a>
+            <a href="contact.html#contact">Contact Us</a>
+          </div>
+        </div>
         <div class="footer-col">
           <h4>Verified Contact</h4>
           <div class="footer-contact-item">
@@ -271,13 +608,13 @@
       <div class="footer-bottom">
         <div>&copy; 2026 The Students Hub. All rights reserved. • Registered in the United Kingdom</div>
         <div class="footer-bottom-links">
-          <span>Official Website: <a href="https://www.thestudents-hub.uk" target="_blank" rel="noopener" style="color:var(--brand-blue-light); text-decoration:none;">www.thestudents-hub.uk</a></span>
+          <span>Official Website: <a href="https://thestudents-hub.uk" target="_blank" rel="noopener" style="color:var(--brand-blue-light); text-decoration:none;">thestudents-hub.uk</a></span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- FREE TRIAL ASSESSMENT MODAL -->
+  <!-- Free Assessment Modal -->
   <div class="modal-backdrop" id="trial-modal" role="dialog" aria-modal="true" aria-labelledby="trial-modal-title">
     <div class="modal-window">
       <div class="modal-header">
@@ -312,15 +649,15 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="trial-subject">Target Academic Programme *</label>
+            <label class="form-label" for="trial-subject">Target Academic Level *</label>
             <select id="trial-subject" class="form-control" required>
-              <option value="" disabled selected>Select a programme or subject...</option>
-              <option value="11+ Grammar Entrance Prep">11+ Grammar School Entrance (GL / CEM)</option>
-              <option value="13+ Common Entrance Prep">13+ Common Entrance &amp; Scholarships</option>
-              <option value="Key Stage 2 Maths &amp; English">Key Stage 2 (Years 3–6)</option>
-              <option value="Key Stage 3 Secondary Core">Key Stage 3 (Years 7–9)</option>
-              <option value="GCSE / IGCSE Exam Preparation">GCSE / IGCSE Exam Preparation</option>
-              <option value="A-Level / Sixth Form Tutoring">AS &amp; A2 Level Tutoring</option>
+              <option value="" disabled selected>Select a programme...</option>
+              <option value="KS2 Tuition (£35 for 2 hrs)">Key Stage 2 Tuition (Years 3–5)</option>
+              <option value="KS3 & 13+ Prep (£40 for 2 hrs)">Key Stage 3 &amp; 13+ Prep</option>
+              <option value="SATS / 11+ Prep (£40 for 2 hrs)">SATS / 11+ Prep (Maths, English, VR, NVR)</option>
+              <option value="GCSE / IGCSE (£45 for 2 hrs)">GCSE / IGCSE Tuition</option>
+              <option value="AS / A2 Level (£55 for 1.5 hrs)">AS / A2 Level Tutoring</option>
+              <option value="1-to-1 Online Tuition">1-to-1 Online Tuition Class</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; margin-top: 0.5rem;">

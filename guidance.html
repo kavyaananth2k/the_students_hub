@@ -3,24 +3,441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Guidance | The Students Hub</title>
-  <meta name="description" content="Academic guidance for primary, secondary and sixth form students, including 11+, 13+, revision skills and school pathways.">
+  <title>Our Services | The Students Hub</title>
+  <meta name="description" content="Comprehensive educational services at The Students Hub: School Partnership, Academic Guidance, Grammar Schools, Revision Workshops, Booster Classes, and Career Guidance.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
-    .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
-    .page-hero h1 { font-size: clamp(2.4rem, 4vw, 3.5rem); margin-bottom:1rem; }
-    .page-hero p { max-width:760px; margin:0 auto; color:#dbeafe; line-height:1.7; }
-    .section { padding:4rem 0; }
-    .feature-grid, .support-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
-    .card { background:#fff; border:1px solid var(--border-light); border-radius:var(--radius-lg); padding:1.8rem; box-shadow: var(--shadow-sm); }
-    .card h3 { color: var(--primary-900); margin-bottom:0.6rem; }
-    .card p, .card li { color: var(--text-secondary); line-height:1.7; }
-    .card ul { margin:0; padding-left:1.1rem; }
-    .cta-panel { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); border-radius: var(--radius-xl); padding:2.5rem; text-align:center; color:#fff; }
-    .cta-panel p { max-width:700px; margin:0 auto 1.5rem; color:#dbeafe; }
+    /* Specific styles for Our Services page */
+    .services-hero {
+      background: linear-gradient(135deg, var(--primary-900) 0%, #1e3a8a 50%, var(--primary-800) 100%);
+      color: #fff;
+      padding: 4.5rem 0 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .services-hero h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      margin-bottom: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .services-hero p {
+      max-width: 820px;
+      margin: 0 auto;
+      color: #dbeafe;
+      font-size: 1.12rem;
+      line-height: 1.75;
+    }
+
+    /* Sticky Navigation Strip */
+    .nav-strip {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 78px;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .nav-strip-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0.85rem 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 9999px;
+      background: #f1f5f9;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .chip:hover {
+      background: #e2e8f0;
+      color: var(--primary-900);
+      transform: translateY(-1px);
+    }
+    .chip.active {
+      background: var(--brand-blue);
+      color: #fff;
+      border-color: var(--brand-blue);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Sub-tabs / pill groups matching screenshot [Primary] [Secondary] etc. */
+    .sub-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .sub-tab-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      background: #fff;
+      color: var(--brand-blue);
+      border: 1.5px solid var(--brand-blue);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    .sub-tab-btn:hover {
+      background: var(--brand-blue);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .sub-tab-btn.active {
+      background: var(--brand-blue);
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Section shared spacing */
+    .service-section {
+      padding: 4.5rem 0;
+      scroll-margin-top: 145px;
+    }
+    .service-section.bg-alt {
+      background: #f8fafc;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .section-header-wrap {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+    }
+    .section-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: #eff6ff;
+      color: var(--brand-blue);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.9rem;
+      border: 1px solid #bfdbfe;
+    }
+    .section-header-wrap h2 {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      color: var(--primary-900);
+      margin-bottom: 0.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .section-header-wrap p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Card styling */
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    /* Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .nav-strip {
+        top: 68px;
+      }
+      .service-section {
+        padding: 3rem 0;
+        scroll-margin-top: 130px;
+      }
+    }
+
+    /* Impact Pillars */
+    .impact-pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 860px) {
+      .impact-pillar-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .impact-pillar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .impact-pillar-card {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 1.6rem 1.4rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+    .impact-pillar-card:hover {
+      border-color: var(--brand-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37,99,235,0.08);
+    }
+    .impact-pillar-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: var(--brand-blue);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .impact-pillar-card h4 {
+      font-size: 1.08rem;
+      color: var(--primary-900);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+    .impact-pillar-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Checkmark lists */
+    .styled-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0;
+    }
+    .styled-checklist li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.85rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 0.97rem;
+    }
+    .styled-checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.35rem;
+      width: 18px;
+      height: 18px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232563eb'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat center center;
+      background-size: contain;
+    }
+
+    /* Partnership callout box */
+    .partnership-callout {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #fff;
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+    }
+    .partnership-callout-text {
+      flex: 1 1 500px;
+    }
+    .partnership-callout-text h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 800;
+    }
+    .partnership-callout-text p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .partnership-callout-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Grammar schools directory list */
+    .school-list-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .school-list-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-900);
+      font-size: 1.15rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+    .school-list-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .school-list-card li {
+      padding: 0.55rem 0;
+      border-bottom: 1px dashed #f1f5f9;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .school-list-card li:last-child {
+      border-bottom: none;
+    }
+    .school-list-card li::before {
+      content: '•';
+      color: var(--brand-blue);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Stage Guidance Tabs / Panels */
+    .stage-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .stage-card-header {
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.4rem;
+    }
+    .stage-badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .stage-card h3 {
+      font-size: 1.4rem;
+      color: var(--primary-900);
+      margin: 0;
+      font-weight: 800;
+    }
+    .stage-subgroup {
+      margin-bottom: 1.5rem;
+    }
+    .stage-subgroup:last-child {
+      margin-bottom: 0;
+    }
+    .stage-subgroup h5 {
+      font-size: 0.98rem;
+      color: var(--brand-blue);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .stage-subgroup p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Organisation pills */
+    .org-pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.2rem 0;
+    }
+    .org-pill {
+      background: #eff6ff;
+      color: var(--brand-blue);
+      border: 1px solid #bfdbfe;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
   </style>
 </head>
 <body>
+  <!-- Top Notification & Contact Bar -->
   <div class="top-contact-bar">
     <div class="container">
       <div class="top-contact-left">
@@ -36,12 +453,17 @@
     </div>
   </div>
 
+  <!-- Main Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
-      <nav class="nav-menu" id="primary-nav">
+      <a href="index.html" class="brand-logo" id="site-logo">
+        <img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img">
+      </a>
+            <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+
+        <!-- Academic Tuition Dropdown -->
         <div class="nav-dropdown-wrapper">
           <a href="courses.html" class="nav-link dropdown-toggle" id="academic-tuition-nav" role="button" aria-haspopup="true" aria-expanded="false">
             Academic Tuition
@@ -59,85 +481,699 @@
             <a href="courses.html#alevel" class="dropdown-item">AS &amp; A2 Levels</a>
           </div>
         </div>
-        <a href="guidance.html" class="nav-link active">Academic Guidance</a>
-        <a href="contact.html" class="nav-link">School Partnership</a>
+
+        <!-- Coding Courses Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="coding.html" class="nav-link dropdown-toggle" id="coding-courses-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Coding Courses
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="coding-courses-nav">
+            <a href="coding.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Coding Courses &rarr;</a>
+            <a href="coding.html#scratch" class="dropdown-item">Coding in Scratch</a>
+            <a href="coding.html#webdesign" class="dropdown-item">Web Design</a>
+            <a href="coding.html#gamedev" class="dropdown-item">Game Development</a>
+            <a href="coding.html#python" class="dropdown-item">Coding in Python</a>
+            <a href="coding.html#javascript" class="dropdown-item">Coding in JavaScript</a>
+            <a href="coding.html#canva" class="dropdown-item">Design Using Canva</a>
+            <a href="coding.html#cybersecurity" class="dropdown-item">Cyber Security Essentials</a>
+            <a href="coding.html#robotics" class="dropdown-item">Robotics</a>
+            <a href="coding.html#ai" class="dropdown-item">Artificial Intelligence</a>
+            <a href="coding.html#arduino" class="dropdown-item">Programming with Ardunio UNO</a>
+            <a href="coding.html#raspberrypi" class="dropdown-item">Programming with Raspberry Pi</a>
+            <a href="coding.html#microbit" class="dropdown-item">Programming with BBC Microbit</a>
+          </div>
+        </div>
+
+        <!-- Our Services Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="guidance.html" class="nav-link active dropdown-toggle" id="services-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Our Services
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="services-nav">
+            <a href="guidance.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Services Overview &rarr;</a>
+            <a href="guidance.html#school-partnership" class="dropdown-item">School Partnership</a>
+            <a href="guidance.html#academic-guidance" class="dropdown-item">Academic Guidance</a>
+            <a href="guidance.html#grammar-schools" class="dropdown-item">Grammar Schools Admissions</a>
+            <a href="guidance.html#revision-workshops" class="dropdown-item">Revision Workshops</a>
+            <a href="guidance.html#booster-classes" class="dropdown-item">Easter &amp; Summer Booster Classes</a>
+            <a href="guidance.html#career-guidance" class="dropdown-item">Career Guidance</a>
+          </div>
+        </div>
+
+        <!-- Fees & Schedule Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="fees.html" class="nav-link dropdown-toggle" id="fees-schedule-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Fees &amp; Schedule
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="fees-schedule-nav">
+            <a href="fees.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">Fees &amp; Timetable Overview &rarr;</a>
+            <a href="fees.html#fees" class="dropdown-item">Tuition Fees Structure</a>
+            <a href="fees.html#one-to-one" class="dropdown-item">1-to-1 Online Tuition Fees</a>
+            <a href="fees.html#discounts" class="dropdown-item">Discounts &amp; Policies</a>
+            <a href="fees.html#schedule" class="dropdown-item">Weekly Operating Hours</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Book Free Assessment</a>
+          </div>
+        </div>
+
+        <!-- Free Resources Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="resources.html" class="nav-link dropdown-toggle" id="free-resources-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Free Resources
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="free-resources-nav">
+            <a href="resources.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Free Resources &rarr;</a>
+            <a href="resources.html#study-packs" class="dropdown-item">Study Packs &amp; Worksheets</a>
+            <a href="resources.html#past-papers" class="dropdown-item">11+ &amp; GCSE Past Paper Packs</a>
+            <a href="documents/TSH content.docx" class="dropdown-item" download>Download Prospectus (.docx)</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Free Diagnostic Assessment</a>
+          </div>
+        </div>
+
         <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="btn btn-accent trial-modal-trigger">Book Free Trial</button>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
   </header>
 
-  <section class="page-hero">
+  <!-- Page Hero -->
+  <section class="services-hero">
     <div class="container">
-      <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Academic &amp; Career Excellence</span>
-      <h1>Academic Guidance</h1>
-      <p>Personalised academic guidance for primary, secondary and sixth form students, alongside specialist preparation for grammar school entrance, revision planning and future pathways.</p>
+      <span class="badge-tag" style="background: rgba(255,255,255,0.15); color:#fff; border: 1px solid rgba(255,255,255,0.25); margin-bottom: 1.2rem; font-size: 0.88rem; padding: 0.45rem 1.2rem;">
+        OUR SERVICES
+      </span>
+      <h1>Our Services</h1>
+      <p>
+        School Partnership, Academic Guidance, Grammar School Admissions, Revision Workshops, Booster Classes, and Career Mentorship.
+      </p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Sticky Sub-Nav Strip -->
+  <div class="nav-strip">
+    <div class="container nav-strip-inner">
+      <a href="#school-partnership" class="chip active">🤝 School Partnership</a>
+      <a href="#academic-guidance" class="chip">📚 Academic Guidance</a>
+      <a href="#grammar-schools" class="chip">🏛️ Grammar Schools</a>
+      <a href="#revision-workshops" class="chip">✍️ Revision Workshops</a>
+      <a href="#booster-classes" class="chip">🚀 Booster Classes</a>
+      <a href="#career-guidance" class="chip">🎯 Career Guidance</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: SCHOOL PARTNERSHIP -->
+  <section class="service-section" id="school-partnership">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Stage-by-Stage Support</span>
-        <h2 class="section-title">Targeted guidance across every academic stage</h2>
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">OUR SERVICES</span>
+        <h2 style="margin-top: 0.3rem;">School Partnership</h2>
       </div>
-      <div class="support-grid">
-        <div class="card"><h3>Key Stage 2</h3><p>We support learners in Years 3 to 6 through reading comprehension, spelling, grammar, writing, number work, fractions, measurement, geometry and problem solving.</p></div>
-        <div class="card"><h3>Key Stage 3</h3><p>Students receive structured support across Maths, Science, English, Computing and key transition skills that prepare them for GCSE study.</p></div>
-        <div class="card"><h3>GCSE &amp; IGCSE</h3><p>Our guidance includes exam board alignment, timed paper practice, performance feedback and focused revision for stronger outcomes.</p></div>
-        <div class="card"><h3>AS &amp; A2 Levels</h3><p>We help students develop advanced knowledge in Maths, Sciences and other key subjects while supporting university planning and long-term goals.</p></div>
+
+      <!-- About Us & Mission Grid -->
+      <div class="grid-2">
+        <div class="service-card" style="border-top: 4px solid var(--brand-blue);">
+          <h3 style="font-size: 1.45rem; color: var(--primary-900); margin: 0 0 1rem; font-weight: 800;">About Us</h3>
+          <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1.02rem;">
+            We are an Ofsted-registered after-school tuition centre that strongly believes every child has talent and deserves the opportunity to develop the skills and confidence needed to achieve success—both in school and beyond—regardless of their background.
+          </p>
+        </div>
+
+        <div class="service-card" style="border-top: 4px solid #10b981;">
+          <h3 style="font-size: 1.45rem; color: var(--primary-900); margin: 0 0 1rem; font-weight: 800;">Our Mission</h3>
+          <p style="color: var(--text-secondary); line-height: 1.75; font-size: 1.02rem;">
+            Our centre was founded by a team of committed and experienced tutors and education professionals who share a passion for improving the attainment of every child. We are especially dedicated to empowering and inspiring children from disadvantaged backgrounds, ensuring they receive the support necessary to reach their full potential.
+          </p>
+        </div>
+      </div>
+
+      <!-- Creating Opportunities for Every Child -->
+      <div style="margin-top: 3.5rem;">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 1.5rem;">
+          <h3 style="font-size: 1.7rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.6rem;">Creating Opportunities for Every Child</h3>
+          <p style="color: var(--text-secondary); font-size: 1.02rem; line-height: 1.7;">
+            We strive to create a positive and nurturing environment where every child can grow academically, emotionally, and socially. Our work aims to make a meaningful impact on each student’s:
+          </p>
+        </div>
+
+        <div class="impact-pillar-grid">
+          <div class="impact-pillar-card">
+            <div class="impact-pillar-icon">🌟</div>
+            <h4>Self-Esteem</h4>
+            <p>Nurturing self-belief, emotional resilience, and a positive mindset toward learning challenges.</p>
+          </div>
+          <div class="impact-pillar-card">
+            <div class="impact-pillar-icon">📈</div>
+            <h4>Academic Progress</h4>
+            <p>Closing curriculum attainment gaps in Maths, English, and Science with measurable grade improvements.</p>
+          </div>
+          <div class="impact-pillar-card">
+            <div class="impact-pillar-icon">💼</div>
+            <h4>Long-Term Economic Well-Being</h4>
+            <p>Instilling lifelong critical thinking, study habits, and long-term economic well-being.</p>
+          </div>
+          <div class="impact-pillar-card">
+            <div class="impact-pillar-icon">🎓</div>
+            <h4>Future Success</h4>
+            <p>Opening pathways to top grammar schools, high-performing sixth forms, and competitive universities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Disadvantaged Pupils & Flexible Tuition Models -->
+      <div class="grid-2" style="margin-top: 3.5rem;">
+        <div class="service-card" style="background: #fdfefe;">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); margin: 0 0 0.8rem; font-weight: 800;">Supporting Disadvantaged Pupils</h3>
+          <p style="color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 1rem; line-height: 1.6;">
+            Our primary focus is on providing personalised support for:
+          </p>
+          <ul class="styled-checklist">
+            <li>Pupils from disadvantaged backgrounds</li>
+            <li>Pupils eligible for Pupil Premium funding</li>
+            <li>Pupils with SEND</li>
+            <li>Pupils in Alternative Provision</li>
+          </ul>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed #e2e8f0;">
+            We are committed to partnering with all primary and secondary schools in the area to ensure their pupils can benefit from our tailored support.
+          </p>
+        </div>
+
+        <div class="service-card" style="background: #fdfefe;">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); margin: 0 0 0.8rem; font-weight: 800;">Flexible Tuition Models</h3>
+          <p style="color: var(--text-secondary); font-size: 0.98rem; margin-bottom: 1rem; line-height: 1.6;">
+            To meet diverse learning needs, we offer flexible tuition models, including:
+          </p>
+          <ul class="styled-checklist">
+            <li>Online tuition</li>
+            <li>Face-to-face sessions</li>
+            <li>Blended learning</li>
+            <li>Small-group tuition</li>
+            <li>One-to-one personalised support</li>
+          </ul>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed #e2e8f0;">
+            We design programmes around school timetables, after-school hours, and weekend sessions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Working with Schools & Pandemic Recovery -->
+      <div class="grid-2" style="margin-top: 2rem;">
+        <div class="service-card">
+          <h3 style="font-size: 1.3rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.6rem;">Working With Schools &amp; Community Organisations</h3>
+          <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7;">
+            As an experienced tuition provider, we have worked with various organisations such as:
+          </p>
+          <div class="org-pill-wrap">
+            <span class="org-pill">📚 Local libraries</span>
+            <span class="org-pill">🏛️ Community centres</span>
+            <span class="org-pill">🏫 Schools</span>
+            <span class="org-pill">🤝 Educational support groups</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin: 0;">
+            We design bespoke programmes to meet the unique needs of each organisation, supporting both general studies and preparation for targeted examinations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 style="font-size: 1.3rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.6rem;">Our Commitment During and Beyond the Pandemic</h3>
+          <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1rem;">
+            We are fully prepared to work with any primary or secondary school, community centre, or organisation to help children especially those from disadvantaged backgrounds recover from learning loss caused by the pandemic and continue progressing in the years ahead.
+          </p>
+        </div>
+      </div>
+
+      <!-- Get In Touch Callout Panel -->
+      <div class="partnership-callout">
+        <div class="partnership-callout-text">
+          <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #93c5fd; margin-bottom: 0.4rem;">Get in Touch</span>
+          <h3>Partner With The Students Hub</h3>
+          <p>
+            We welcome the opportunity to support your pupils or community. Please contact us to discuss how we can work together to help every child reach their full potential.
+          </p>
+        </div>
+        <div class="partnership-callout-actions">
+          <a href="contact.html#contact" class="btn btn-accent btn-lg" style="white-space: nowrap;">Contact us &rarr;</a>
+          <a href="https://wa.me/447424044851" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.12); color:#fff; border-color: rgba(255,255,255,0.3); white-space: nowrap;">
+            WhatsApp Partnership Team
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--bg-alt);">
+  <!-- SECTION 2: ACADEMIC GUIDANCE -->
+  <section class="service-section bg-alt" id="academic-guidance">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Entrance Exams</span>
-        <h2 class="section-title">11+ and 13+ preparation</h2>
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">ACADEMIC GUIDANCE</span>
+        <h2>Academic Guidance</h2>
+        <p style="font-weight: 600; color: var(--primary-900); font-size: 1.15rem; margin-top: 0.5rem;">Academic Guidance for Primary, Secondary &amp; Sixth Form Students</p>
       </div>
-      <div class="feature-grid">
-        <div class="card"><h3>Mathematics</h3><ul><li>Place value, number operations, fractions and percentages.</li><li>Ratio, measurement, geometry, algebra and problem-solving.</li><li>Quick mental arithmetic and exam speed drills.</li></ul></div>
-        <div class="card"><h3>English</h3><ul><li>Reading comprehension and inference.</li><li>Vocabulary, grammar and punctuation.</li><li>Creative writing and structured responses.</li></ul></div>
-        <div class="card"><h3>Verbal &amp; Non-Verbal Reasoning</h3><ul><li>Word analogies, codes and hidden words.</li><li>Shape series, matrices and rotation patterns.</li><li>Visual logic and exam technique.</li></ul></div>
+
+      <!-- Stage Buttons matching screenshot [Primary] [Secondary] [Advanced Academic Coaching] -->
+      <div class="sub-tabs-bar">
+        <a href="#primary-support" class="sub-tab-btn active">[Primary]</a>
+        <a href="#secondary-support" class="sub-tab-btn">[Secondary]</a>
+        <a href="#sixth-form-support" class="sub-tab-btn">[Advanced Academic Coaching]</a>
+      </div>
+
+      <div style="max-width: 860px; margin: 0 auto 3rem; text-align: center;">
+        <p style="font-size: 1.08rem; color: var(--text-primary); line-height: 1.8;">
+          At our tuition centre, we provide personalised academic support designed to help every learner grow in confidence, close attainment gaps and achieve their full potential. Our programmes are tailored to the needs of primary, secondary, and sixth-form students, ensuring the right guidance at every stage of their educational journey.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Primary School Support (KS1–KS2) -->
+        <div class="stage-card" id="primary-support">
+          <div class="stage-card-header">
+            <span class="stage-badge">Primary Level</span>
+            <h3>Primary School Support (KS1–KS2)</h3>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>📖 Building Strong Foundations</h5>
+            <p>We help younger learners develop essential literacy and numeracy skills, supporting:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Reading fluency, phonics &amp; comprehension</li>
+              <li style="font-size: 0.9rem;">Core maths skills including number bonds, place value &amp; times tables</li>
+              <li style="font-size: 0.9rem;">Early writing skills (spelling, punctuation, vocabulary)</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>🌱 Confidence &amp; Learning Habits</h5>
+            <p>We nurture curiosity, motivation and independence through:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Positive learning habits</li>
+              <li style="font-size: 0.9rem;">Growth mindset and resilience</li>
+              <li style="font-size: 0.9rem;">Encouraging problem-solving skills</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>🎯 SATs &amp; 11+ Preparation</h5>
+            <p>Specialist support for:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Year 2 &amp; Year 6 SATs</li>
+              <li style="font-size: 0.9rem;">11+ exams (GL &amp; CEM) in verbal, non-verbal reasoning, English &amp; maths</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Secondary School Support (KS3–KS4 / GCSE) -->
+        <div class="stage-card" id="secondary-support">
+          <div class="stage-card-header">
+            <span class="stage-badge" style="background: #eff6ff; color: #1e40af; border-color: #bfdbfe;">Secondary Level</span>
+            <h3>Secondary School Support (KS3–KS4 / GCSE)</h3>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>📐 Subject Mastery &amp; Skill Development</h5>
+            <p>We provide targeted academic support across:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Maths, English &amp; Science</li>
+              <li style="font-size: 0.9rem;">Humanities, Languages &amp; Computing</li>
+              <li style="font-size: 0.9rem;">Foundation-building for KS3 transition and GCSE success</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>🧠 Effective Study &amp; Revision Skills</h5>
+            <p>Students learn how to revise smarter, not harder:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Active recall &amp; spaced repetition</li>
+              <li style="font-size: 0.9rem;">Time management &amp; organisation</li>
+              <li style="font-size: 0.9rem;">Understanding exam command words</li>
+              <li style="font-size: 0.9rem;">Past papers, model answers &amp; exam technique coaching</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>📝 GCSE Exam Preparation &amp; Careers</h5>
+            <p>We offer comprehensive preparation for AQA, Edexcel and OCR subjects including:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Topic-by-topic teaching</li>
+              <li style="font-size: 0.9rem;">Mock exams and feedback</li>
+              <li style="font-size: 0.9rem;">Exam strategy and confidence-building</li>
+              <li style="font-size: 0.9rem;"><strong>Careers Awareness:</strong> Students receive early guidance on post-16 options and how GCSE choices shape future opportunities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sixth Form Support (A-Level / BTEC / Vocational Pathways) -->
+        <div class="stage-card" id="sixth-form-support">
+          <div class="stage-card-header">
+            <span class="stage-badge" style="background: #fdf4ff; color: #86198f; border-color: #f5d0fe;">Sixth Form Level</span>
+            <h3>Sixth Form Support (A-Level / BTEC / Vocational Pathways)</h3>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>🔬 Advanced Academic Coaching</h5>
+            <p>We offer tailored sessions in key A-Level subjects such as:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Maths, Further Maths, Physics, Chemistry, Biology</li>
+              <li style="font-size: 0.9rem;">Psychology, Sociology, Business, Economics</li>
+              <li style="font-size: 0.9rem;">English Literature, History, Geography &amp; more</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>📖 Independent Study &amp; Academic Success</h5>
+            <p>We help students adapt to the demands of advanced study:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">Critical thinking and extended writing</li>
+              <li style="font-size: 0.9rem;">Managing deadlines and workload</li>
+              <li style="font-size: 0.9rem;">Advanced revision &amp; exam strategies</li>
+            </ul>
+          </div>
+
+          <div class="stage-subgroup">
+            <h5>🎓 University, Apprenticeship &amp; Future-Ready Skills</h5>
+            <p>Our progression support includes:</p>
+            <ul class="styled-checklist" style="margin: 0.5rem 0;">
+              <li style="font-size: 0.9rem;">UCAS personal statements</li>
+              <li style="font-size: 0.9rem;">Course selection &amp; interview preparation</li>
+              <li style="font-size: 0.9rem;">Apprenticeship and vocational pathway advice</li>
+              <li style="font-size: 0.9rem;">CV development and employability skills</li>
+              <li style="font-size: 0.9rem;">Communication &amp; presentation</li>
+              <li style="font-size: 0.9rem;">Research, digital literacy, and academic referencing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Helping Every Learner Thrive Callout -->
+      <div style="background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 2.5rem; margin-top: 3rem; text-align: center; box-shadow: var(--shadow-sm);">
+        <h4 style="font-size: 1.4rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.6rem;">Helping Every Learner Thrive</h4>
+        <p style="max-width: 780px; margin: 0 auto; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75;">
+          Our mission is to make learning accessible, enjoyable, and effective for every student. Whether your child needs additional academic support, confidence building, or structured exam preparation, we’re here to help them move forward with clarity and confidence.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- SECTION 3: GRAMMAR SCHOOLS -->
+  <section class="service-section" id="grammar-schools">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Revision Skills</span>
-        <h2 class="section-title">Study skills that make a difference</h2>
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">GRAMMAR SCHOOLS</span>
+        <h2>Grammar Schools</h2>
       </div>
-      <div class="feature-grid">
-        <div class="card"><h3>Active recall</h3><p>Students practise retrieving knowledge from memory, which improves retention and exam confidence.</p></div>
-        <div class="card"><h3>Spaced repetition</h3><p>We use structured review schedules to reinforce learning over time and reduce last-minute cramming.</p></div>
-        <div class="card"><h3>Time management</h3><p>Students learn how to organise revision, plan effectively and build strong routines for school and examinations.</p></div>
+
+      <!-- Regional Tabs matching screenshot: [London : Barnet] [Hertfordshire] [Berkshire : Slough] [Buckinghamshire] -->
+      <div class="sub-tabs-bar">
+        <a href="#barnet-schools" class="sub-tab-btn active">[London : Barnet]</a>
+        <a href="#hertfordshire-schools" class="sub-tab-btn">[Hertfordshire]</a>
+        <a href="#slough-schools" class="sub-tab-btn">[Berkshire : Slough]</a>
+        <a href="#buckinghamshire-schools" class="sub-tab-btn">[Buckinghamshire]</a>
+      </div>
+
+      <div class="grid-4">
+        <!-- Region 1: London Barnet -->
+        <div class="school-list-card" id="barnet-schools">
+          <h4>📍 London Barnet Grammar Schools</h4>
+          <ul>
+            <li>Henrietta Barnett School</li>
+            <li>Mill Hill County High School</li>
+            <li>Queen Elizabeth’s School (QE Boy’s Barnet)</li>
+          </ul>
+        </div>
+
+        <!-- Region 2: Hertfordshire -->
+        <div class="school-list-card" id="hertfordshire-schools">
+          <h4>📍 Hertfordshire Grammar Schools</h4>
+          <ul>
+            <li>Bushey Meads School</li>
+            <li>Queen’s School</li>
+            <li>Croxley Danes Grammar School</li>
+            <li>Rickmansworth School</li>
+            <li>Parmiter’s School</li>
+            <li>St Michaels Catholic Grammar School</li>
+          </ul>
+        </div>
+
+        <!-- Region 3: Berkshire Slough -->
+        <div class="school-list-card" id="slough-schools">
+          <h4>📍 Berkshire Slough Grammar Schools</h4>
+          <ul>
+            <li>Herschel Grammar School</li>
+            <li>Langley Grammar School</li>
+            <li>St Bernard’s Catholic Grammar School</li>
+            <li>Upton Court Grammar School</li>
+          </ul>
+        </div>
+
+        <!-- Region 4: Buckinghamshire -->
+        <div class="school-list-card" id="buckinghamshire-schools">
+          <h4>📍 Buckinghamshire Grammar Schools</h4>
+          <ul>
+            <li>Aylesbury Grammar School</li>
+            <li>John Hampden Grammar School</li>
+            <li>Aylesbury High School</li>
+            <li>Sir Henry Floyd Grammar School</li>
+            <li>Beaconsfield High School</li>
+            <li>Sir William Borlase’s Grammar School</li>
+            <li>Burnham Grammar School</li>
+            <li>The Royal Grammar School</li>
+            <li>Chesham Grammar School</li>
+            <li>The Royal Latin School</li>
+            <li>Dr Challoner’s Grammar School</li>
+            <li>Wycombe High School</li>
+            <li>Dr Challoner’s High School</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--bg-alt);">
+  <!-- SECTION 4: REVISION WORKSHOPS -->
+  <section class="service-section bg-alt" id="revision-workshops">
     <div class="container">
-      <div class="cta-panel">
-        <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Need Support?</span>
-        <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Book a guidance consultation today</h2>
-        <p>Our team can advise on the most suitable programme for your child, from Key Stage 2 support to grammar school preparation and A-Level planning.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Book Guidance Consultation</a>
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">REVISION WORKSHOPS</span>
+        <h2>Revision Workshops</h2>
+        <p style="font-weight: 700; color: var(--primary-900); font-size: 1.15rem;">Exam Revision &amp; Booster Sessions</p>
+      </div>
+
+      <div style="max-width: 860px; margin: 0 auto 3rem; text-align: center;">
+        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.75;">
+          Excel Academy Tuition offers exclusive revision sessions, both at our centre and online, designed to strengthen students’ final exam preparation. These targeted sessions are available before and during exam periods, as well as through intensive programmes held during the Easter and Summer holidays.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="service-card" style="border-top: 4px solid var(--brand-blue);">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Comprehensive Booster Courses</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1rem;">
+            Our booster sessions include crash courses that thoroughly cover the entire syllabus. These sessions are ideal for students preparing for:
+          </p>
+          <ul class="styled-checklist">
+            <li>GCSE</li>
+            <li>IGCSE</li>
+            <li>A Levels</li>
+            <li>11 Plus</li>
+            <li>13 Plus</li>
+          </ul>
+          <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem; margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed #e2e8f0;">
+            These courses focus on revisiting missed or challenging topics, reinforcing key concepts, and ensuring students have a solid understanding of all subject areas.
+          </p>
+        </div>
+
+        <div class="service-card" style="border-top: 4px solid #10b981;">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Focused Exam Preparation</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1rem;">
+            We prioritise hands-on, exam-focused learning by:
+          </p>
+          <ul class="styled-checklist">
+            <li>Practising a wide range of exam-style questions</li>
+            <li>Providing abundant opportunities to solve past papers</li>
+            <li>Strengthening exam technique and confidence</li>
+            <li>Offering personalised support to close learning gaps</li>
+          </ul>
+          <div style="background: #eff6ff; border-left: 4px solid var(--brand-blue); padding: 0.9rem 1.2rem; border-radius: 0 8px 8px 0; margin-top: 1rem;">
+            <p style="color: #1e3a8a; font-size: 0.92rem; font-weight: 600; margin: 0;">
+              Our goal is to equip every student with the skills, knowledge, and confidence they need to achieve their aspirational grades.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- SECTION 5: EASTER & SUMMER BOOSTER CLASSES -->
+  <section class="service-section" id="booster-classes">
+    <div class="container">
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">EASTER &amp; SUMMER BOOSTER CLASSES</span>
+        <h2>Easter &amp; Summer Booster Classes</h2>
+        <p style="font-weight: 700; color: var(--primary-900); font-size: 1.15rem;">Revision &amp; Booster Sessions</p>
+      </div>
+
+      <div style="max-width: 860px; margin: 0 auto 3rem; text-align: center;">
+        <p style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.75;">
+          Excel Academy Tuition offers exclusive revision sessions, both at our centre and online, during the Easter and Summer periods to strengthen and enhance students’ exam preparation.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="service-card" style="border-left: 4px solid var(--brand-blue);">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Crash Courses for All Major Exams</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1.2rem;">
+            Our booster sessions include crash courses that thoroughly cover the entire syllabus. These sessions are ideal for students preparing for:
+          </p>
+          <ul class="styled-checklist">
+            <li>GCSE</li>
+            <li>IGCSE</li>
+            <li>A Levels</li>
+            <li>11 Plus</li>
+            <li>13 Plus</li>
+          </ul>
+          <p style="color: var(--text-secondary); line-height: 1.65; font-size: 0.95rem; margin: 0;">
+            We revisit missed, difficult, or challenging topics to ensure every student has a solid understanding before entering the exam hall.
+          </p>
+        </div>
+
+        <div class="service-card" style="border-left: 4px solid #10b981;">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Exam-Focused Practice</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1rem;">
+            We place strong emphasis on hands-on learning by:
+          </p>
+          <ul class="styled-checklist">
+            <li>Working through a variety of exam-style questions</li>
+            <li>Providing extensive practice using past papers</li>
+            <li>Strengthening exam techniques and time management</li>
+            <li>Building confidence through guided support</li>
+          </ul>
+          <div style="background: #ecfdf5; border-left: 4px solid #059669; padding: 0.9rem 1.2rem; border-radius: 0 8px 8px 0; margin-top: 1rem;">
+            <p style="color: #065f46; font-size: 0.92rem; font-weight: 600; margin: 0;">
+              Our aim is to ensure students are fully prepared and positioned for success, giving them the best chance of achieving their aspirational grades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CAREER GUIDANCE (Exact match to screenshots 2 & 3) -->
+  <section class="service-section bg-alt" id="career-guidance">
+    <div class="container">
+      <div class="section-header-wrap">
+        <span class="section-badge-pill">CAREER GUIDANCE</span>
+        <h2>Career Guidance</h2>
+        <p style="font-weight: 700; color: var(--primary-900); font-size: 1.15rem;">Academic and Career Support for Students &amp; Parents</p>
+      </div>
+
+      <!-- Sub-tabs matching screenshot: [Academic & Career Support] [Application & Process Support] [Career Guidance] -->
+      <div class="sub-tabs-bar">
+        <a href="#academic-career-support" class="sub-tab-btn active">[Academic &amp; Career Support]</a>
+        <a href="#application-process-support" class="sub-tab-btn">[Application &amp; Process Support]</a>
+        <a href="#career-guidance-support" class="sub-tab-btn">[Career Guidance]</a>
+      </div>
+
+      <div style="max-width: 860px; margin: 0 auto 3rem; text-align: center;" id="academic-career-support">
+        <p style="font-size: 1.08rem; color: var(--text-primary); line-height: 1.8;">
+          At our tuition centre, we offer dedicated Academic and Career Guidance to support students and parents throughout the entrance exam and admissions process. We provide clear, personalised advice for applications to Grammar Schools, Private Schools, Sixth-Form Colleges and Russell Group Universities, ensuring families understand each step with confidence.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Entrance Exam Process & Application Support -->
+        <div class="service-card" id="application-process-support" style="border-top: 4px solid var(--brand-blue);">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Entrance Exam Process &amp; Application Support</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1rem;">
+            We guide students through the full preparation and application journey, including:
+          </p>
+          <ul class="styled-checklist">
+            <li>Entrance exam process and requirements</li>
+            <li>Preparation for Grammar and Private School admissions</li>
+            <li>UCAS application support</li>
+            <li>Interview preparation</li>
+          </ul>
+        </div>
+
+        <!-- Career Guidance for Students & Parents -->
+        <div class="service-card" id="career-guidance-support" style="border-top: 4px solid #8b5cf6;">
+          <h3 style="font-size: 1.35rem; color: var(--primary-900); font-weight: 800; margin-bottom: 0.8rem;">Career Guidance for Students &amp; Parents</h3>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin-bottom: 1rem;">
+            We provide comprehensive career guidance to help students choose a career path that aligns with their interests and strengths. Our support includes:
+          </p>
+          <ul class="styled-checklist">
+            <li>Understanding how to select a suitable career</li>
+            <li>Identifying universities that offer courses related to their chosen field</li>
+            <li>Explaining entrance criteria and grade requirements</li>
+            <li>Highlighting alternative career options available for their future</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA PANEL -->
+  <section class="service-section" style="padding: 3rem 0 5rem;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--primary-900) 0%, #1e3a8a 100%); border-radius: var(--radius-xl); padding: 3.5rem 2rem; text-align: center; color: #fff; box-shadow: var(--shadow-lg);">
+        <span class="section-badge" style="background: rgba(255,255,255,0.15); color:#bfdbfe; margin-bottom: 1rem;">Ready to Start?</span>
+        <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: #fff; margin-bottom: 1rem; font-weight: 800;">Book a Consultation or School Partnership Meeting</h2>
+        <p style="max-width: 720px; margin: 0 auto 2rem; color: #dbeafe; font-size: 1.08rem; line-height: 1.7;">
+          Our academic team can advise on the most suitable programme for your child or discuss tailored partnership initiatives for your school or community group.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-accent btn-lg trial-modal-trigger">Book Free Assessment</button>
+          <a href="contact.html#contact" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.12); color:#fff; border-color: rgba(255,255,255,0.35);">
+            Partner with Us / Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub supports academic progress, confidence and long-term success in every stage of learning.</p></div>
-        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="courses.html#stem">Coding &amp; STEM</a></div></div>
-        <div class="footer-col"><h4>Resources</h4><div class="footer-links"><a href="about.html">About Us</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html">School Partnership</a><a href="contact.html#contact">Contact Us</a></div></div>
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo-wrap">
+            <img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img">
+          </a>
+          <p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">
+            The Students Hub supports academic progress, confidence and long-term success in every stage of learning.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Programmes</h4>
+          <div class="footer-links">
+            <a href="courses.html#ks2">Key Stage 2</a>
+            <a href="courses.html#ks3">Key Stage 3</a>
+            <a href="courses.html#gcse">GCSE &amp; IGCSE</a>
+            <a href="courses.html#alevel">AS &amp; A2 Levels</a>
+            <a href="coding.html">Coding &amp; STEM Academy</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a>
+            <a href="guidance.html#school-partnership">School Partnership</a>
+            <a href="fees.html">Fees &amp; Schedule</a>
+            <a href="resources.html">Free Resources</a>
+            <a href="contact.html#contact">Contact Us</a>
+          </div>
+        </div>
         <div class="footer-col">
           <h4>Verified Contact</h4>
           <div class="footer-contact-item">
@@ -169,7 +1205,7 @@
             </div>
           </div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-blue)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <div>
               <span class="footer-contact-label">Globe:</span>
               <a href="https://www.thestudents-hub.uk" target="_blank" rel="noopener">www.thestudents-hub.uk</a>
@@ -204,7 +1240,7 @@
     </div>
   </footer>
 
-  <!-- FREE TRIAL ASSESSMENT MODAL -->
+  <!-- Free Assessment Modal -->
   <div class="modal-backdrop" id="trial-modal" role="dialog" aria-modal="true" aria-labelledby="trial-modal-title">
     <div class="modal-window">
       <div class="modal-header">
@@ -239,15 +1275,18 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="trial-subject">Target Academic Programme *</label>
+            <label class="form-label" for="trial-subject">Target Service or Programme *</label>
             <select id="trial-subject" class="form-control" required>
-              <option value="" disabled selected>Select a programme or subject...</option>
+              <option value="" disabled selected>Select a programme...</option>
+              <option value="School Partnership Consultation">School Partnership / Institutional Tutoring</option>
               <option value="11+ Grammar Entrance Prep">11+ Grammar School Entrance (GL / CEM)</option>
               <option value="13+ Common Entrance Prep">13+ Common Entrance &amp; Scholarships</option>
-              <option value="Key Stage 2 Maths &amp; English">Key Stage 2 (Years 3–6)</option>
-              <option value="Key Stage 3 Secondary Core">Key Stage 3 (Years 7–9)</option>
-              <option value="GCSE / IGCSE Exam Preparation">GCSE / IGCSE Exam Preparation</option>
-              <option value="A-Level / Sixth Form Tutoring">AS &amp; A2 Level Tutoring</option>
+              <option value="Primary School Support (KS1-KS2)">Primary School Support (KS1–KS2)</option>
+              <option value="Secondary Support (KS3-KS4/GCSE)">Secondary Support (KS3–KS4 / GCSE)</option>
+              <option value="Sixth Form / A-Level Coaching">Sixth Form / A-Level Advanced Coaching</option>
+              <option value="Easter & Summer Booster Classes">Easter &amp; Summer Booster Classes</option>
+              <option value="Revision Workshops">Exam Revision Workshops</option>
+              <option value="Career & University Guidance">Career &amp; University Guidance</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; margin-top: 0.5rem;">

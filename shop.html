@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Resources | The Students Hub</title>
-  <meta name="description" content="The Students Hub study resources page is temporarily unavailable. Please use the academic tuition, guidance and contact pages.">
+  <meta name="description" content="Free study resources, past papers, and prospectus at The Students Hub.">
+  <meta http-equiv="refresh" content="0; url=resources.html">
+  <link rel="canonical" href="resources.html">
   <link rel="stylesheet" href="styles/main.css">
   <style>
     .page-hero { background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%); color:#fff; padding:4rem 0 3rem; text-align:center; }
@@ -35,9 +37,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" id="site-logo"><img src="assets/images/logo.png" alt="The Students Hub" class="brand-logo-img"></a>
-      <nav class="nav-menu" id="primary-nav">
+            <nav class="nav-menu" id="primary-nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+
+        <!-- Academic Tuition Dropdown -->
         <div class="nav-dropdown-wrapper">
           <a href="courses.html" class="nav-link dropdown-toggle" id="academic-tuition-nav" role="button" aria-haspopup="true" aria-expanded="false">
             Academic Tuition
@@ -55,12 +59,90 @@
             <a href="courses.html#alevel" class="dropdown-item">AS &amp; A2 Levels</a>
           </div>
         </div>
-        <a href="guidance.html" class="nav-link">Academic Guidance</a>
-        <a href="contact.html" class="nav-link">School Partnership</a>
+
+        <!-- Coding Courses Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="coding.html" class="nav-link dropdown-toggle" id="coding-courses-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Coding Courses
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="coding-courses-nav">
+            <a href="coding.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Coding Courses &rarr;</a>
+            <a href="coding.html#scratch" class="dropdown-item">Coding in Scratch</a>
+            <a href="coding.html#webdesign" class="dropdown-item">Web Design</a>
+            <a href="coding.html#gamedev" class="dropdown-item">Game Development</a>
+            <a href="coding.html#python" class="dropdown-item">Coding in Python</a>
+            <a href="coding.html#javascript" class="dropdown-item">Coding in JavaScript</a>
+            <a href="coding.html#canva" class="dropdown-item">Design Using Canva</a>
+            <a href="coding.html#cybersecurity" class="dropdown-item">Cyber Security Essentials</a>
+            <a href="coding.html#robotics" class="dropdown-item">Robotics</a>
+            <a href="coding.html#ai" class="dropdown-item">Artificial Intelligence</a>
+            <a href="coding.html#arduino" class="dropdown-item">Programming with Ardunio UNO</a>
+            <a href="coding.html#raspberrypi" class="dropdown-item">Programming with Raspberry Pi</a>
+            <a href="coding.html#microbit" class="dropdown-item">Programming with BBC Microbit</a>
+          </div>
+        </div>
+
+        <!-- Our Services Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <a href="guidance.html" class="nav-link dropdown-toggle" id="services-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Our Services
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="services-nav">
+            <a href="guidance.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Services Overview &rarr;</a>
+            <a href="guidance.html#school-partnership" class="dropdown-item">School Partnership</a>
+            <a href="guidance.html#academic-guidance" class="dropdown-item">Academic Guidance</a>
+            <a href="guidance.html#grammar-schools" class="dropdown-item">Grammar Schools Admissions</a>
+            <a href="guidance.html#revision-workshops" class="dropdown-item">Revision Workshops</a>
+            <a href="guidance.html#booster-classes" class="dropdown-item">Easter &amp; Summer Booster Classes</a>
+            <a href="guidance.html#career-guidance" class="dropdown-item">Career Guidance</a>
+          </div>
+        </div>
+
+        <!-- Fees & Schedule Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="fees.html" class="nav-link dropdown-toggle" id="fees-schedule-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Fees &amp; Schedule
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="fees-schedule-nav">
+            <a href="fees.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">Fees &amp; Timetable Overview &rarr;</a>
+            <a href="fees.html#fees" class="dropdown-item">Tuition Fees Structure</a>
+            <a href="fees.html#one-to-one" class="dropdown-item">1-to-1 Online Tuition Fees</a>
+            <a href="fees.html#discounts" class="dropdown-item">Discounts &amp; Policies</a>
+            <a href="fees.html#schedule" class="dropdown-item">Weekly Operating Hours</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Book Free Assessment</a>
+          </div>
+        </div>
+
+        <!-- Free Resources Dropdown (Dedicated Page) -->
+        <div class="nav-dropdown-wrapper">
+          <a href="resources.html" class="nav-link dropdown-toggle" id="free-resources-nav" role="button" aria-haspopup="true" aria-expanded="false">
+            Free Resources
+            <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown-menu" aria-labelledby="free-resources-nav">
+            <a href="resources.html" class="dropdown-item" style="font-weight: 700; color: var(--brand-blue);">All Free Resources &rarr;</a>
+            <a href="resources.html#study-packs" class="dropdown-item">Study Packs &amp; Worksheets</a>
+            <a href="resources.html#past-papers" class="dropdown-item">11+ &amp; GCSE Past Paper Packs</a>
+            <a href="documents/TSH content.docx" class="dropdown-item" download>Download Prospectus (.docx)</a>
+            <a href="#trial-modal" class="dropdown-item trial-modal-trigger">Free Diagnostic Assessment</a>
+          </div>
+        </div>
+
         <a href="contact.html#contact" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn btn-primary trial-modal-trigger">Book Free Trial</button>
+        <button class="btn btn-accent trial-modal-trigger">Book Free Trial</button>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       </div>
     </div>
@@ -103,7 +185,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col"><a href="index.html" class="footer-logo-wrap"><img src="assets/images/logo.png" alt="The Students Hub" class="footer-logo-img"></a><p style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">The Students Hub supports learners through tuition, guidance and STEM enrichment.</p></div>
-        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="courses.html#stem">Coding &amp; STEM</a></div></div>
+        <div class="footer-col"><h4>Programmes</h4><div class="footer-links"><a href="courses.html#ks2">Key Stage 2</a><a href="courses.html#ks3">Key Stage 3</a><a href="courses.html#gcse">GCSE &amp; IGCSE</a><a href="courses.html#alevel">AS &amp; A2 Levels</a><a href="coding.html">Coding &amp; STEM Academy</a></div></div>
         <div class="footer-col"><h4>Resources</h4><div class="footer-links"><a href="about.html">About Us</a><a href="guidance.html">Academic Guidance</a><a href="documents/TSH content.docx" download>Download Prospectus (.docx)</a><a href="contact.html#contact">Contact Us</a></div></div>
         <div class="footer-col">
           <h4>Verified Contact</h4>
