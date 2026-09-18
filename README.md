@@ -2,7 +2,7 @@
 
 > **Premier British Tuition Academy Website with Interactive 3D WebGL Hero Experience**
 
-Official website for **The Students Hub** — an accredited academic tuition academy providing specialist tuition for 11+ Grammar School entrance, Key Stage 2 & 3, GCSE, and A-Level examinations across Greater London and online.
+Official website for **The Students Hub** — an accredited academic tuition academy providing specialist online tuition for 11+ Grammar School entrance, Key Stage 2 & 3, GCSE, and A-Level examinations across the UK.
 
 ---
 
@@ -39,7 +39,7 @@ Official website for **The Students Hub** — an accredited academic tuition aca
 4. **Interactive Grade Boost Calculator**:
    - Allows parents to pick their child's current working grade and desired target grade to generate a personalized weekly roadmap.
 5. **About Us (`about.html`) & Contact (`contact.html`)**:
-   - Explaining the 4-Step Mastery Method, safeguarding (Ofsted-aligned, Enhanced DBS certified), interactive consultation booking form, centre opening hours, and interactive FAQ accordion.
+   - Explaining the 4-Step Mastery Method, safeguarding (Ofsted-aligned, Enhanced DBS certified), interactive consultation booking form, weekly operating hours timetable, and interactive FAQ accordion.
 
 ---
 
