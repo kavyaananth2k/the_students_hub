@@ -728,5 +728,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setupCurriculumFlow();
+
+  // -------------------------------------------------------------
+  // Floating Actions Dock (WhatsApp & Back to Top)
+  // -------------------------------------------------------------
+  let floatingDock = document.getElementById('floating-actions');
+  if (!floatingDock) {
+    floatingDock = document.createElement('div');
+    floatingDock.id = 'floating-actions';
+    floatingDock.className = 'floating-actions';
+
+    const existingWa = document.querySelector('.whatsapp-float');
+    if (existingWa) {
+      existingWa.parentNode.insertBefore(floatingDock, existingWa);
+      floatingDock.appendChild(existingWa);
+    } else {
+      const waBtn = document.createElement('a');
+      waBtn.href = 'https://wa.me/447424044851';
+      waBtn.className = 'whatsapp-float';
+      waBtn.target = '_blank';
+      waBtn.rel = 'noopener noreferrer';
+      waBtn.setAttribute('aria-label', 'Chat with us on WhatsApp');
+      waBtn.setAttribute('title', 'Chat with us on WhatsApp');
+      waBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.18 8.18 0 0 1-1.25-4.36c0-4.54 3.7-8.24 8.27-8.24zm4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.05.15 1.72-.71 1.96-1.39.24-.68.24-1.27.17-1.39-.07-.12-.25-.19-.5-.32z"/>
+        </svg>
+        <span class="whatsapp-float-tooltip">Chat with us</span>
+      `;
+      floatingDock.appendChild(waBtn);
+    }
+
+    if (!floatingDock.querySelector('#back-to-top')) {
+      const backBtn = document.createElement('button');
+      backBtn.type = 'button';
+      backBtn.id = 'back-to-top';
+      backBtn.className = 'back-to-top-btn';
+      backBtn.setAttribute('aria-label', 'Back to top');
+      backBtn.setAttribute('title', 'Back to top');
+      backBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+        <span class="back-to-top-tooltip">Back to top</span>
+      `;
+      floatingDock.appendChild(backBtn);
+    }
+
+    if (!document.body.contains(floatingDock)) {
+      document.body.appendChild(floatingDock);
+    }
+  }
+
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    const checkBackToTopScroll = () => {
+      if (window.scrollY > 260) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', checkBackToTopScroll, { passive: true });
+    checkBackToTopScroll();
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
 
