@@ -1704,44 +1704,41 @@ ul, ol {
 }
 
 /* ==========================================================================
-   FLOATING ACTIONS DOCK (WHATSAPP & BACK TO TOP)
+   FLOATING ACTIONS (WHATSAPP & BACK TO TOP)
+   Both buttons use position: fixed at bottom-right with high z-index
    ========================================================================== */
 .floating-actions {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 2500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+  display: contents; /* Container produces no box, ensuring zero interference with pointer events */
+  position: static;
   pointer-events: none;
 }
 
-.floating-actions > * {
-  pointer-events: auto;
-}
-
-/* WhatsApp Floating Button */
+/* 1. WhatsApp Floating Button */
 .whatsapp-float {
-  position: relative;
+  position: fixed !important;
+  bottom: 86px;
+  right: 24px;
   width: 60px;
   height: 60px;
-  background: #25D366;
+  background-color: #25D366;
   border-radius: 50%;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
-  text-decoration: none;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
   cursor: pointer;
+  text-decoration: none !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.25s ease,
               background-color 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  flex-shrink: 0;
 }
 
 .whatsapp-float:hover {
@@ -1765,6 +1762,7 @@ ul, ol {
   height: 35px;
   fill: #ffffff;
   display: block;
+  pointer-events: none;
   transition: transform 0.25s ease;
   flex-shrink: 0;
 }
@@ -1773,55 +1771,50 @@ ul, ol {
   transform: scale(1.06);
 }
 
-/* Back to Top Floating Arrow Button (Directly below WhatsApp) */
+/* 2. Back to Top Floating Button (Directly below WhatsApp) */
 .back-to-top-btn {
-  position: relative;
+  position: fixed !important;
+  bottom: 24px;
+  right: 30px; /* Centered with 60px WhatsApp button (24 + (60 - 48)/2) */
   width: 48px;
-  height: 0;
-  margin-top: 0;
-  padding: 0;
-  border: 0 solid rgba(255, 255, 255, 0.18);
+  height: 48px;
+  background: var(--primary-900, #0a1128);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  background: var(--primary-900, #0a1128);
-  color: #ffffff;
-  box-shadow: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+  z-index: 99998 !important;
   cursor: pointer;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
-  overflow: hidden;
-  transform: translateY(12px) scale(0.8);
-  transition: height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              margin-top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              opacity 0.25s ease,
-              transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+  pointer-events: none !important;
+  transform: translateY(14px) scale(0.8);
+  transition: opacity 0.3s ease,
               visibility 0.3s ease,
+              transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
               background-color 0.25s ease,
               box-shadow 0.25s ease,
               border-color 0.25s ease;
-  -webkit-tap-highlight-color: transparent;
-  flex-shrink: 0;
 }
 
 .back-to-top-btn.visible {
-  height: 48px;
-  margin-top: 12px;
-  border-width: 1px;
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
-  overflow: visible;
+  pointer-events: auto !important;
   transform: translateY(0) scale(1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .back-to-top-btn:hover {
   background: var(--brand-blue, #2563eb);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: scale(1.08) translateY(-2px);
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35), 0 3px 8px rgba(0, 0, 0, 0.18);
 }
@@ -1841,6 +1834,7 @@ ul, ol {
   height: 22px;
   stroke: currentColor;
   display: block;
+  pointer-events: none;
   transition: transform 0.25s ease;
   flex-shrink: 0;
 }
@@ -1865,7 +1859,7 @@ ul, ol {
   border-radius: 6px;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none !important;
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
   font-family: inherit;
@@ -1893,14 +1887,11 @@ ul, ol {
 
 /* Mobile & Tablet Responsiveness */
 @media (max-width: 768px) {
-  .floating-actions {
-    bottom: max(18px, env(safe-area-inset-bottom, 18px));
-    right: max(18px, env(safe-area-inset-right, 18px));
-  }
-
   .whatsapp-float {
     width: 54px;
     height: 54px;
+    right: max(18px, env(safe-area-inset-right, 18px));
+    bottom: calc(max(18px, env(safe-area-inset-bottom, 18px)) + 54px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.15);
   }
 
@@ -1911,11 +1902,9 @@ ul, ol {
 
   .back-to-top-btn {
     width: 44px;
-  }
-
-  .back-to-top-btn.visible {
     height: 44px;
-    margin-top: 10px;
+    right: calc(max(18px, env(safe-area-inset-right, 18px)) + 5px);
+    bottom: max(18px, env(safe-area-inset-bottom, 18px));
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 5px rgba(0, 0, 0, 0.15);
   }
 
@@ -1931,14 +1920,11 @@ ul, ol {
 }
 
 @media (max-width: 480px) {
-  .floating-actions {
-    bottom: max(16px, env(safe-area-inset-bottom, 16px));
-    right: max(16px, env(safe-area-inset-right, 16px));
-  }
-
   .whatsapp-float {
     width: 50px;
     height: 50px;
+    right: max(16px, env(safe-area-inset-right, 16px));
+    bottom: calc(max(16px, env(safe-area-inset-bottom, 16px)) + 50px);
   }
 
   .whatsapp-float svg {
@@ -1948,11 +1934,9 @@ ul, ol {
 
   .back-to-top-btn {
     width: 42px;
-  }
-
-  .back-to-top-btn.visible {
     height: 42px;
-    margin-top: 8px;
+    right: calc(max(16px, env(safe-area-inset-right, 16px)) + 4px);
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
   }
 
   .back-to-top-btn svg {
