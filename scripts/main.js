@@ -316,16 +316,92 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
               <div class="form-group">
-                <label class="form-label" for="trial-subject">Target Academic Programme *</label>
+                <label class="form-label" for="trial-subject">Target Academic Programme / Course *</label>
                 <select id="trial-subject" class="form-control" required>
-                  <option value="" disabled selected>Select a programme or subject...</option>
-                  <option value="11+ Grammar Entrance Prep">11+ Grammar School Entrance (GL / CEM)</option>
-                  <option value="13+ Common Entrance Prep">13+ Common Entrance &amp; Scholarships</option>
-                  <option value="Key Stage 2 Maths &amp; English">Key Stage 2 (Years 3–6)</option>
-                  <option value="Key Stage 3 Secondary Core">Key Stage 3 (Years 7–9)</option>
-                  <option value="GCSE / IGCSE Exam Preparation">GCSE / IGCSE Exam Preparation</option>
-                  <option value="A-Level / Sixth Form Tutoring">AS &amp; A2 Level Tutoring</option>
-                </select>
+              <option value="" disabled selected>Select an academic programme or coding course...</option>
+
+              <optgroup label="── Academic Tuition Programmes ──">
+                <option value="Academic Tuition">All Academic Tuition Programmes (General Inquiry)</option>
+                <option value="11+ Grammar Entrance Prep">11+ Grammar School Entrance Prep (GL &amp; CEM)</option>
+                <option value="13+ Common Entrance Prep">13+ Common Entrance &amp; Scholarships</option>
+                <option value="Key Stage 2 Maths &amp; English">Key Stage 2 (Years 3–6) Primary Tuition</option>
+                <option value="Key Stage 3 Secondary Core">Key Stage 3 (Years 7–9) Secondary Core</option>
+                <option value="GCSE / IGCSE Exam Mastery">GCSE / IGCSE Exam Preparation (Years 10–11)</option>
+                <option value="A-Level / Sixth Form Tutoring">A-Level / Sixth Form Tutoring (Years 12–13)</option>
+              </optgroup>
+
+              <optgroup label="── Coding, AI &amp; STEM Courses (All 12 Modules) ──">
+                <option value="Coding &amp; STEM">All Coding &amp; STEM Academy Courses (General Inquiry)</option>
+                <option value="Coding in Scratch">Coding in Scratch (Ages 7–14)</option>
+                <option value="Web Design">Web Design &amp; Development (Ages 10–16)</option>
+                <option value="Game Development">Game Development with Python &amp; Arcade (Ages 10–16)</option>
+                <option value="Coding in Python">Coding in Python &amp; Algorithms (Ages 10–16)</option>
+                <option value="Coding in JavaScript">Coding in JavaScript &amp; Web Apps (Ages 11–16)</option>
+                <option value="Designing Using Canva">Designing Using Canva &amp; Digital Media (Ages 8–16)</option>
+                <option value="Cyber Security Essentials">Cyber Security Essentials &amp; Online Safety (Ages 10–16)</option>
+                <option value="Robotics">Robotics &amp; Physical Computing (Ages 8–14)</option>
+                <option value="Artificial Intelligence">Artificial Intelligence &amp; Machine Learning (Ages 11–16)</option>
+                <option value="Programming with Arduino">Programming with Arduino &amp; Circuits (Ages 11–16)</option>
+                <option value="Raspberry Pi Projects">Raspberry Pi Projects &amp; Linux (Ages 11–16)</option>
+                <option value="BBC Micro:bit Programming">BBC Micro:bit Programming (Ages 8–14)</option>
+              </optgroup>
+
+              <optgroup label="── Primary Academic Subjects (KS2) ──">
+                <option value="Year 3 Maths">Year 3 Primary Maths</option>
+                <option value="Year 3 English">Year 3 Primary English</option>
+                <option value="Year 4 Maths">Year 4 Primary Maths</option>
+                <option value="Year 4 English">Year 4 Primary English</option>
+                <option value="Year 5 Maths">Year 5 Primary Maths</option>
+                <option value="Year 5 English">Year 5 Primary English</option>
+                <option value="Year 6 Maths">Year 6 Primary Maths &amp; SATs</option>
+                <option value="Year 6 English">Year 6 Primary English &amp; SATs</option>
+              </optgroup>
+
+              <optgroup label="── Secondary Academic Subjects (KS3) ──">
+                <option value="Year 7 Maths">Year 7 Secondary Maths</option>
+                <option value="Year 7 English">Year 7 Secondary English</option>
+                <option value="Year 7 Science">Year 7 Secondary Science</option>
+                <option value="Year 7 Computer Science">Year 7 Computer Science</option>
+                <option value="Year 8 Maths">Year 8 Secondary Maths</option>
+                <option value="Year 8 English">Year 8 Secondary English</option>
+                <option value="Year 8 Science">Year 8 Secondary Science</option>
+                <option value="Year 8 Computer Science">Year 8 Computer Science</option>
+                <option value="Year 9 Maths">Year 9 Secondary Maths</option>
+                <option value="Year 9 English">Year 9 Secondary English</option>
+                <option value="Year 9 Science">Year 9 Secondary Science</option>
+                <option value="Year 9 Computer Science">Year 9 Computer Science</option>
+              </optgroup>
+
+              <optgroup label="── GCSE &amp; IGCSE Exam Preparation ──">
+                <option value="Year 10 Maths">Year 10 Maths (GCSE / IGCSE)</option>
+                <option value="Year 10 English">Year 10 English (Language &amp; Literature)</option>
+                <option value="Year 10 Science">Year 10 Science (Biology, Chemistry, Physics)</option>
+                <option value="Year 10 Computer Science">Year 10 Computer Science</option>
+                <option value="Year 11 Maths">Year 11 Maths (GCSE Exam Prep)</option>
+                <option value="Year 11 English">Year 11 English (GCSE Exam Prep)</option>
+                <option value="Year 11 Science">Year 11 Science (GCSE Exam Prep)</option>
+                <option value="Year 11 Computer Science">Year 11 Computer Science (GCSE Exam Prep)</option>
+              </optgroup>
+
+              <optgroup label="── 11+ &amp; 13+ Entrance Exam Subjects ──">
+                <option value="11+ Mathematics">11+ Mathematics &amp; Numerical Reasoning</option>
+                <option value="11+ English">11+ English &amp; Creative Writing</option>
+                <option value="11+ Verbal Reasoning">11+ Verbal Reasoning</option>
+                <option value="11+ Non-Verbal Reasoning">11+ Non-Verbal Reasoning</option>
+                <option value="13+ Mathematics">13+ Mathematics</option>
+                <option value="13+ English (Reading &amp; Writing)">13+ English (Reading &amp; Writing)</option>
+                <option value="13+ Verbal Reasoning">13+ Verbal Reasoning</option>
+                <option value="13+ Non-Verbal Reasoning">13+ Non-Verbal Reasoning</option>
+              </optgroup>
+
+              <optgroup label="── A-Level &amp; Sixth Form Subjects ──">
+                <option value="A-Level Mathematics">A-Level Mathematics</option>
+                <option value="A-Level Further Mathematics">A-Level Further Mathematics</option>
+                <option value="A-Level Biology">A-Level Biology</option>
+                <option value="A-Level Chemistry">A-Level Chemistry</option>
+                <option value="A-Level Physics">A-Level Physics</option>
+              </optgroup>
+            </select>
               </div>
               <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; margin-top: 0.5rem;">
                 Confirm Free Assessment Booking
@@ -339,11 +415,43 @@ document.addEventListener('DOMContentLoaded', () => {
     return modal;
   }
 
-  function openTrialModal(e) {
+  function openTrialModal(e, triggerEl) {
     if (e && typeof e.preventDefault === 'function') e.preventDefault();
     const modal = ensureTrialModalElement();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Auto-select subject if triggered from a specific subject/course card
+    const trigger = triggerEl || (e && e.target ? e.target.closest('.trial-modal-trigger, a[href$="#trial"], a[href$="#trial-modal"]') : null);
+    if (trigger && trigger.dataset && trigger.dataset.subject) {
+      const subjectSelect = modal.querySelector('#trial-subject');
+      if (subjectSelect) {
+        const val = trigger.dataset.subject.trim();
+        // Prioritize exact match, then fall back to includes
+        for (let i = 0; i < subjectSelect.options.length; i++) {
+          const opt = subjectSelect.options[i];
+          if (opt.value && opt.value.toLowerCase() === val.toLowerCase()) {
+            opt.selected = true;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          for (let i = 0; i < subjectSelect.options.length; i++) {
+            const opt = subjectSelect.options[i];
+            if (opt.value && (opt.value.toLowerCase().includes(val.toLowerCase()) || val.toLowerCase().includes(opt.value.toLowerCase()))) {
+              opt.selected = true;
+              matched = true;
+              break;
+            }
+          }
+        }
+        if (!matched && val) {
+          const newOpt = new Option(val, val, true, true);
+          subjectSelect.add(newOpt);
+        }
+      }
+    }
 
     const closeBtn = modal.querySelector('#trial-modal-close');
     if (closeBtn && !closeBtn._hasCloseBound) {
@@ -390,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const trigger = e.target.closest('.trial-modal-trigger, a[href$="#trial"], a[href$="#trial-modal"]');
     if (trigger) {
       e.preventDefault();
-      openTrialModal(e);
+      openTrialModal(e, trigger);
     }
   });
 

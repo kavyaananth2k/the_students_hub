@@ -16,7 +16,7 @@ Official website for **The Students Hub** — an accredited academic tuition aca
 - **Official Domain:** [www.thestudents-hub.uk](https://www.thestudents-hub.uk)
 - **Facebook:** [The Students Hub](https://www.facebook.com)
 - **Instagram:** [@thestudentshub01](https://www.instagram.com/thestudentshub01)
-- **Location:** United Kingdom
+- **Location:** London - United Kingdom
 
 ---
 
