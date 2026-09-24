@@ -293,28 +293,32 @@
         <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
           Claim a 100% free, no-obligation 45-minute diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
         </p>
-        <form id="trial-form">
+        <form id="trial-form" action="https://formsubmit.co/admin@thestudents-hub.co.uk" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_cc" value="kavyaananth97@gmail.com">
+            <input type="hidden" name="_subject" value="New Free Assessment Booking - The Students Hub">
           <div class="form-group">
             <label class="form-label" for="trial-parent-name">Parent / Guardian Full Name *</label>
-            <input type="text" id="trial-parent-name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+            <input type="text" id="trial-parent-name" name="Parent_Guardian_Name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="trial-student-name">Student Full Name *</label>
-            <input type="text" id="trial-student-name" class="form-control" placeholder="e.g. James Jenkins" required>
+            <input type="text" id="trial-student-name" name="Student_Full_Name" class="form-control" placeholder="e.g. James Jenkins" required>
           </div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="form-group">
               <label class="form-label" for="trial-email">Contact Email *</label>
-              <input type="email" id="trial-email" class="form-control" placeholder="parent@example.com" required>
+              <input type="email" id="trial-email" name="Contact_Email" class="form-control" placeholder="parent@example.com" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="trial-phone">Contact Phone *</label>
-              <input type="tel" id="trial-phone" class="form-control" placeholder="07405 860115" required>
+              <input type="tel" id="trial-phone" name="Contact_Phone" class="form-control" placeholder="07405 860115" required>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="trial-subject">Target Academic Programme / Course *</label>
-            <select id="trial-subject" class="form-control" required>
+            <select id="trial-subject" name="Target_Academic_Programme" class="form-control" required>
               <option value="" disabled selected>Select an academic programme or coding course...</option>
 
               <optgroup label="── Academic Tuition Programmes ──">

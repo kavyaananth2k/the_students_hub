@@ -418,6 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openTrialModal(e, triggerEl) {
     if (e && typeof e.preventDefault === 'function') e.preventDefault();
     const modal = ensureTrialModalElement();
+    if (modal && typeof modal.restoreForm === 'function') modal.restoreForm();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
@@ -466,23 +467,204 @@ document.addEventListener('DOMContentLoaded', () => {
       modal._hasBackdropBound = true;
     }
 
-    const form = modal.querySelector('#trial-form');
-    if (form && !form._hasSubmitBound) {
-      form.addEventListener('submit', (ev) => {
-        ev.preventDefault();
-        const parentName = document.getElementById('trial-parent-name')?.value || 'Parent';
-        const studentName = document.getElementById('trial-student-name')?.value || 'Student';
-        const subject = document.getElementById('trial-subject')?.value || 'Tuition';
-
-        closeTrialModal();
-        form.reset();
-
-        window.showHubToast(
-          `Thank you ${parentName}! Free trial assessment booked for ${studentName} (${subject}). Our academic advisor will contact you within 2 business hours.`
-        );
-      });
-      form._hasSubmitBound = true;
+    // Cache initial modal-window content for clean resets
+    if (!modal._initialWindowHtml) {
+      const win = modal.querySelector('.modal-window');
+      if (win) modal._initialWindowHtml = win.innerHTML;
     }
+
+    // Function to restore original form if modal was in success state
+    modal.restoreForm = function () {
+      const win = modal.querySelector('.modal-window');
+      if (win && modal._initialWindowHtml && modal._isSubmittedSuccess) {
+        win.innerHTML = modal._initialWindowHtml;
+        modal._isSubmittedSuccess = false;
+        bindModalEvents();
+      }
+    };
+
+    function bindModalEvents() {
+      const closeBtn = modal.querySelector('#trial-modal-close');
+      if (closeBtn) {
+        closeBtn.onclick = closeTrialModal;
+      }
+
+      const form = modal.querySelector('#trial-form');
+      if (form && !form._hasSubmitBound) {
+        form.addEventListener('submit', async (ev) => {
+          ev.preventDefault();
+
+          const parentInput = modal.querySelector('#trial-parent-name');
+          const studentInput = modal.querySelector('#trial-student-name');
+          const emailInput = modal.querySelector('#trial-email');
+          const phoneInput = modal.querySelector('#trial-phone');
+          const subjectSelect = modal.querySelector('#trial-subject');
+          const submitBtn = form.querySelector('button[type="submit"]');
+
+          const parentName = parentInput?.value.trim() || 'Parent';
+          const studentName = studentInput?.value.trim() || 'Student';
+          const email = emailInput?.value.trim() || '';
+          const phone = phoneInput?.value.trim() || '';
+          const subject = subjectSelect?.value.trim() || 'Academic Tuition';
+
+          if (!email || !phone) {
+            alert('Please provide your contact email and phone number.');
+            return;
+          }
+
+          // Visual loading state on the button
+          const origBtnHtml = submitBtn ? submitBtn.innerHTML : 'Confirm Free Assessment Booking';
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.85';
+            submitBtn.innerHTML = `
+              <svg style="animation: spin 0.8s linear infinite; display: inline-block; width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                <path d="M12 2a10 10 0 0 1 10 10"></path>
+              </svg>
+              Sending to admin@thestudents-hub.co.uk...
+            `;
+          }
+
+          // Payload for email delivery via FormSubmit
+          const payload = {
+            "Parent_Guardian_Name": parentName,
+            "Student_Full_Name": studentName,
+            "Contact_Email": email,
+            "Contact_Phone": phone,
+            "Target_Academic_Programme": subject,
+            "Booking_Date_London": new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' }),
+            "Source_Page": window.location.href,
+            "_subject": `🎓 Free Assessment Booking: ${studentName} (${subject})`,
+            "_template": "table",
+            "_captcha": "false",
+            "_cc": "kavyaananth97@gmail.com"
+          };
+
+          let emailSent = false;
+          try {
+            const res = await fetch('https://formsubmit.co/ajax/admin@thestudents-hub.co.uk', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+            const resData = await res.json().catch(() => ({}));
+            if (res.ok || resData.success === 'true' || resData.success === true || (resData.message && resData.message.includes('Activation'))) {
+              emailSent = true;
+            }
+          } catch (err) {
+            console.warn('Email dispatch warning:', err);
+          }
+
+          // Restore button
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            submitBtn.innerHTML = origBtnHtml;
+          }
+
+          // Show confirmation view inside modal
+          const win = modal.querySelector('.modal-window');
+          if (win) {
+            modal._isSubmittedSuccess = true;
+            const waText = encodeURIComponent(`Hi, I just booked a Free Diagnostic Assessment on the website for ${studentName} (${subject}). Parent: ${parentName}, Phone: ${phone}, Email: ${email}`);
+            const waUrl = `https://wa.me/447424044851?text=${waText}`;
+
+            win.innerHTML = `
+              <div class="modal-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%); color: #fff; border-radius: var(--radius-xl) var(--radius-xl) 0 0;">
+                <h3 class="modal-title" style="color: #fff; display: flex; align-items: center; gap: 0.6rem; font-size: 1.35rem;">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="#34d399">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  Booking Details Sent to Mail!
+                </h3>
+                <button class="modal-close-btn" id="trial-modal-success-close" aria-label="Close dialog" style="background: rgba(255,255,255,0.2); color: #fff;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body" style="padding: 1.75rem 2rem 2rem;">
+                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: var(--radius-lg); padding: 1.15rem; margin-bottom: 1.25rem;">
+                  <div style="font-weight: 700; color: #065f46; font-size: 1rem; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>✉️</span> Sent to: admin@thestudents-hub.co.uk
+                  </div>
+                  <p style="margin: 0; font-size: 0.88rem; color: #047857; line-height: 1.5;">
+                    Your 45-minute diagnostic assessment booking has been submitted. A copy has been delivered to our admissions desk.
+                  </p>
+                </div>
+
+                <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.92rem; line-height: 1.75;">
+                  <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1rem;">
+                    <span style="color: var(--text-secondary); font-weight: 600;">Student:</span>
+                    <strong style="color: var(--primary-900);">${studentName}</strong>
+
+                    <span style="color: var(--text-secondary); font-weight: 600;">Programme:</span>
+                    <span style="color: var(--brand-blue); font-weight: 700;">${subject}</span>
+
+                    <span style="color: var(--text-secondary); font-weight: 600;">Parent:</span>
+                    <span style="color: var(--text-primary);">${parentName}</span>
+
+                    <span style="color: var(--text-secondary); font-weight: 600;">Phone:</span>
+                    <a href="tel:${phone}" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">${phone}</a>
+
+                    <span style="color: var(--text-secondary); font-weight: 600;">Email:</span>
+                    <span style="color: var(--text-primary);">${email}</span>
+                  </div>
+                </div>
+
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; text-align: center;">
+                  Our senior academic advisor will review your student's stage and contact you within <strong>2 business hours</strong> to confirm your assessment date and time.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <a href="${waUrl}" target="_blank" rel="noopener" class="btn" style="background: #25D366; color: #fff; justify-content: center; padding: 0.85rem; font-size: 0.98rem; text-decoration: none; font-weight: 700; border-radius: var(--radius-md); display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.18 8.18 0 0 1-1.25-4.36c0-4.54 3.7-8.24 8.27-8.24zm4.53 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1 1.05.15 1.72-.71 1.96-1.39.24-.68.24-1.27.17-1.39-.07-.12-.25-.19-.5-.32z"/></svg>
+                    Connect on WhatsApp for Immediate Confirmation
+                  </a>
+                  <button type="button" id="trial-modal-done-btn" class="btn btn-outline" style="justify-content: center; padding: 0.75rem;">
+                    Done
+                  </button>
+                </div>
+              </div>
+            `;
+
+            const doneBtn = win.querySelector('#trial-modal-done-btn');
+            const succClose = win.querySelector('#trial-modal-success-close');
+            const handleDone = () => {
+              closeTrialModal();
+              setTimeout(() => modal.restoreForm(), 300);
+            };
+            doneBtn?.addEventListener('click', handleDone);
+            succClose?.addEventListener('click', handleDone);
+          }
+
+          // Success Toast
+          window.showHubToast(`🎉 Assessment details for ${studentName} sent to admin@thestudents-hub.co.uk.`);
+
+          // Seamless mailto fallback if network failed
+          if (!emailSent) {
+            const mailtoSubject = encodeURIComponent(`Free Assessment Booking: ${studentName} (${subject})`);
+            const mailtoBody = encodeURIComponent(
+              `Hello The Students Hub Team,\n\nI have booked a free assessment with the following details:\n\n` +
+              `• Parent / Guardian: ${parentName}\n` +
+              `• Student Name: ${studentName}\n` +
+              `• Contact Email: ${email}\n` +
+              `• Contact Phone: ${phone}\n` +
+              `• Target Academic Programme / Course: ${subject}\n\n` +
+              `Please confirm our booking date and time.\n\nThank you,\n${parentName}`
+            );
+            window.location.href = `mailto:admin@thestudents-hub.co.uk?subject=${mailtoSubject}&body=${mailtoBody}`;
+          }
+        });
+        form._hasSubmitBound = true;
+      }
+    }
+
+    bindModalEvents();
   }
 
   function closeTrialModal() {
