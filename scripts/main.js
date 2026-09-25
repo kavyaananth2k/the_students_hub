@@ -418,7 +418,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function openTrialModal(e, triggerEl) {
     if (e && typeof e.preventDefault === 'function') e.preventDefault();
     const modal = ensureTrialModalElement();
-    if (modal && typeof modal.restoreForm === 'function') modal.restoreForm();
+    if (!modal) return;
+    if (typeof modal.restoreForm === 'function') modal.restoreForm();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
@@ -428,6 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const subjectSelect = modal.querySelector('#trial-subject');
       if (subjectSelect) {
         const val = trigger.dataset.subject.trim();
+        let matched = false;
         // Prioritize exact match, then fall back to includes
         for (let i = 0; i < subjectSelect.options.length; i++) {
           const opt = subjectSelect.options[i];
