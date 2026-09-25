@@ -681,6 +681,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (trigger) {
       e.preventDefault();
       openTrialModal(e, trigger);
+      return;
+    }
+
+    const mailtoLink = e.target.closest('a[href^="mailto:"]');
+    if (mailtoLink) {
+      const email = 'admin@thestudents-hub.co.uk';
+      const subject = encodeURIComponent('Academic Enquiry - The Students Hub');
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`;
+      
+      // Fallback to Webmail (Gmail) if default mail app doesn't take focus
+      setTimeout(() => {
+        if (!document.hidden) {
+          window.open(gmailUrl, '_blank');
+        }
+      }, 600);
     }
   });
 
