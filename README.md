@@ -15,7 +15,7 @@ Official website for **The Students Hub** — an accredited academic tuition aca
 - **Email:** `admin@thestudents-hub.co.uk`
 - **Official Domain:** [www.thestudents-hub.uk](https://www.thestudents-hub.uk)
 - **Facebook:** [The Students Hub](https://www.facebook.com)
-- **Instagram:** [@thestudentshub01](https://www.instagram.com/thestudentshub01)
+- **Instagram:** [@joinstudenthub](https://www.instagram.com/joinstudenthub?stkn=ZXdmb3duamN0Y2wy)
 - **Location:** London - United Kingdom
 
 ---

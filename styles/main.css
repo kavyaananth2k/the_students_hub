@@ -2322,15 +2322,26 @@ ul, ol {
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
   text-decoration: none;
   transition: all var(--transition-fast);
+  border: 1px solid transparent;
   cursor: pointer;
+  line-height: 1.2;
 }
 
 .chip:hover {
-  border-color: var(--brand-blue);
-  color: var(--brand-blue);
-  background: var(--brand-blue-light);
+  background: #e2e8f0;
+  color: var(--primary-900);
+  border-color: #cbd5e1;
   transform: translateY(-1px);
 }
 
