@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="modal-body">
             <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
-              Claim a 100% free, no-obligation 45-minute diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
+              Claim a 100% free, no-obligation diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
             </p>
             <form id="trial-form">
               <div class="form-group">
@@ -595,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span>✉️</span> Sent to: admin@thestudents-hub.co.uk
                   </div>
                   <p style="margin: 0; font-size: 0.88rem; color: #047857; line-height: 1.5;">
-                    Your 45-minute diagnostic assessment booking has been submitted. A copy has been delivered to our admissions desk.
+                    Your diagnostic assessment booking has been submitted. A copy has been delivered to our admissions desk.
                   </p>
                 </div>
 
@@ -698,6 +698,13 @@ document.addEventListener('DOMContentLoaded', () => {
           window.open(gmailUrl, '_blank');
         }
       }, 600);
+    }
+  });
+
+  // Enforce numeric characters ONLY on contact phone input fields
+  document.addEventListener('input', (e) => {
+    if (e.target && (e.target.id === 'trial-phone' || e.target.type === 'tel' || e.target.name === 'Contact_Phone')) {
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
     }
   });
 

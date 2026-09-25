@@ -199,7 +199,7 @@
         <span class="section-badge" style="background: rgba(255,255,255,0.12); color:#bfdbfe;">Book a Free Assessment</span>
         <h2 class="section-title" style="color:#fff; margin-bottom:1rem;">Speak with our academic team</h2>
         <p>Share your child’s year group, subject needs and goals, and we will help recommend the right programme for them.</p>
-        <a href="#trial-modal" class="btn btn-primary btn-lg trial-modal-trigger">Email Us</a>
+        <a href="#trial-modal" class="btn btn-primary btn-lg trial-modal-trigger">Email Us & Book a Free Assessment </a>
       </div>
     </div>
   </section>
@@ -315,7 +315,7 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
-          Claim a 100% free, no-obligation 45-minute diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
+          Claim a 100% free, no-obligation diagnostic assessment. We evaluate baseline knowledge, highlight exam strengths, and recommend a bespoke learning plan.
         </p>
         <form id="trial-form" action="https://formsubmit.co/admin@thestudents-hub.co.uk" method="POST">
             <input type="hidden" name="_captcha" value="false">
@@ -337,7 +337,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="trial-phone">Contact Phone *</label>
-              <input type="tel" id="trial-phone" name="Contact_Phone" class="form-control" placeholder="07405 860115" required>
+              <input type="tel" id="trial-phone" name="Contact_Phone" class="form-control" placeholder="07405 860115" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
             </div>
           </div>
           <div class="form-group">

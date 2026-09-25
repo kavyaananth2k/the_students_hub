@@ -533,7 +533,7 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
-          Enter your details below to receive our digital study packs and claim a free 45-minute baseline diagnostic assessment.
+          Enter your details below to receive our digital study packs and claim a free baseline diagnostic assessment.
         </p>
         <form id="trial-form" action="https://formsubmit.co/admin@thestudents-hub.co.uk" method="POST">
             <input type="hidden" name="_captcha" value="false">
@@ -555,7 +555,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="trial-phone">Contact Phone *</label>
-              <input type="tel" id="trial-phone" name="Contact_Phone" class="form-control" placeholder="07405 860115" required>
+              <input type="tel" id="trial-phone" name="Contact_Phone" class="form-control" placeholder="07405 860115" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
             </div>
           </div>
           <div class="form-group">
